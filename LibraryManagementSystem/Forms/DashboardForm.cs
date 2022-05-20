@@ -32,5 +32,11 @@ namespace LibraryManagementSystem.Forms
         {
             Application.Exit();
         }
+
+        private void btnGenres_Click(object sender, EventArgs e)
+        {
+            ManageGenresForm manageGenresForm = new ManageGenresForm();
+            manageGenresForm.Show();
+        }
     }
 }

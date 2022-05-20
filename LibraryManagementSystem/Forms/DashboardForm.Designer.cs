@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.picture_close = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -59,11 +60,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.picture_close = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_close)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -73,7 +74,6 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_close)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,6 +98,7 @@
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(2, 396);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(197, 46);
@@ -113,6 +114,7 @@
             this.btnCirculation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCirculation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCirculation.ForeColor = System.Drawing.Color.White;
+            this.btnCirculation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCirculation.Location = new System.Drawing.Point(2, 334);
             this.btnCirculation.Name = "btnCirculation";
             this.btnCirculation.Size = new System.Drawing.Size(197, 46);
@@ -128,6 +130,7 @@
             this.btnGenres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenres.ForeColor = System.Drawing.Color.White;
+            this.btnGenres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenres.Location = new System.Drawing.Point(2, 272);
             this.btnGenres.Name = "btnGenres";
             this.btnGenres.Size = new System.Drawing.Size(197, 46);
@@ -136,6 +139,7 @@
             this.btnGenres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenres.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGenres.UseVisualStyleBackColor = true;
+            this.btnGenres.Click += new System.EventHandler(this.btnGenres_Click);
             // 
             // btnAuthors
             // 
@@ -143,6 +147,7 @@
             this.btnAuthors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAuthors.ForeColor = System.Drawing.Color.White;
+            this.btnAuthors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAuthors.Location = new System.Drawing.Point(2, 210);
             this.btnAuthors.Name = "btnAuthors";
             this.btnAuthors.Size = new System.Drawing.Size(197, 46);
@@ -158,6 +163,7 @@
             this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.ForeColor = System.Drawing.Color.White;
+            this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBooks.Location = new System.Drawing.Point(3, 148);
             this.btnBooks.Name = "btnBooks";
             this.btnBooks.Size = new System.Drawing.Size(197, 46);
@@ -208,6 +214,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(935, 540);
             this.panel3.TabIndex = 1;
+            // 
+            // picture_close
+            // 
+            this.picture_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picture_close.Location = new System.Drawing.Point(901, 2);
+            this.picture_close.Name = "picture_close";
+            this.picture_close.Size = new System.Drawing.Size(33, 33);
+            this.picture_close.TabIndex = 3;
+            this.picture_close.TabStop = false;
+            this.picture_close.Click += new System.EventHandler(this.picture_close_Click);
             // 
             // panel7
             // 
@@ -443,16 +459,6 @@
             this.label2.Text = "Books";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // picture_close
-            // 
-            this.picture_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picture_close.Location = new System.Drawing.Point(900, 0);
-            this.picture_close.Name = "picture_close";
-            this.picture_close.Size = new System.Drawing.Size(33, 33);
-            this.picture_close.TabIndex = 3;
-            this.picture_close.TabStop = false;
-            this.picture_close.Click += new System.EventHandler(this.picture_close_Click);
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +476,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_close)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -484,7 +491,6 @@
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_close)).EndInit();
             this.ResumeLayout(false);
 
         }

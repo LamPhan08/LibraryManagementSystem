@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryManagementSystem.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace LibraryManagementSystem.Forms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            btnLogin.Enabled = false;
             pictureLock.Image = Image.FromFile("../../Images/lock.png");
             pictureUser.Image = Image.FromFile("../../Images/user.png");
         }
@@ -38,11 +40,53 @@ namespace LibraryManagementSystem.Forms
             Application.Exit(); 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            DashboardForm dashboardForm = new DashboardForm();
-            dashboardForm.ShowDialog();
-            this.Close();
+            if (txtUserPassword.Text == "")
+            {
+                MessageBox.Show("Please enter full information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database database = new Database.Database("USERS", "select USERTYPE from USERS where USERNAME = '" + txtUserName.Text
+                        + "' and USERPASSWORD = '" + txtUserPassword.Text + "'");
+                    if (database.Rows.Count > 0)
+                    {
+                        if (database.Rows[0][0].ToString().Equals("Quan tri vien"))
+                        {
+                            MessageBox.Show("Login Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            DashboardForm dashboard = new DashboardForm();
+                            dashboard.ShowDialog();
+                            Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUserName.Focus();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUserName.Text != "")
+            {
+                btnLogin.Enabled = true;
+            }
+            else
+            {
+                btnLogin.Enabled = false;
+            }
         }
     }
 }
