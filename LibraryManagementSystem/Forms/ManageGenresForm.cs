@@ -13,11 +13,11 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class ManageGenresForm : Form
     {
-        SqlConnection sqlConnection;
-        SqlDataAdapter dataAdapter;
-        DataTable dataTable;
-        BindingManagerBase managerBase;
-        bool isAdded = false;
+        private SqlConnection sqlConnection;
+        private SqlDataAdapter dataAdapter;
+        private DataTable dataTable;
+        private BindingManagerBase managerBase;
+        private bool isAdded = false;
         public ManageGenresForm()
         {
             InitializeComponent();
@@ -40,15 +40,15 @@ namespace LibraryManagementSystem.Forms
 
         private void ManageGenresForm_Load(object sender, EventArgs e)
         {
-            label_header.Image = Image.FromFile("../../Images/genres.png");
-            btnAdd.Image = Image.FromFile("../../Images/add.png");
-            btnEdit.Image = Image.FromFile("../../Images/edit.png");
-            btnUpdate.Image = Image.FromFile("../../Images/update.png");
-            btnDelete.Image = Image.FromFile("../../Images/trash.png");
+            label_header_genres.Image = Image.FromFile("../../Images/genres.png");
+            btnAddGenre.Image = Image.FromFile("../../Images/add.png");
+            btnEditGenre.Image = Image.FromFile("../../Images/edit.png");
+            btnUpdateGenre.Image = Image.FromFile("../../Images/update.png");
+            btnDeleteGenre.Image = Image.FromFile("../../Images/trash.png");
 
-            txtName.ReadOnly = true;
-            txtID.ReadOnly = true;
-            btnUpdate.Enabled = false;
+            txtGenreName.ReadOnly = true;
+            txtGenreID.ReadOnly = true;
+            btnUpdateGenre.Enabled = false;
 
             try
             {
@@ -74,16 +74,16 @@ namespace LibraryManagementSystem.Forms
             if (managerBase.Position >= 0)
             {
                 DataRow row = dataTable.Rows[managerBase.Position];
-                txtName.Text = row["NAME"].ToString();
-                txtID.Text = row["ID"].ToString();
-                txtName.ReadOnly = true;
-                btnEdit.Enabled = true;
+                txtGenreName.Text = row["NAME"].ToString();
+                txtGenreID.Text = row["ID"].ToString();
+                txtGenreName.ReadOnly = true;
+                btnEditGenre.Enabled = true;
             }
             else
             {
-                txtName.Text = "";
-                txtID.Text = "";
-                btnEdit.Enabled = false;
+                txtGenreName.Text = "";
+                txtGenreID.Text = "";
+                btnEditGenre.Enabled = false;
             }
         }
 
@@ -91,20 +91,20 @@ namespace LibraryManagementSystem.Forms
         {
             isAdded = true;
 
-            txtName.ReadOnly = false;
+            txtGenreName.ReadOnly = false;
 
-            txtName.Text = "";
+            txtGenreName.Text = "";
 
-            txtID.Text = "";
+            txtGenreID.Text = "";
 
-            txtName.Focus();
+            txtGenreName.Focus();
 
-            btnUpdate.Enabled = true;
+            btnUpdateGenre.Enabled = true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtName.Text.Equals(""))
+            if (txtGenreName.Text.Equals(""))
             {
                 MessageBox.Show("Please enter name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -116,16 +116,32 @@ namespace LibraryManagementSystem.Forms
 
                     if (isAdded) {
                         row = dataTable.NewRow();
+
+                        Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                        Database.Database database = new Database.Database("GENRES", "select NAME from GENRES where NAME = '" + txtGenreName.Text + "'");
+
+                        if (database.Rows.Count > 0)
+                        {
+                            MessageBox.Show("This genre already exists!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            ManagerBase_PositionChanged(null, null);
+                        }
+                        else
+                        {
+                            row["NAME"] = txtGenreName.Text;
+
+                            dataTable.Rows.Add(row);
+                            managerBase.Position = managerBase.Count;
+
+                            MessageBox.Show("Update Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else {
                         row = dataTable.Rows[managerBase.Position];
-                    }
-                    row["NAME"] = txtName.Text;
+                        row["NAME"] = txtGenreName.Text;
 
-                    if (isAdded)
-                    {
-                        dataTable.Rows.Add(row);
-                        managerBase.Position = managerBase.Count;
+                        MessageBox.Show("Update Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
 
                     dataAdapter.Update(dataTable);
@@ -133,27 +149,25 @@ namespace LibraryManagementSystem.Forms
 
                     isAdded = false;
 
-                    txtName.ReadOnly = true;
+                    txtGenreName.ReadOnly = true;
 
-                    MessageBox.Show("Update Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    btnUpdate.Enabled = false;
+                    btnUpdateGenre.Enabled = false;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);  
 
-                    txtName.Clear();
-                    txtID.Clear();
+                    txtGenreName.Clear();
+                    txtGenreID.Clear();
                 }
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            txtName.ReadOnly = false;
-            txtName.Focus();
-            btnUpdate.Enabled = true;
+            txtGenreName.ReadOnly = false;
+            txtGenreName.Focus();
+            btnUpdateGenre.Enabled = true;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -173,8 +187,6 @@ namespace LibraryManagementSystem.Forms
                     //dataAdapter.Update(dataTable);
 
                     dataTable.AcceptChanges();
-
-                    txtName.Text = "";
 
                     ManagerBase_PositionChanged(null, null);
 

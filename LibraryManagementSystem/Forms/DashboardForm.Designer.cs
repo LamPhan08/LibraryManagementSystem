@@ -94,9 +94,10 @@
             // 
             // btnUsers
             // 
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(2, 396);
@@ -110,9 +111,10 @@
             // 
             // btnCirculation
             // 
+            this.btnCirculation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCirculation.FlatAppearance.BorderSize = 0;
             this.btnCirculation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCirculation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCirculation.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCirculation.ForeColor = System.Drawing.Color.White;
             this.btnCirculation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCirculation.Location = new System.Drawing.Point(2, 334);
@@ -126,9 +128,10 @@
             // 
             // btnGenres
             // 
+            this.btnGenres.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenres.FlatAppearance.BorderSize = 0;
             this.btnGenres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenres.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenres.ForeColor = System.Drawing.Color.White;
             this.btnGenres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenres.Location = new System.Drawing.Point(2, 272);
@@ -143,9 +146,10 @@
             // 
             // btnAuthors
             // 
+            this.btnAuthors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAuthors.FlatAppearance.BorderSize = 0;
             this.btnAuthors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuthors.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAuthors.ForeColor = System.Drawing.Color.White;
             this.btnAuthors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAuthors.Location = new System.Drawing.Point(2, 210);
@@ -156,12 +160,14 @@
             this.btnAuthors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAuthors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAuthors.UseVisualStyleBackColor = true;
+            this.btnAuthors.Click += new System.EventHandler(this.btnAuthors_Click);
             // 
             // btnBooks
             // 
+            this.btnBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBooks.FlatAppearance.BorderSize = 0;
             this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooks.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.ForeColor = System.Drawing.Color.White;
             this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBooks.Location = new System.Drawing.Point(3, 148);

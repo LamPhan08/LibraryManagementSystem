@@ -38,5 +38,11 @@ namespace LibraryManagementSystem.Forms
             ManageGenresForm manageGenresForm = new ManageGenresForm();
             manageGenresForm.Show();
         }
+
+        private void btnAuthors_Click(object sender, EventArgs e)
+        {
+            ManageAuthorsForm manageAuthorsForm = new ManageAuthorsForm();
+            manageAuthorsForm.Show();
+        }
     }
 }

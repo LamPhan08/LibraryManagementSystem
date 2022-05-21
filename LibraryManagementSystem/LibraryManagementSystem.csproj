@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Genre.cs" />
     <Compile Include="Database\Database.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -62,6 +61,18 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManageAuthorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageAuthorsForm.Designer.cs">
+      <DependentUpon>ManageAuthorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageBooksForm.Designer.cs">
+      <DependentUpon>ManageBooksForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManageGenresForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +86,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageAuthorsForm.resx">
+      <DependentUpon>ManageAuthorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageBooksForm.resx">
+      <DependentUpon>ManageBooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageGenresForm.resx">
       <DependentUpon>ManageGenresForm.cs</DependentUpon>
@@ -101,12 +118,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Classes\" />
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\add.png" />
+    <Content Include="Images\author.png" />
     <Content Include="Images\authors.png" />
     <Content Include="Images\books.png" />
     <Content Include="Images\close.png" />
