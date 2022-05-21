@@ -16,8 +16,11 @@ namespace LibraryManagementSystem.Forms
         private SqlConnection connection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
         private SqlDataAdapter dataAdapter;
         private DataTable dataTable;
-        public AuthorsList()
+
+        private ManageBooksForm manageBooks = null;
+        public AuthorsList(ManageBooksForm sourceForm)
         {
+            manageBooks = sourceForm as ManageBooksForm;
             InitializeComponent();
         }
 
@@ -55,7 +58,12 @@ namespace LibraryManagementSystem.Forms
             String fullName = dataRowView["FULLNAME"].ToString();
             String id = dataRowView["ID"].ToString();
 
-            MessageBox.Show("ID = " + id + "| Fullname: " + fullName);
+            manageBooks.txtBookAuthor.Text = fullName;
+            manageBooks.txtAuthorID.Text = id;
+
+            //MessageBox.Show("ID = " + id + "| Fullname: " + fullName);
+
+            Close();
         }
     }
 }

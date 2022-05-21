@@ -81,7 +81,7 @@
             this.btnSelectAuthorList.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectAuthorList.ForeColor = System.Drawing.Color.White;
             this.btnSelectAuthorList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectAuthorList.Location = new System.Drawing.Point(17, 361);
+            this.btnSelectAuthorList.Location = new System.Drawing.Point(16, 361);
             this.btnSelectAuthorList.Name = "btnSelectAuthorList";
             this.btnSelectAuthorList.Size = new System.Drawing.Size(253, 40);
             this.btnSelectAuthorList.TabIndex = 13;

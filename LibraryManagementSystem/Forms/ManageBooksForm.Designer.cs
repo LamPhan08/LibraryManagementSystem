@@ -34,6 +34,12 @@
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtAuthorID = new System.Windows.Forms.Label();
+            this.btnAddNewBook = new System.Windows.Forms.Button();
+            this.btnSelectAuthor = new System.Windows.Forms.Button();
+            this.txtBookAuthor = new System.Windows.Forms.TextBox();
+            this.comboBoxBookGenre = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_BookQuantity = new System.Windows.Forms.NumericUpDown();
             this.btnSelectCover = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBookPublisher = new System.Windows.Forms.TextBox();
@@ -55,16 +61,12 @@
             this.txtBookISBN = new System.Windows.Forms.TextBox();
             this.labeName = new System.Windows.Forms.Label();
             this.label_close_books = new System.Windows.Forms.Label();
-            this.numericUpDown_BookQuantity = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxBookGenre = new System.Windows.Forms.ComboBox();
-            this.txtAuthorBook = new System.Windows.Forms.TextBox();
-            this.btnSelectAuthor = new System.Windows.Forms.Button();
-            this.btnAddNewBook = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnClearFields = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBookCover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBookCover)).BeginInit();
             this.SuspendLayout();
             // 
             // label_header_books
@@ -105,6 +107,7 @@
             this.btnAddBook.Text = " Add";
             this.btnAddBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // btnDeleteBook
             // 
@@ -135,9 +138,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Peru;
+            this.panel2.Controls.Add(this.btnClearFields);
+            this.panel2.Controls.Add(this.txtAuthorID);
             this.panel2.Controls.Add(this.btnAddNewBook);
             this.panel2.Controls.Add(this.btnSelectAuthor);
-            this.panel2.Controls.Add(this.txtAuthorBook);
+            this.panel2.Controls.Add(this.txtBookAuthor);
             this.panel2.Controls.Add(this.comboBoxBookGenre);
             this.panel2.Controls.Add(this.numericUpDown_BookQuantity);
             this.panel2.Controls.Add(this.btnSelectCover);
@@ -164,6 +169,72 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1078, 405);
             this.panel2.TabIndex = 7;
+            // 
+            // txtAuthorID
+            // 
+            this.txtAuthorID.AutoSize = true;
+            this.txtAuthorID.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAuthorID.Location = new System.Drawing.Point(287, 173);
+            this.txtAuthorID.Name = "txtAuthorID";
+            this.txtAuthorID.Size = new System.Drawing.Size(41, 23);
+            this.txtAuthorID.TabIndex = 48;
+            this.txtAuthorID.Text = "ID:";
+            // 
+            // btnAddNewBook
+            // 
+            this.btnAddNewBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(203)))), ((int)(((byte)(167)))));
+            this.btnAddNewBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNewBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewBook.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewBook.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNewBook.Location = new System.Drawing.Point(110, 358);
+            this.btnAddNewBook.Name = "btnAddNewBook";
+            this.btnAddNewBook.Size = new System.Drawing.Size(253, 40);
+            this.btnAddNewBook.TabIndex = 12;
+            this.btnAddNewBook.Text = "Add Book";
+            this.btnAddNewBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddNewBook.UseVisualStyleBackColor = false;
+            this.btnAddNewBook.Click += new System.EventHandler(this.btnAddNewBook_Click);
+            // 
+            // btnSelectAuthor
+            // 
+            this.btnSelectAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelectAuthor.Location = new System.Drawing.Point(369, 170);
+            this.btnSelectAuthor.Name = "btnSelectAuthor";
+            this.btnSelectAuthor.Size = new System.Drawing.Size(121, 32);
+            this.btnSelectAuthor.TabIndex = 13;
+            this.btnSelectAuthor.Text = "Select Author";
+            this.btnSelectAuthor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSelectAuthor.UseVisualStyleBackColor = true;
+            this.btnSelectAuthor.Click += new System.EventHandler(this.btnSelectAuthor_Click);
+            // 
+            // txtBookAuthor
+            // 
+            this.txtBookAuthor.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookAuthor.Location = new System.Drawing.Point(110, 170);
+            this.txtBookAuthor.Name = "txtBookAuthor";
+            this.txtBookAuthor.Size = new System.Drawing.Size(171, 32);
+            this.txtBookAuthor.TabIndex = 47;
+            // 
+            // comboBoxBookGenre
+            // 
+            this.comboBoxBookGenre.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBookGenre.FormattingEnabled = true;
+            this.comboBoxBookGenre.Location = new System.Drawing.Point(110, 217);
+            this.comboBoxBookGenre.Name = "comboBoxBookGenre";
+            this.comboBoxBookGenre.Size = new System.Drawing.Size(253, 31);
+            this.comboBoxBookGenre.TabIndex = 46;
+            // 
+            // numericUpDown_BookQuantity
+            // 
+            this.numericUpDown_BookQuantity.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown_BookQuantity.Location = new System.Drawing.Point(110, 265);
+            this.numericUpDown_BookQuantity.Name = "numericUpDown_BookQuantity";
+            this.numericUpDown_BookQuantity.Size = new System.Drawing.Size(139, 32);
+            this.numericUpDown_BookQuantity.TabIndex = 44;
             // 
             // btnSelectCover
             // 
@@ -200,6 +271,8 @@
             // pictureBookCover
             // 
             this.pictureBookCover.BackColor = System.Drawing.Color.Gray;
+            this.pictureBookCover.Image = global::LibraryManagementSystem.Properties.Resources.bookcover;
+            this.pictureBookCover.InitialImage = null;
             this.pictureBookCover.Location = new System.Drawing.Point(826, 54);
             this.pictureBookCover.Name = "pictureBookCover";
             this.pictureBookCover.Size = new System.Drawing.Size(234, 263);
@@ -297,7 +370,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 176);
+            this.label3.Location = new System.Drawing.Point(20, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 23);
             this.label3.TabIndex = 28;
@@ -374,60 +447,22 @@
             this.label_close_books.MouseEnter += new System.EventHandler(this.label_close_books_MouseEnter);
             this.label_close_books.MouseLeave += new System.EventHandler(this.label_close_books_MouseLeave);
             // 
-            // numericUpDown_BookQuantity
+            // btnClearFields
             // 
-            this.numericUpDown_BookQuantity.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_BookQuantity.Location = new System.Drawing.Point(110, 265);
-            this.numericUpDown_BookQuantity.Name = "numericUpDown_BookQuantity";
-            this.numericUpDown_BookQuantity.Size = new System.Drawing.Size(139, 32);
-            this.numericUpDown_BookQuantity.TabIndex = 44;
-            // 
-            // comboBoxBookGenre
-            // 
-            this.comboBoxBookGenre.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxBookGenre.FormattingEnabled = true;
-            this.comboBoxBookGenre.Location = new System.Drawing.Point(110, 217);
-            this.comboBoxBookGenre.Name = "comboBoxBookGenre";
-            this.comboBoxBookGenre.Size = new System.Drawing.Size(253, 31);
-            this.comboBoxBookGenre.TabIndex = 46;
-            // 
-            // txtAuthorBook
-            // 
-            this.txtAuthorBook.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAuthorBook.Location = new System.Drawing.Point(110, 173);
-            this.txtAuthorBook.Name = "txtAuthorBook";
-            this.txtAuthorBook.Size = new System.Drawing.Size(132, 32);
-            this.txtAuthorBook.TabIndex = 47;
-            // 
-            // btnSelectAuthor
-            // 
-            this.btnSelectAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelectAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectAuthor.Location = new System.Drawing.Point(248, 173);
-            this.btnSelectAuthor.Name = "btnSelectAuthor";
-            this.btnSelectAuthor.Size = new System.Drawing.Size(115, 32);
-            this.btnSelectAuthor.TabIndex = 13;
-            this.btnSelectAuthor.Text = "Select Author";
-            this.btnSelectAuthor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSelectAuthor.UseVisualStyleBackColor = true;
-            this.btnSelectAuthor.Click += new System.EventHandler(this.btnSelectAuthor_Click);
-            // 
-            // btnAddNewBook
-            // 
-            this.btnAddNewBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(203)))), ((int)(((byte)(167)))));
-            this.btnAddNewBook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNewBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewBook.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewBook.Location = new System.Drawing.Point(110, 358);
-            this.btnAddNewBook.Name = "btnAddNewBook";
-            this.btnAddNewBook.Size = new System.Drawing.Size(253, 40);
-            this.btnAddNewBook.TabIndex = 12;
-            this.btnAddNewBook.Text = "Add Book";
-            this.btnAddNewBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNewBook.UseVisualStyleBackColor = false;
+            this.btnClearFields.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnClearFields.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearFields.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearFields.ForeColor = System.Drawing.Color.White;
+            this.btnClearFields.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClearFields.Location = new System.Drawing.Point(544, 358);
+            this.btnClearFields.Name = "btnClearFields";
+            this.btnClearFields.Size = new System.Drawing.Size(253, 40);
+            this.btnClearFields.TabIndex = 49;
+            this.btnClearFields.Text = "Clear Fields";
+            this.btnClearFields.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClearFields.UseVisualStyleBackColor = false;
+            this.btnClearFields.Click += new System.EventHandler(this.btnClearFields_Click);
             // 
             // ManageBooksForm
             // 
@@ -447,8 +482,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBookCover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBookCover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,10 +519,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSelectAuthor;
-        private System.Windows.Forms.TextBox txtAuthorBook;
         private System.Windows.Forms.ComboBox comboBoxBookGenre;
         private System.Windows.Forms.NumericUpDown numericUpDown_BookQuantity;
         private System.Windows.Forms.Button btnAddNewBook;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.Windows.Forms.TextBox txtBookAuthor;
+        public System.Windows.Forms.Label txtAuthorID;
+        private System.Windows.Forms.Button btnClearFields;
     }
 }

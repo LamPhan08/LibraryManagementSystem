@@ -78,7 +78,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
             this.panel1.Controls.Add(this.btnUsers);
             this.panel1.Controls.Add(this.btnCirculation);
             this.panel1.Controls.Add(this.btnGenres);
