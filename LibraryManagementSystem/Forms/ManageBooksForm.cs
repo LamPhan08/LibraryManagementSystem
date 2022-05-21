@@ -95,7 +95,7 @@ namespace LibraryManagementSystem.Forms
                 || numericUpDown_BookQuantity.Text.Equals("") 
                 || txtBookPrice.Text.Equals("") 
                 || txtBookPublisher.Text.Equals("") 
-                || richTextBox_BookDescription.Text.Equals(""))
+                || richTextBox_BookDescription.Text.Equals("") || txtAuthorID.Text.Equals("ID:"))
             {
                 MessageBox.Show("Please enter full information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -146,6 +146,8 @@ namespace LibraryManagementSystem.Forms
                             connection.Close();
 
                             MessageBox.Show("Add Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            ClearFields();
                         }
                     }
                 }
@@ -173,6 +175,11 @@ namespace LibraryManagementSystem.Forms
 
         private void btnClearFields_Click(object sender, EventArgs e)
         {
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
             txtBookISBN.Clear();
             txtBookTitle.Clear();
             txtBookAuthor.Clear();
@@ -180,7 +187,7 @@ namespace LibraryManagementSystem.Forms
             txtBookPrice.Clear();
             txtBookPublisher.Clear();
             richTextBox_BookDescription.Clear();
-            comboBoxBookGenre.SelectedIndex = 0;    
+            comboBoxBookGenre.SelectedIndex = 0;
             numericUpDown_BookQuantity.Value = 0;
             dateTimePicker_Books.Value = DateTime.Now;
             pictureBookCover.Image = Image.FromFile("../../Resources/bookcover.png");
