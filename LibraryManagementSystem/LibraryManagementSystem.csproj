@@ -49,6 +49,12 @@
     <Compile Include="Database\Database.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\AuthorsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthorsList.Designer.cs">
+      <DependentUpon>AuthorsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AuthorsList.resx">
+      <DependentUpon>AuthorsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +137,7 @@
     <Content Include="Images\add.png" />
     <Content Include="Images\author.png" />
     <Content Include="Images\authors.png" />
+    <Content Include="Images\book.png" />
     <Content Include="Images\books.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\edit.png" />
@@ -138,6 +148,7 @@
     <Content Include="Images\tag.png" />
     <Content Include="Images\trash.png" />
     <Content Include="Images\update.png" />
+    <Content Include="Images\upload.png" />
     <Content Include="Images\user.png" />
     <Content Include="Images\users.png" />
   </ItemGroup>

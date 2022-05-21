@@ -78,7 +78,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel1.Controls.Add(this.btnUsers);
             this.panel1.Controls.Add(this.btnCirculation);
             this.panel1.Controls.Add(this.btnGenres);
@@ -178,10 +178,11 @@
             this.btnBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(59)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureLogo);
             this.panel2.Location = new System.Drawing.Point(0, 0);

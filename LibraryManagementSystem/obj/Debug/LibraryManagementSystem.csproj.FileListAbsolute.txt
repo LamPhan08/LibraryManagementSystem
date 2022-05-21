@@ -13,3 +13,4 @@ D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\L
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageGenresForm.resources
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageAuthorsForm.resources
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageBooksForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.AuthorsList.resources

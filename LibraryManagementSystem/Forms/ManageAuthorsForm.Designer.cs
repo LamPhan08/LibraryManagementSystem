@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label_header_authors = new System.Windows.Forms.Label();
             this.label_close_authors = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnShowAuthorBooks = new System.Windows.Forms.Button();
             this.btnUpdateAuthor = new System.Windows.Forms.Button();
             this.btnAddAuthor = new System.Windows.Forms.Button();
             this.btnDeleteAuthor = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.labelID = new System.Windows.Forms.Label();
             this.txtAuthorFirstName = new System.Windows.Forms.TextBox();
             this.labeName = new System.Windows.Forms.Label();
-            this.btnShowAuthorBooks = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Authors)).BeginInit();
@@ -88,6 +88,8 @@
             this.label_close_authors.Text = "X";
             this.label_close_authors.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_close_authors.Click += new System.EventHandler(this.label_close_authors_Click);
+            this.label_close_authors.MouseEnter += new System.EventHandler(this.label_close_authors_MouseEnter);
+            this.label_close_authors.MouseLeave += new System.EventHandler(this.label_close_authors_MouseLeave);
             // 
             // panel1
             // 
@@ -102,6 +104,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(142, 342);
             this.panel1.TabIndex = 5;
+            // 
+            // btnShowAuthorBooks
+            // 
+            this.btnShowAuthorBooks.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAuthorBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowAuthorBooks.Location = new System.Drawing.Point(8, 246);
+            this.btnShowAuthorBooks.Name = "btnShowAuthorBooks";
+            this.btnShowAuthorBooks.Size = new System.Drawing.Size(127, 68);
+            this.btnShowAuthorBooks.TabIndex = 13;
+            this.btnShowAuthorBooks.Text = " Show   \r\nAuthor\r\nBooks";
+            this.btnShowAuthorBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnShowAuthorBooks.UseVisualStyleBackColor = true;
             // 
             // btnUpdateAuthor
             // 
@@ -183,14 +197,14 @@
             this.dataGridView_Authors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Authors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_Authors.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Authors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Authors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Authors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Authors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -198,14 +212,14 @@
             this.LASTNAME,
             this.EDUCATION,
             this.BIO});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_Authors.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Authors.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Authors.Location = new System.Drawing.Point(420, 30);
             this.dataGridView_Authors.Name = "dataGridView_Authors";
             this.dataGridView_Authors.ReadOnly = true;
@@ -351,18 +365,6 @@
             this.labeName.Size = new System.Drawing.Size(120, 23);
             this.labeName.TabIndex = 11;
             this.labeName.Text = "First Name:";
-            // 
-            // btnShowAuthorBooks
-            // 
-            this.btnShowAuthorBooks.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAuthorBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowAuthorBooks.Location = new System.Drawing.Point(8, 246);
-            this.btnShowAuthorBooks.Name = "btnShowAuthorBooks";
-            this.btnShowAuthorBooks.Size = new System.Drawing.Size(127, 68);
-            this.btnShowAuthorBooks.TabIndex = 13;
-            this.btnShowAuthorBooks.Text = " Show   \r\nAuthor\r\nBooks";
-            this.btnShowAuthorBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnShowAuthorBooks.UseVisualStyleBackColor = true;
             // 
             // ManageAuthorsForm
             // 

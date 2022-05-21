@@ -221,5 +221,15 @@ namespace LibraryManagementSystem.Forms
                 MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label_close_authors_MouseEnter(object sender, EventArgs e)
+        {
+            label_close_authors.ForeColor = Color.Black;
+        }
+
+        private void label_close_authors_MouseLeave(object sender, EventArgs e)
+        {
+            label_close_authors.ForeColor = Color.White;
+        }
     }
 }

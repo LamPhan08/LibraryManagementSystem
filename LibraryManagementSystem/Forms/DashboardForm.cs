@@ -44,5 +44,11 @@ namespace LibraryManagementSystem.Forms
             ManageAuthorsForm manageAuthorsForm = new ManageAuthorsForm();
             manageAuthorsForm.Show();
         }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            ManageBooksForm manageBooksForm = new ManageBooksForm();
+            manageBooksForm.Show();
+        }
     }
 }
