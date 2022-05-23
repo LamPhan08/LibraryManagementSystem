@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class AuthorsList : Form
     {
-        private SqlConnection connection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+        private SqlConnection connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
         private SqlDataAdapter dataAdapter;
         private DataTable dataTable;
 
@@ -60,6 +60,9 @@ namespace LibraryManagementSystem.Forms
 
             manageBooks.txtBookAuthor.Text = fullName;
             manageBooks.txtAuthorID.Text = id;
+
+            manageBooks.textBox_Author_Edit.Text = fullName;
+            manageBooks.label_AuthorId_Edit.Text = id;
 
             //MessageBox.Show("ID = " + id + "| Fullname: " + fullName);
 
