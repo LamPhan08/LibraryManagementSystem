@@ -37,7 +37,7 @@ CREATE TABLE AUTHORS (
 	LASTNAME VARCHAR(20) NOT NULL,
 	EDUCATION VARCHAR(50) NOT NULL,
 	BIO TEXT 
-)
+)	
 
 INSERT INTO AUTHORS VALUES('Phan', 'Lam', 'Student', 'hello xin chao moi nguoi')
 INSERT INTO AUTHORS VALUES('Nguyen', 'Doan', 'Student', 'hello xin chao moi nguoi')

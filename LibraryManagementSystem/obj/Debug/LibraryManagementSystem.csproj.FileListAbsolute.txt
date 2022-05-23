@@ -30,3 +30,4 @@ C:\Users\congd\Source\Repos\LibraryManagementSystem\LibraryManagementSystem\obj\
 C:\Users\congd\Source\Repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\congd\Source\Repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
 C:\Users\congd\Source\Repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.RemoveBookForm.resources
