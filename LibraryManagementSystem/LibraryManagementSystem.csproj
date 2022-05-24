@@ -150,6 +150,7 @@
     <Content Include="Images\book.png" />
     <Content Include="Images\books.png" />
     <Content Include="Images\close.png" />
+    <Content Include="Images\details_list.png" />
     <Content Include="Images\edit.png" />
     <Content Include="Images\genres.png" />
     <Content Include="Images\library_logo.png" />

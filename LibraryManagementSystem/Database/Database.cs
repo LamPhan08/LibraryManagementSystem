@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LibraryManagementSystem.Database
 {
-    internal class Database : DataTable
+    public class Database : DataTable
     {
         public static SqlConnection sqlConnection;
         SqlDataAdapter dataAdapter;

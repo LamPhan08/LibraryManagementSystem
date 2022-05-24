@@ -30,6 +30,7 @@
         {
             this.label_header_books = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_show_book = new System.Windows.Forms.Button();
             this.label_booksCount = new System.Windows.Forms.Label();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnDeleteBook = new System.Windows.Forms.Button();
@@ -63,6 +64,8 @@
             this.labelID = new System.Windows.Forms.Label();
             this.txtBookISBN = new System.Windows.Forms.TextBox();
             this.labeName = new System.Windows.Forms.Label();
+            this.panel_ShowBooks = new System.Windows.Forms.Panel();
+            this.dataGridView_ShowBooks = new System.Windows.Forms.DataGridView();
             this.panel_edit = new System.Windows.Forms.Panel();
             this.button_searchByIsbn = new System.Windows.Forms.Button();
             this.button_searchById = new System.Windows.Forms.Button();
@@ -94,11 +97,14 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label_close_books = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button_show_book = new System.Windows.Forms.Button();
+            this.button_editBook_ = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBookCover)).BeginInit();
+            this.panel_ShowBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowBooks)).BeginInit();
             this.panel_edit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Quantity_Edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cover_Edit)).BeginInit();
@@ -133,6 +139,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 513);
             this.panel1.TabIndex = 6;
+            // 
+            // button_show_book
+            // 
+            this.button_show_book.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_show_book.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_show_book.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_show_book.Location = new System.Drawing.Point(10, 163);
+            this.button_show_book.Margin = new System.Windows.Forms.Padding(4);
+            this.button_show_book.Name = "button_show_book";
+            this.button_show_book.Size = new System.Drawing.Size(169, 59);
+            this.button_show_book.TabIndex = 51;
+            this.button_show_book.Text = "Show books";
+            this.button_show_book.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_show_book.UseVisualStyleBackColor = true;
+            this.button_show_book.Click += new System.EventHandler(this.button_show_book_Click);
             // 
             // label_booksCount
             // 
@@ -221,7 +242,7 @@
             this.panel_add.Controls.Add(this.labelID);
             this.panel_add.Controls.Add(this.txtBookISBN);
             this.panel_add.Controls.Add(this.labeName);
-            this.panel_add.Location = new System.Drawing.Point(199, 102);
+            this.panel_add.Location = new System.Drawing.Point(197, 100);
             this.panel_add.Margin = new System.Windows.Forms.Padding(4);
             this.panel_add.Name = "panel_add";
             this.panel_add.Size = new System.Drawing.Size(1437, 498);
@@ -540,6 +561,29 @@
             this.labeName.TabIndex = 21;
             this.labeName.Text = "ISBN:";
             // 
+            // panel_ShowBooks
+            // 
+            this.panel_ShowBooks.BackColor = System.Drawing.Color.Tan;
+            this.panel_ShowBooks.Controls.Add(this.button1);
+            this.panel_ShowBooks.Controls.Add(this.button_editBook_);
+            this.panel_ShowBooks.Controls.Add(this.dataGridView_ShowBooks);
+            this.panel_ShowBooks.Location = new System.Drawing.Point(199, 102);
+            this.panel_ShowBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_ShowBooks.Name = "panel_ShowBooks";
+            this.panel_ShowBooks.Size = new System.Drawing.Size(1437, 498);
+            this.panel_ShowBooks.TabIndex = 51;
+            // 
+            // dataGridView_ShowBooks
+            // 
+            this.dataGridView_ShowBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_ShowBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ShowBooks.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_ShowBooks.Name = "dataGridView_ShowBooks";
+            this.dataGridView_ShowBooks.RowHeadersWidth = 51;
+            this.dataGridView_ShowBooks.RowTemplate.Height = 24;
+            this.dataGridView_ShowBooks.Size = new System.Drawing.Size(1437, 400);
+            this.dataGridView_ShowBooks.TabIndex = 0;
+            // 
             // panel_edit
             // 
             this.panel_edit.BackColor = System.Drawing.Color.RosyBrown;
@@ -571,7 +615,7 @@
             this.panel_edit.Controls.Add(this.label22);
             this.panel_edit.Controls.Add(this.textBox_ISBN_Edit);
             this.panel_edit.Controls.Add(this.label23);
-            this.panel_edit.Location = new System.Drawing.Point(199, 102);
+            this.panel_edit.Location = new System.Drawing.Point(197, 100);
             this.panel_edit.Margin = new System.Windows.Forms.Padding(4);
             this.panel_edit.Name = "panel_edit";
             this.panel_edit.Size = new System.Drawing.Size(1437, 498);
@@ -911,20 +955,38 @@
             this.label_close_books.MouseEnter += new System.EventHandler(this.label_close_books_MouseEnter);
             this.label_close_books.MouseLeave += new System.EventHandler(this.label_close_books_MouseLeave);
             // 
-            // button_show_book
+            // button_editBook_
             // 
-            this.button_show_book.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_show_book.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_show_book.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_show_book.Location = new System.Drawing.Point(10, 163);
-            this.button_show_book.Margin = new System.Windows.Forms.Padding(4);
-            this.button_show_book.Name = "button_show_book";
-            this.button_show_book.Size = new System.Drawing.Size(169, 59);
-            this.button_show_book.TabIndex = 51;
-            this.button_show_book.Text = "Show books";
-            this.button_show_book.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_show_book.UseVisualStyleBackColor = true;
-            this.button_show_book.Click += new System.EventHandler(this.button_show_book_Click);
+            this.button_editBook_.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button_editBook_.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_editBook_.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_editBook_.ForeColor = System.Drawing.Color.White;
+            this.button_editBook_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_editBook_.Location = new System.Drawing.Point(30, 417);
+            this.button_editBook_.Margin = new System.Windows.Forms.Padding(4);
+            this.button_editBook_.Name = "button_editBook_";
+            this.button_editBook_.Size = new System.Drawing.Size(679, 59);
+            this.button_editBook_.TabIndex = 54;
+            this.button_editBook_.Text = "Edit this book";
+            this.button_editBook_.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_editBook_.UseVisualStyleBackColor = false;
+            this.button_editBook_.Click += new System.EventHandler(this.button_editBook__Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(723, 417);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(688, 59);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Remove this book";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // ManageBooksForm
             // 
@@ -932,9 +994,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1645, 607);
-            this.Controls.Add(this.panel_edit);
             this.Controls.Add(this.label_close_books);
+
             this.Controls.Add(this.panel_add);
+            this.Controls.Add(this.panel_edit);
+            this.Controls.Add(this.panel_ShowBooks);
+            
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_header_books);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -948,6 +1013,8 @@
             this.panel_add.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBookCover)).EndInit();
+            this.panel_ShowBooks.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowBooks)).EndInit();
             this.panel_edit.ResumeLayout(false);
             this.panel_edit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Quantity_Edit)).EndInit();
@@ -994,7 +1061,6 @@
         public System.Windows.Forms.TextBox txtBookAuthor;
         public System.Windows.Forms.Label txtAuthorID;
         private System.Windows.Forms.Button btnClearFields;
-        private System.Windows.Forms.Label label_booksCount;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel_edit;
         public System.Windows.Forms.Label label_AuthorId_Edit;
@@ -1026,5 +1092,10 @@
         private System.Windows.Forms.Button button_searchByIsbn;
         private System.Windows.Forms.Button button_searchById;
         private System.Windows.Forms.Button button_show_book;
+        public System.Windows.Forms.Label label_booksCount;
+        private System.Windows.Forms.Panel panel_ShowBooks;
+        private System.Windows.Forms.DataGridView dataGridView_ShowBooks;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_editBook_;
     }
 }

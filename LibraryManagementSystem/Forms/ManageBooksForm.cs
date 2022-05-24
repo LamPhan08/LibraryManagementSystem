@@ -14,12 +14,13 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class ManageBooksForm : Form
     {
-        private SqlConnection connection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
-        private SqlDataAdapter dataAdapter;
-        private DataTable dataTable;
+        private SqlConnection connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+        private SqlDataAdapter dataAdapter, dataAdapter1;
+        private DataTable dataTable, dataTable1;
         private SqlCommand command;
+        private BindingManagerBase bindingManagerBase_dataTable, bindingManagerBase_dataTable1;
 
-        private int numberOfBooks;
+        public static int numberOfBooks;
         public ManageBooksForm()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace LibraryManagementSystem.Forms
             btnEditBook.Image = Image.FromFile("../../Images/edit.png");
             btnSelectCover.Image = Image.FromFile("../../Images/upload.png");   // in add panel
             button_SelectCover_Edit.Image = Image.FromFile("../../Images/upload.png");
+            button_show_book.Image = Image.FromFile("../../Images/details_list.png");
 
             txtBookID.Enabled = false;
             txtBookISBN.Enabled = false;
@@ -52,6 +54,12 @@ namespace LibraryManagementSystem.Forms
             dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
 
+            dataAdapter1 = new SqlDataAdapter("SELECT ID, TITLE, AUTHOR_ID, GENRE_ID, QUANTITY, PRICE, PUBLISHER, DATE_RECEIVED, DESCRIPTION FROM BOOKS", connection);
+            dataTable1 = new DataTable();
+            dataAdapter1.Fill(dataTable1);
+
+            dataGridView_ShowBooks.DataSource = dataTable1;
+
             comboBoxBookGenre.DataSource = dataTable;
             comboBoxBookGenre.DisplayMember = "Name";
             comboBoxBookGenre.ValueMember = "ID";
@@ -59,6 +67,9 @@ namespace LibraryManagementSystem.Forms
             comboBox_Genre_Edit.DataSource = dataTable;
             comboBox_Genre_Edit.DisplayMember = "Name";
             comboBox_Genre_Edit.ValueMember = "ID";
+
+            bindingManagerBase_dataTable = BindingContext[dataTable];
+            bindingManagerBase_dataTable1 = BindingContext[dataTable1];
 
             numberOfBooks = 0;
             connection.Open();
@@ -133,7 +144,7 @@ namespace LibraryManagementSystem.Forms
 
                 try
                 {
-                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select ISBN from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                     if (database.Rows.Count > 0)
@@ -281,7 +292,7 @@ namespace LibraryManagementSystem.Forms
 
                 try
                 {
-                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                     if (database.Rows.Count > 0)
@@ -298,7 +309,6 @@ namespace LibraryManagementSystem.Forms
                         }
                         else
                         {
-                            // lỗi update tại đây
                             connection.Open();
                             //command = new SqlCommand
                             //   (
@@ -370,23 +380,13 @@ namespace LibraryManagementSystem.Forms
             }
             try
             {
-                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ID = '" + textBox_ID_Edit.Text + "'");
                 Database.Database authorsDatabase = new Database.Database("AUTHORS", "select * from AUTHORS where ID = '" + int.Parse(database.Rows[0][3].ToString()) + "'");
                 Database.Database gerneDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
                 if (database.Rows.Count > 0)
                 {
-                    textBox_ID_Edit.Text = database.Rows[0][0].ToString();
-                    textBox_ISBN_Edit.Text = database.Rows[0][1].ToString();
-                    textBox_Title_Edit.Text = database.Rows[0][2].ToString();
-                    textBox_Author_Edit.Text = authorsDatabase.Rows[0][1].ToString() + " " + authorsDatabase.Rows[0][2].ToString();
-                    label_AuthorId_Edit.Text = database.Rows[0][3].ToString();
-                    comboBox_Genre_Edit.Text = gerneDatabase.Rows[0][0].ToString();
-                    numericUpDown_Quantity_Edit.Value = Convert.ToInt32(database.Rows[0][5].ToString());
-                    textBox_Price_Edit.Text = database.Rows[0][6].ToString();
-                    textBox_Publisher_Edit.Text = database.Rows[0][7].ToString();
-                    dateTimePicker_DateReceived_Edit.Text = database.Rows[0][8].ToString();
-                    richTextBox_Description_Edit.Text = database.Rows[0][9].ToString();
+                    displayingData(database, authorsDatabase, gerneDatabase);
 
                     ////specifically book cover
                     //byte[] cover = (byte[])database.Rows[0]["COVER"];
@@ -416,28 +416,13 @@ namespace LibraryManagementSystem.Forms
             }
             try
             {
-                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + textBox_ISBN_Edit.Text + "'");
                 Database.Database authorsDatabase = new Database.Database("AUTHORS", "select * from AUTHORS where ID = '" + int.Parse(database.Rows[0][3].ToString()) + "'");
-                Database.Database gerneDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
+                Database.Database genreDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
                 if (database.Rows.Count > 0)
                 {
-                    textBox_ID_Edit.Text = database.Rows[0][0].ToString();
-                    textBox_ISBN_Edit.Text = database.Rows[0][1].ToString();
-                    textBox_Title_Edit.Text = database.Rows[0][2].ToString();
-                    textBox_Author_Edit.Text = authorsDatabase.Rows[0][1].ToString() + " " + authorsDatabase.Rows[0][2].ToString();
-                    label_AuthorId_Edit.Text = database.Rows[0][3].ToString();
-                    comboBox_Genre_Edit.Text = gerneDatabase.Rows[0][0].ToString();
-                    numericUpDown_Quantity_Edit.Value = Convert.ToInt32(database.Rows[0][5].ToString());
-                    textBox_Price_Edit.Text = database.Rows[0][6].ToString();
-                    textBox_Publisher_Edit.Text = database.Rows[0][7].ToString();
-                    dateTimePicker_DateReceived_Edit.Text = database.Rows[0][8].ToString();
-                    richTextBox_Description_Edit.Text = database.Rows[0][9].ToString();
-
-                    // specifically book cover
-                    //byte[] cover = (byte[])database.Rows[0][10];
-                    //MemoryStream memoryStream = new MemoryStream(cover);
-                    //pictureBox_Cover_Edit.Image = Image.FromStream(memoryStream);
+                    displayingData(database, authorsDatabase, genreDatabase);
                 }
                 else
                 {
@@ -450,19 +435,118 @@ namespace LibraryManagementSystem.Forms
             }
         }
 
-        //public void displayingData(Database.Database database)
-        //{
-        //    // lỗi ngay tên
-        //}
+        public void displayingData(Database.Database database, Database.Database authorsDatabase, Database.Database genreDatabase)
+        {
+            textBox_ID_Edit.Text = database.Rows[0][0].ToString();
+            textBox_ISBN_Edit.Text = database.Rows[0][1].ToString();
+            textBox_Title_Edit.Text = database.Rows[0][2].ToString();
+            textBox_Author_Edit.Text = authorsDatabase.Rows[0][1].ToString() + " " + authorsDatabase.Rows[0][2].ToString();
+            label_AuthorId_Edit.Text = database.Rows[0][3].ToString();
+            comboBox_Genre_Edit.Text = genreDatabase.Rows[0][0].ToString();
+            numericUpDown_Quantity_Edit.Value = Convert.ToInt32(database.Rows[0][5].ToString());
+            textBox_Price_Edit.Text = database.Rows[0][6].ToString();
+            textBox_Publisher_Edit.Text = database.Rows[0][7].ToString();
+            dateTimePicker_DateReceived_Edit.Text = database.Rows[0][8].ToString();
+            richTextBox_Description_Edit.Text = database.Rows[0][9].ToString();
+
+            // specifically book cover
+            //byte[] cover = (byte[])database.Rows[0][10];
+            //MemoryStream memoryStream = new MemoryStream(cover);
+            //pictureBox_Cover_Edit.Image = Image.FromStream(memoryStream);
+        }
 
         private void button_show_book_Click(object sender, EventArgs e)
         {
+            panel_ShowBooks.BringToFront();
+        }
 
+        private void button_editBook__Click(object sender, EventArgs e)
+        {
+            panel_edit.BringToFront();
+
+            // stop here
+
+            //dataAdapter = new SqlDataAdapter("SELECT ID, NAME FROM GENRES", connection);
+            //dataTable = new DataTable();
+            //dataAdapter.FillSchema(dataTable, SchemaType.Mapped);
+            //dataAdapter.Fill(dataTable);
+
+            dataTable1 = new DataTable();
+            dataAdapter1 = new SqlDataAdapter("SELECT ID, TITLE, AUTHOR_ID, GENRE_ID, QUANTITY, PRICE, PUBLISHER, DATE_RECEIVED, DESCRIPTION FROM BOOKS INNER JOIN GENRES", connection);
+            
+            
+            dataAdapter1.Fill(dataTable1);
+
+            comboBox_Genre_Edit.DataSource = dataTable;
+            comboBox_Genre_Edit.DisplayMember = "Name";
+            comboBox_Genre_Edit.ValueMember = "ID";
+
+            bindingManagerBase_dataTable1 = BindingContext[dataTable1];
+            bindingManagerBase_dataTable1.PositionChanged += BindingManagerBase_dataTable1_PositionChanged;
+
+            //DataRow row1 = dataTable1.Rows[bindingManagerBase_dataTable1.Position],
+            //    row = dataTable.Rows[bindingManagerBase_dataTable.Position];
+
+            //textBox_ID_Edit.Text = row1["ID"].ToString();
+            //textBox_ISBN_Edit.Text = row["ISBN"].ToString();
+            //textBox_Title_Edit.Text = row1["TITLE"].ToString();
+            //textBox_Author_Edit.Text = row["FIRSTNAME"].ToString() + " " + row["LASTNAME"].ToString();
+            //label_AuthorId_Edit.Text = row1["AUTHOR_ID"].ToString();
+            //comboBox_Genre_Edit.Text = row["NAME"].ToString();
+            //numericUpDown_Quantity_Edit.Value = int.Parse(row1["QUANTITY"].ToString());
+            //textBox_Price_Edit.Text = row1["PRICE"].ToString();
+            //textBox_Publisher_Edit.Text = row1["PUBLISHER"].ToString();
+            //dateTimePicker_DateReceived_Edit.Text = row1["DATE_RECEIVED"].ToString();
+            //richTextBox_Description_Edit.Text = row1["DESCRIPTION"].ToString();
+        }
+
+        private void BindingManagerBase_dataTable1_PositionChanged(object sender, EventArgs e)
+        {
+            DataRow row1 = dataTable1.Rows[bindingManagerBase_dataTable1.Position];
+
+            textBox_ID_Edit.Text = row1["ID"].ToString();
+            textBox_ISBN_Edit.Text = row1["ISBN"].ToString();
+            textBox_Title_Edit.Text = row1["TITLE"].ToString();
+            textBox_Author_Edit.Text = row1["FIRSTNAME"].ToString() + " " + row1["LASTNAME"].ToString();
+            label_AuthorId_Edit.Text = row1["AUTHOR_ID"].ToString();
+            comboBox_Genre_Edit.Text = row1["NAME"].ToString();
+            numericUpDown_Quantity_Edit.Value = int.Parse(row1["QUANTITY"].ToString());
+            textBox_Price_Edit.Text = row1["PRICE"].ToString();
+            textBox_Publisher_Edit.Text = row1["PUBLISHER"].ToString();
+            dateTimePicker_DateReceived_Edit.Text = row1["DATE_RECEIVED"].ToString();
+            richTextBox_Description_Edit.Text = row1["DESCRIPTION"].ToString();
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
-            // vì đang có lỗi update nên tui chưa dám cài đặt xóa chỗ này
+            RemoveBookForm removeBookForm = new RemoveBookForm();
+            removeBookForm.Show();
+        }
+
+        public void deleteBook(int id)
+        {
+            try
+            {
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
+
+                connection.Open();
+                command = new SqlCommand("DELETE FROM BOOKS WHERE ID = " + id, connection);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                MessageBox.Show("Add Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                numberOfBooks--;
+                label_booksCount.Text = numberOfBooks.ToString() + " books";
+
+                ClearFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
