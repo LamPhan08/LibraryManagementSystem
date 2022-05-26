@@ -14,7 +14,7 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class ManageBooksForm : Form
     {
-        private SqlConnection connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+        private SqlConnection connection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
         private SqlDataAdapter dataAdapter, dataAdapter1;
         private DataTable dataTable, dataTable1;
         private SqlCommand command;
@@ -54,11 +54,8 @@ namespace LibraryManagementSystem.Forms
             dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
 
-            dataAdapter1 = new SqlDataAdapter("SELECT ID, TITLE, AUTHOR_ID, GENRE_ID, QUANTITY, PRICE, PUBLISHER, DATE_RECEIVED, DESCRIPTION FROM BOOKS", connection);
-            dataTable1 = new DataTable();
-            dataAdapter1.Fill(dataTable1);
+            loadDataGridView();
 
-            dataGridView_ShowBooks.DataSource = dataTable1;
 
             comboBoxBookGenre.DataSource = dataTable;
             comboBoxBookGenre.DisplayMember = "Name";
@@ -91,7 +88,9 @@ namespace LibraryManagementSystem.Forms
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            openFileDialog.Filter = "Choose Image (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+            openFileDialog.Title = "Choose Image";
+
+            openFileDialog.Filter = "(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -140,11 +139,11 @@ namespace LibraryManagementSystem.Forms
 
                 MemoryStream memory = new MemoryStream();
                 pictureBookCover.Image.Save(memory, pictureBookCover.Image.RawFormat);
-                byte[] book_cover = memory.ToArray();
+              
 
                 try
                 {
-                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select ISBN from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                     if (database.Rows.Count > 0)
@@ -170,8 +169,9 @@ namespace LibraryManagementSystem.Forms
                                 "" + price + ", " +
                                 "'" + txtBookPublisher.Text + "', " +
                                 "'" + date + "', " +
-                                "'" + richTextBox_BookDescription.Text + "', " +
-                                "'" + book_cover + "')", connection);
+                                "'" + richTextBox_BookDescription.Text + "', @image)", connection);
+
+                            command.Parameters.AddWithValue("image", memory.ToArray());
 
                             command.ExecuteNonQuery();
                             connection.Close();
@@ -190,6 +190,8 @@ namespace LibraryManagementSystem.Forms
                     MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            loadDataGridView();
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
@@ -288,11 +290,10 @@ namespace LibraryManagementSystem.Forms
 
                 MemoryStream memory = new MemoryStream();
                 pictureBox_Cover_Edit.Image.Save(memory, pictureBox_Cover_Edit.Image.RawFormat);
-                byte[] book_cover = memory.ToArray();
 
                 try
                 {
-                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                     if (database.Rows.Count > 0)
@@ -337,7 +338,9 @@ namespace LibraryManagementSystem.Forms
                                 "PUBLISHER = '" + publisher + "', " +
                                 "DATE_RECEIVED = '" + date + "', " +
                                 "DESCRIPTION = '" + description + "', " +
-                                "COVER = '" + book_cover + "' WHERE ID = " + book_id, connection);
+                                "COVER = @image WHERE ID = " + book_id, connection);
+
+                            command.Parameters.AddWithValue("image", memory.ToArray());
 
                             command.ExecuteNonQuery();
                             connection.Close();
@@ -354,6 +357,8 @@ namespace LibraryManagementSystem.Forms
                     MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            loadDataGridView();
         }
 
         private void button_SelectCover_Edit_Click(object sender, EventArgs e)
@@ -380,7 +385,7 @@ namespace LibraryManagementSystem.Forms
             }
             try
             {
-                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ID = '" + textBox_ID_Edit.Text + "'");
                 Database.Database authorsDatabase = new Database.Database("AUTHORS", "select * from AUTHORS where ID = '" + int.Parse(database.Rows[0][3].ToString()) + "'");
                 Database.Database gerneDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
@@ -416,7 +421,7 @@ namespace LibraryManagementSystem.Forms
             }
             try
             {
-                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + textBox_ISBN_Edit.Text + "'");
                 Database.Database authorsDatabase = new Database.Database("AUTHORS", "select * from AUTHORS where ID = '" + int.Parse(database.Rows[0][3].ToString()) + "'");
                 Database.Database genreDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
@@ -450,14 +455,30 @@ namespace LibraryManagementSystem.Forms
             richTextBox_Description_Edit.Text = database.Rows[0][9].ToString();
 
             // specifically book cover
-            //byte[] cover = (byte[])database.Rows[0][10];
-            //MemoryStream memoryStream = new MemoryStream(cover);
-            //pictureBox_Cover_Edit.Image = Image.FromStream(memoryStream);
+            byte[] cover = (byte[])database.Rows[0][10];
+            MemoryStream memoryStream = new MemoryStream(cover);
+            pictureBox_Cover_Edit.Image = Image.FromStream(memoryStream);
         }
 
         private void button_show_book_Click(object sender, EventArgs e)
         {
             panel_ShowBooks.BringToFront();
+            loadDataGridView();
+        }
+
+        public void loadDataGridView()
+        {
+            command = new SqlCommand("SELECT * FROM BOOKS", connection);
+            dataAdapter1 = new SqlDataAdapter();
+            dataAdapter1.SelectCommand = command;
+            dataTable1 = new DataTable();
+            dataTable1.Clear();
+            dataAdapter1.Fill(dataTable1);
+            dataGridView_ShowBooks.RowTemplate.Height = 75;
+            dataGridView_ShowBooks.DataSource = dataTable1;
+            DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn();
+            dataGridViewImageColumn = (DataGridViewImageColumn)dataGridView_ShowBooks.Columns[10];
+            dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         private void button_editBook__Click(object sender, EventArgs e)
@@ -527,7 +548,7 @@ namespace LibraryManagementSystem.Forms
         {
             try
             {
-                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                 connection.Open();
@@ -536,7 +557,7 @@ namespace LibraryManagementSystem.Forms
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Add Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Delete Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 numberOfBooks--;
                 label_booksCount.Text = numberOfBooks.ToString() + " books";
@@ -547,6 +568,8 @@ namespace LibraryManagementSystem.Forms
             {
                 MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            loadDataGridView();
         }
     }
 }

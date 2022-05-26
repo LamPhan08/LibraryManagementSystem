@@ -15,3 +15,20 @@ C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\
 C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
 C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe.config
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.pdb
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.AssemblyReference.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.SuggestedBindingRedirects.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.AuthorsList.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.DashboardForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.LoginForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageAuthorsForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageBooksForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageGenresForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.RemoveBookForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Properties.Resources.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.GenerateResource.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
