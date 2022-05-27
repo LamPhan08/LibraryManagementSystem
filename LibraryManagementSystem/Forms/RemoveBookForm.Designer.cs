@@ -139,8 +139,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_close;
-        private System.Windows.Forms.NumericUpDown numericUpDown_BookId;
         private System.Windows.Forms.Button button_deleteBook;
         private System.Windows.Forms.Label label22;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_BookId;
     }
 }

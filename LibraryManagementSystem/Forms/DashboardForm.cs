@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,13 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class DashboardForm : Form
     {
+        private SqlConnection connection;
+        private SqlDataAdapter dataAdapter;
+        private SqlCommand command;
+        private DataTable dataTable;
+
+        public static int numBooks, numAuthors;
+
         public DashboardForm()
         {
             InitializeComponent();
@@ -26,6 +35,10 @@ namespace LibraryManagementSystem.Forms
             btnGenres.Image = Image.FromFile("../../Images/tag.png");
             btnCirculation.Image = Image.FromFile("../../Images/loop.png");
             btnUsers.Image = Image.FromFile("../../Images/users.png");
+
+            label_book.Text = ManageBooksForm.numberOfBooks.ToString();
+            label_author.Text = ManageAuthorsForm.numberOfAuthors.ToString();
+            label_member.Text = "0";
         }
 
         private void picture_close_Click(object sender, EventArgs e)
@@ -49,6 +62,72 @@ namespace LibraryManagementSystem.Forms
         {
             ManageBooksForm manageBooksForm = new ManageBooksForm();
             manageBooksForm.Show();
+        }
+
+        private void DashboardForm_Shown(object sender, EventArgs e)
+        {
+            try
+            {
+                connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                dataAdapter = new SqlDataAdapter("select * from AUTHORS", connection);
+                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
+
+                numAuthors = 0;
+                connection.Open();
+                command = new SqlCommand("SELECT COUNT(*) FROM AUTHORS", connection);
+                numAuthors = (int)command.ExecuteScalar();
+                connection.Close();
+
+                label_author.Text = numAuthors.ToString();
+
+                numBooks = 0;
+                connection.Open();
+                command = new SqlCommand("SELECT COUNT(*) FROM BOOKS", connection);
+                numBooks = (int)command.ExecuteScalar();
+                connection.Close();
+
+                label_book.Text = numBooks.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database database = new Database.Database("BOOKS", "select * from BOOKS");
+                if (database.Rows.Count > 0)
+                {
+                    //byte[] cover1 = (byte[])database.Rows[0][10];
+                    //MemoryStream memoryStream1 = new MemoryStream(cover1);
+                    //panel_1stBook.BackgroundImage = Image.FromStream(memoryStream1);
+
+                    //byte[] cover2 = (byte[])database.Rows[1][10];
+                    //MemoryStream memoryStream2 = new MemoryStream(cover2);
+                    //panel_2ndBook.BackgroundImage = Image.FromStream(memoryStream2);
+
+                    //byte[] cover3 = (byte[])database.Rows[2][10];
+                    //MemoryStream memoryStream3 = new MemoryStream(cover3);
+                    //panel_3rdBook.BackgroundImage = Image.FromStream(memoryStream3);
+
+                    //byte[] cover4 = (byte[])database.Rows[3][10];
+                    //MemoryStream memoryStream4 = new MemoryStream(cover4);
+                    //panel_4thBook.BackgroundImage = Image.FromStream(memoryStream4);
+
+                    //byte[] cover5 = (byte[])database.Rows[4][10];
+                    //MemoryStream memoryStream5 = new MemoryStream(cover5);
+                    //panel_5thBook.BackgroundImage = Image.FromStream(memoryStream5);
+                }
+                else
+                {
+                    MessageBox.Show("This ID doesn't exist! Select a diiferent ID.", "ID not found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

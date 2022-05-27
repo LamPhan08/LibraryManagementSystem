@@ -65,3 +65,5 @@ SELECT * FROM BOOKS
 select sum(QUANTITY) as TONG_SACH from BOOKS where AUTHOR_ID = '2'
 
 DELETE FROM BOOKS
+
+select * from BOOKS b inner join GENRES g on b.GENRE_ID = g.ID

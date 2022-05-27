@@ -15,9 +15,12 @@ namespace LibraryManagementSystem.Forms
     {
         private SqlConnection sqlConnection;
         private SqlDataAdapter dataAdapter;
+        private SqlCommand command;
         private DataTable dataTable;
         private BindingManagerBase managerBase;
         private bool isAdded = false;
+
+        public static int numberOfAuthors;
 
         public ManageAuthorsForm()
         {
@@ -45,11 +48,22 @@ namespace LibraryManagementSystem.Forms
             richTextBox_AuthorBio.ReadOnly = true;
             btnUpdateAuthor.Enabled = false;
 
+            
+
             try
             {
-                sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from AUTHORS", sqlConnection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
+
+                numberOfAuthors = 0;
+                sqlConnection.Open();
+                command = new SqlCommand("SELECT COUNT(*) FROM AUTHORS", sqlConnection);
+                numberOfAuthors = (int)command.ExecuteScalar();
+                sqlConnection.Close();
+
+                label_authorsCount.Text = numberOfAuthors.ToString() + " authors";
+
                 dataTable = new DataTable();
 
                 dataAdapter.FillSchema(dataTable, SchemaType.Mapped);
@@ -142,6 +156,10 @@ namespace LibraryManagementSystem.Forms
                         managerBase.Position = managerBase.Count;
 
                         MessageBox.Show("Update Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        numberOfAuthors++;
+                        label_authorsCount.Text = numberOfAuthors.ToString() + " authors";
+
                     }
                     else
                     {
@@ -199,7 +217,7 @@ namespace LibraryManagementSystem.Forms
                 if (MessageBox.Show("Are you sure you want to delete it?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
-                    sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                    sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                     sqlConnection.Open();
                     SqlCommand command = new SqlCommand("Delete from AUTHORS where ID = '" + row["ID"].ToString() + "'", sqlConnection);
                     command.ExecuteNonQuery();
@@ -213,6 +231,9 @@ namespace LibraryManagementSystem.Forms
                     ManagerBase_PositionChanged(null, null);
 
                     MessageBox.Show("Delete Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    numberOfAuthors--;
+                    label_authorsCount.Text = numberOfAuthors.ToString() + " authors";
                 }
             }
             catch (Exception ex)
