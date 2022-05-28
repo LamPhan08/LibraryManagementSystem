@@ -35,6 +35,7 @@ namespace LibraryManagementSystem.Forms
             btnGenres.Image = Image.FromFile("../../Images/tag.png");
             btnCirculation.Image = Image.FromFile("../../Images/loop.png");
             btnUsers.Image = Image.FromFile("../../Images/users.png");
+            btnMembers.Image = Image.FromFile("../../Images/members.png");
 
             label_book.Text = ManageBooksForm.numberOfBooks.ToString();
             label_author.Text = ManageAuthorsForm.numberOfAuthors.ToString();
@@ -62,6 +63,12 @@ namespace LibraryManagementSystem.Forms
         {
             ManageBooksForm manageBooksForm = new ManageBooksForm();
             manageBooksForm.Show();
+        }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            ManageMembersForm manageMembersForm = new ManageMembersForm();
+            manageMembersForm.Show();
         }
 
         private void DashboardForm_Shown(object sender, EventArgs e)
@@ -118,6 +125,39 @@ namespace LibraryManagementSystem.Forms
                     //byte[] cover5 = (byte[])database.Rows[4][10];
                     //MemoryStream memoryStream5 = new MemoryStream(cover5);
                     //panel_5thBook.BackgroundImage = Image.FromStream(memoryStream5);
+
+                    byte[] bytesImage = (byte[])database.Rows[0][10];
+                    MemoryStream memoryStream;
+                    int i = 0;
+                    foreach (var panelControl in panel_displayBooks.Controls)
+                    {
+                        if (panelControl.GetType() == typeof(Panel))
+                        {
+                            Panel panel = (Panel)panelControl;
+                            bytesImage = (byte[])database.Rows[i][10];
+                            memoryStream = new MemoryStream(bytesImage);
+                            panel.BackgroundImage = Image.FromStream(memoryStream);
+                            panel.BackgroundImageLayout = ImageLayout.Stretch;
+                            i++;
+
+                            foreach (var labelControl in panel.Controls)
+                            {
+                                if (labelControl.GetType() == typeof(Label))
+                                {
+                                    Label label = (Label)labelControl;
+
+                                    // error
+                                    //label.Text = database.Rows[i][6].ToString();
+                                }
+                            }
+                        }
+                    }
+                    string unsuedPart = ".0000";
+                    label_bookPrice1.Text = database.Rows[0][6].ToString().Replace(unsuedPart, "") + "đ";
+                    label_bookPrice2.Text = database.Rows[1][6].ToString().Replace(unsuedPart, "") + "đ";
+                    label_bookPrice3.Text = database.Rows[2][6].ToString().Replace(unsuedPart, "") + "đ";
+                    label_bookPrice4.Text = database.Rows[3][6].ToString().Replace(unsuedPart, "") + "đ";
+                    label_bookPrice5.Text = database.Rows[4][6].ToString().Replace(unsuedPart, "") + "đ";
                 }
                 else
                 {

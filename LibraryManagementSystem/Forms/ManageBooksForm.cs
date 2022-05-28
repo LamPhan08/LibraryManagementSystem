@@ -463,9 +463,9 @@ namespace LibraryManagementSystem.Forms
             richTextBox_Description_Edit.Text = database.Rows[0][9].ToString();
 
             // specifically book cover
-            //byte[] cover = (byte[])database.Rows[0][10];
-            //MemoryStream memoryStream = new MemoryStream(cover);
-            //pictureBox_Cover_Edit.Image = Image.FromStream(memoryStream);
+            byte[] cover = (byte[])database.Rows[0][10];
+            MemoryStream memoryStream = new MemoryStream(cover);
+            pictureBox_Cover_Edit.Image = Image.FromStream(memoryStream);
         }
 
         private void button_show_book_Click(object sender, EventArgs e)
@@ -476,8 +476,8 @@ namespace LibraryManagementSystem.Forms
 
         public void loadDataGridView()
         {
-            // command = new SqlCommand("SELECT * BOOKS", connection);
-            command = new SqlCommand("SELECT ID, ISBN, TITLE, AUTHOR_ID, GENRE_ID, QUANTITY, PRICE, PUBLISHER, DATE_RECEIVED, DESCRIPTION FROM BOOKS", connection);
+            command = new SqlCommand("SELECT * FROM BOOKS", connection);
+            //command = new SqlCommand("SELECT ID, ISBN, TITLE, AUTHOR_ID, GENRE_ID, QUANTITY, PRICE, PUBLISHER, DATE_RECEIVED, DESCRIPTION, COVER FROM BOOKS", connection);
             dataAdapter1 = new SqlDataAdapter();
             dataAdapter1.SelectCommand = command;
             dataTable1 = new DataTable();
@@ -485,9 +485,9 @@ namespace LibraryManagementSystem.Forms
             dataAdapter1.Fill(dataTable1);
             dataGridView_ShowBooks.RowTemplate.Height = 75;
             dataGridView_ShowBooks.DataSource = dataTable1;
-            //DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn();
-            //dataGridViewImageColumn = (DataGridViewImageColumn)dataGridView_ShowBooks.Columns[10];
-            //dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            DataGridViewImageColumn dataGridViewImageColumn = new DataGridViewImageColumn();
+            dataGridViewImageColumn = (DataGridViewImageColumn)dataGridView_ShowBooks.Columns[10];
+            dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         private void button_editBook__Click(object sender, EventArgs e)

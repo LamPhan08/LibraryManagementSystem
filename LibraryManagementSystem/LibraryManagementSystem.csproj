@@ -85,6 +85,12 @@
     <Compile Include="Forms\ManageGenresForm.Designer.cs">
       <DependentUpon>ManageGenresForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManageMembersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageMembersForm.Designer.cs">
+      <DependentUpon>ManageMembersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RemoveBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageGenresForm.resx">
       <DependentUpon>ManageGenresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageMembersForm.resx">
+      <DependentUpon>ManageMembersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RemoveBookForm.resx">
       <DependentUpon>RemoveBookForm.cs</DependentUpon>
@@ -156,6 +165,7 @@
     <Content Include="Images\library_logo.png" />
     <Content Include="Images\lock.png" />
     <Content Include="Images\loop.png" />
+    <Content Include="Images\members.png" />
     <Content Include="Images\tag.png" />
     <Content Include="Images\trash.png" />
     <Content Include="Images\update.png" />
@@ -163,6 +173,7 @@
     <Content Include="Images\user.png" />
     <Content Include="Images\users.png" />
     <Content Include="Resources\bookcover.png" />
+    <None Include="Resources\student_cover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

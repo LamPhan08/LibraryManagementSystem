@@ -32,3 +32,4 @@ D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\L
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageMembersForm.resources

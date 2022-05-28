@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMembers = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnCirculation = new System.Windows.Forms.Button();
             this.btnGenres = new System.Windows.Forms.Button();
@@ -39,13 +40,17 @@
             this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.picture_close = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel_displayBooks = new System.Windows.Forms.Panel();
+            this.label_bookPrice5 = new System.Windows.Forms.Label();
             this.panel_5thBook = new System.Windows.Forms.Panel();
             this.panel_4thBook = new System.Windows.Forms.Panel();
+            this.label_bookPrice4 = new System.Windows.Forms.Label();
             this.panel_3rdBook = new System.Windows.Forms.Panel();
+            this.label_bookPrice3 = new System.Windows.Forms.Label();
             this.panel_2ndBook = new System.Windows.Forms.Panel();
+            this.label_bookPrice2 = new System.Windows.Forms.Label();
             this.panel_1stBook = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label_bookPrice1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label_member = new System.Windows.Forms.Label();
@@ -56,16 +61,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label_book = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_close)).BeginInit();
-            this.panel7.SuspendLayout();
+            this.panel_displayBooks.SuspendLayout();
             this.panel_4thBook.SuspendLayout();
             this.panel_3rdBook.SuspendLayout();
             this.panel_2ndBook.SuspendLayout();
@@ -78,6 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.Controls.Add(this.btnMembers);
             this.panel1.Controls.Add(this.btnUsers);
             this.panel1.Controls.Add(this.btnCirculation);
             this.panel1.Controls.Add(this.btnGenres);
@@ -89,8 +91,27 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 677);
+            this.panel1.Size = new System.Drawing.Size(334, 677);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMembers
+            // 
+            this.btnMembers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMembers.FlatAppearance.BorderSize = 0;
+            this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMembers.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMembers.ForeColor = System.Drawing.Color.White;
+            this.btnMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMembers.Location = new System.Drawing.Point(5, 323);
+            this.btnMembers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMembers.Name = "btnMembers";
+            this.btnMembers.Size = new System.Drawing.Size(263, 57);
+            this.btnMembers.TabIndex = 7;
+            this.btnMembers.Text = " Members";
+            this.btnMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMembers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMembers.UseVisualStyleBackColor = true;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // btnUsers
             // 
@@ -100,7 +121,7 @@
             this.btnUsers.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(3, 487);
+            this.btnUsers.Location = new System.Drawing.Point(4, 518);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(263, 57);
@@ -118,7 +139,7 @@
             this.btnCirculation.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCirculation.ForeColor = System.Drawing.Color.White;
             this.btnCirculation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCirculation.Location = new System.Drawing.Point(3, 411);
+            this.btnCirculation.Location = new System.Drawing.Point(5, 453);
             this.btnCirculation.Margin = new System.Windows.Forms.Padding(4);
             this.btnCirculation.Name = "btnCirculation";
             this.btnCirculation.Size = new System.Drawing.Size(263, 57);
@@ -136,7 +157,7 @@
             this.btnGenres.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenres.ForeColor = System.Drawing.Color.White;
             this.btnGenres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenres.Location = new System.Drawing.Point(3, 335);
+            this.btnGenres.Location = new System.Drawing.Point(5, 388);
             this.btnGenres.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenres.Name = "btnGenres";
             this.btnGenres.Size = new System.Drawing.Size(263, 57);
@@ -221,7 +242,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.picture_close);
-            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.panel_displayBooks);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
@@ -242,21 +263,34 @@
             this.picture_close.TabStop = false;
             this.picture_close.Click += new System.EventHandler(this.picture_close_Click);
             // 
-            // panel7
+            // panel_displayBooks
             // 
-            this.panel7.BackColor = System.Drawing.Color.Green;
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.panel_5thBook);
-            this.panel7.Controls.Add(this.panel_4thBook);
-            this.panel7.Controls.Add(this.panel_3rdBook);
-            this.panel7.Controls.Add(this.panel_2ndBook);
-            this.panel7.Controls.Add(this.panel_1stBook);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Location = new System.Drawing.Point(16, 288);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1213, 356);
-            this.panel7.TabIndex = 2;
+            this.panel_displayBooks.BackColor = System.Drawing.Color.Green;
+            this.panel_displayBooks.Controls.Add(this.label_bookPrice5);
+            this.panel_displayBooks.Controls.Add(this.panel_5thBook);
+            this.panel_displayBooks.Controls.Add(this.panel_4thBook);
+            this.panel_displayBooks.Controls.Add(this.panel_3rdBook);
+            this.panel_displayBooks.Controls.Add(this.panel_2ndBook);
+            this.panel_displayBooks.Controls.Add(this.panel_1stBook);
+            this.panel_displayBooks.Controls.Add(this.label8);
+            this.panel_displayBooks.Location = new System.Drawing.Point(16, 288);
+            this.panel_displayBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_displayBooks.Name = "panel_displayBooks";
+            this.panel_displayBooks.Size = new System.Drawing.Size(1213, 356);
+            this.panel_displayBooks.TabIndex = 2;
+            // 
+            // label_bookPrice5
+            // 
+            this.label_bookPrice5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label_bookPrice5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_bookPrice5.ForeColor = System.Drawing.Color.White;
+            this.label_bookPrice5.Location = new System.Drawing.Point(1092, 73);
+            this.label_bookPrice5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice5.Name = "label_bookPrice5";
+            this.label_bookPrice5.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice5.TabIndex = 1;
+            this.label_bookPrice5.Text = "1000d";
+            this.label_bookPrice5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel_5thBook
             // 
@@ -270,55 +304,94 @@
             // panel_4thBook
             // 
             this.panel_4thBook.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel_4thBook.Controls.Add(this.label6);
+            this.panel_4thBook.Controls.Add(this.label_bookPrice4);
             this.panel_4thBook.Location = new System.Drawing.Point(741, 73);
             this.panel_4thBook.Margin = new System.Windows.Forms.Padding(4);
             this.panel_4thBook.Name = "panel_4thBook";
             this.panel_4thBook.Size = new System.Drawing.Size(213, 256);
             this.panel_4thBook.TabIndex = 3;
             // 
+            // label_bookPrice4
+            // 
+            this.label_bookPrice4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label_bookPrice4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_bookPrice4.ForeColor = System.Drawing.Color.White;
+            this.label_bookPrice4.Location = new System.Drawing.Point(109, 0);
+            this.label_bookPrice4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice4.Name = "label_bookPrice4";
+            this.label_bookPrice4.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice4.TabIndex = 4;
+            this.label_bookPrice4.Text = "1000d";
+            this.label_bookPrice4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel_3rdBook
             // 
             this.panel_3rdBook.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel_3rdBook.Controls.Add(this.label4);
+            this.panel_3rdBook.Controls.Add(this.label_bookPrice3);
             this.panel_3rdBook.Location = new System.Drawing.Point(500, 73);
             this.panel_3rdBook.Margin = new System.Windows.Forms.Padding(4);
             this.panel_3rdBook.Name = "panel_3rdBook";
             this.panel_3rdBook.Size = new System.Drawing.Size(213, 256);
             this.panel_3rdBook.TabIndex = 3;
             // 
+            // label_bookPrice3
+            // 
+            this.label_bookPrice3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label_bookPrice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_bookPrice3.ForeColor = System.Drawing.Color.White;
+            this.label_bookPrice3.Location = new System.Drawing.Point(109, 0);
+            this.label_bookPrice3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice3.Name = "label_bookPrice3";
+            this.label_bookPrice3.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice3.TabIndex = 4;
+            this.label_bookPrice3.Text = "1000d";
+            this.label_bookPrice3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel_2ndBook
             // 
             this.panel_2ndBook.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel_2ndBook.Controls.Add(this.label3);
+            this.panel_2ndBook.Controls.Add(this.label_bookPrice2);
             this.panel_2ndBook.Location = new System.Drawing.Point(259, 73);
             this.panel_2ndBook.Margin = new System.Windows.Forms.Padding(4);
             this.panel_2ndBook.Name = "panel_2ndBook";
             this.panel_2ndBook.Size = new System.Drawing.Size(213, 256);
             this.panel_2ndBook.TabIndex = 3;
             // 
+            // label_bookPrice2
+            // 
+            this.label_bookPrice2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label_bookPrice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_bookPrice2.ForeColor = System.Drawing.Color.White;
+            this.label_bookPrice2.Location = new System.Drawing.Point(109, 0);
+            this.label_bookPrice2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice2.Name = "label_bookPrice2";
+            this.label_bookPrice2.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice2.TabIndex = 4;
+            this.label_bookPrice2.Text = "1000d";
+            this.label_bookPrice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel_1stBook
             // 
             this.panel_1stBook.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel_1stBook.Controls.Add(this.label9);
+            this.panel_1stBook.Controls.Add(this.label_bookPrice1);
             this.panel_1stBook.Location = new System.Drawing.Point(17, 73);
             this.panel_1stBook.Margin = new System.Windows.Forms.Padding(4);
             this.panel_1stBook.Name = "panel_1stBook";
             this.panel_1stBook.Size = new System.Drawing.Size(213, 256);
             this.panel_1stBook.TabIndex = 2;
             // 
-            // label9
+            // label_bookPrice1
             // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(108, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 20);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "1000d";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_bookPrice1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label_bookPrice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_bookPrice1.ForeColor = System.Drawing.Color.White;
+            this.label_bookPrice1.Location = new System.Drawing.Point(108, 0);
+            this.label_bookPrice1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice1.Name = "label_bookPrice1";
+            this.label_bookPrice1.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice1.TabIndex = 0;
+            this.label_bookPrice1.Text = "1000d";
+            this.label_bookPrice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -445,58 +518,6 @@
             this.label2.Text = "Books";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(119, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "1000d";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(109, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "1000d";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(109, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "1000d";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(1092, 73);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "1000d";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -517,7 +538,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_close)).EndInit();
-            this.panel7.ResumeLayout(false);
+            this.panel_displayBooks.ResumeLayout(false);
             this.panel_4thBook.ResumeLayout(false);
             this.panel_3rdBook.ResumeLayout(false);
             this.panel_2ndBook.ResumeLayout(false);
@@ -536,7 +557,7 @@
         private System.Windows.Forms.PictureBox pictureLogo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel_displayBooks;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label_member;
@@ -552,16 +573,17 @@
         private System.Windows.Forms.Panel panel_3rdBook;
         private System.Windows.Forms.Panel panel_2ndBook;
         private System.Windows.Forms.Panel panel_1stBook;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_bookPrice1;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnCirculation;
         private System.Windows.Forms.Button btnGenres;
         private System.Windows.Forms.Button btnAuthors;
         private System.Windows.Forms.Button btnBooks;
         private System.Windows.Forms.PictureBox picture_close;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_bookPrice5;
+        private System.Windows.Forms.Label label_bookPrice4;
+        private System.Windows.Forms.Label label_bookPrice3;
+        private System.Windows.Forms.Label label_bookPrice2;
+        private System.Windows.Forms.Button btnMembers;
     }
 }
