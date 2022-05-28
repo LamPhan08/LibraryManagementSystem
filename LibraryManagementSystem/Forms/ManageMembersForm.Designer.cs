@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMemberFirstName = new System.Windows.Forms.TextBox();
             this.label_membersCount = new System.Windows.Forms.Label();
-            this.btnShowAuthorBooks = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdateMember = new System.Windows.Forms.Button();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnDeleteMember = new System.Windows.Forms.Button();
@@ -274,17 +274,18 @@
             this.label_membersCount.Text = "999 Members";
             this.label_membersCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnShowAuthorBooks
+            // btnClear
             // 
-            this.btnShowAuthorBooks.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAuthorBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowAuthorBooks.Location = new System.Drawing.Point(8, 246);
-            this.btnShowAuthorBooks.Name = "btnShowAuthorBooks";
-            this.btnShowAuthorBooks.Size = new System.Drawing.Size(127, 68);
-            this.btnShowAuthorBooks.TabIndex = 13;
-            this.btnShowAuthorBooks.Text = " Show   \r\nAuthor\r\nBooks";
-            this.btnShowAuthorBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnShowAuthorBooks.UseVisualStyleBackColor = true;
+            this.btnClear.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(8, 246);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(127, 68);
+            this.btnClear.TabIndex = 13;
+            this.btnClear.Text = " Clear";
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpdateMember
             // 
@@ -342,7 +343,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
             this.panel1.Controls.Add(this.label_membersCount);
-            this.panel1.Controls.Add(this.btnShowAuthorBooks);
+            this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnUpdateMember);
             this.panel1.Controls.Add(this.btnAddMember);
             this.panel1.Controls.Add(this.btnDeleteMember);
@@ -474,7 +475,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMemberFirstName;
         public System.Windows.Forms.Label label_membersCount;
-        private System.Windows.Forms.Button btnShowAuthorBooks;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUpdateMember;
         private System.Windows.Forms.Button btnAddMember;
         private System.Windows.Forms.Button btnDeleteMember;

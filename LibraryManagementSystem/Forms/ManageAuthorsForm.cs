@@ -214,7 +214,7 @@ namespace LibraryManagementSystem.Forms
         {
             try
             {
-                if (MessageBox.Show("Are you sure you want to delete it?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete this author?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
                     sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");

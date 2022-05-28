@@ -36,7 +36,7 @@ namespace LibraryManagementSystem.Forms
             btnEditMember.Image = Image.FromFile("../../Images/edit.png");
             btnUpdateMember.Image = Image.FromFile("../../Images/update.png");
             btnDeleteMember.Image = Image.FromFile("../../Images/trash.png");
-            btnShowAuthorBooks.Image = Image.FromFile("../../Images/books.png");
+            btnClear.Image = Image.FromFile("../../Images/broom.png");
 
             txtMemberID.ReadOnly = true;
             txtMemberFirstName.ReadOnly = true;
@@ -228,7 +228,7 @@ namespace LibraryManagementSystem.Forms
         {
             try
             {
-                if (MessageBox.Show("Are you sure you want to delete it?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete this member?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
                     sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
@@ -262,6 +262,22 @@ namespace LibraryManagementSystem.Forms
         private void label_close_members_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtMemberID.Text = "";
+            txtMemberFirstName.Text = "";
+            txtMemberLastName.Text = "";
+            radioButton_Female.Checked = false;
+            radioButton_Male.Checked = false;
+            textBox_Email.Text = "";
+            textBox_Phone.Text = "";
+
+            txtMemberFirstName.ReadOnly = true;
+            txtMemberLastName.ReadOnly = true;
+            textBox_Email.ReadOnly = true;
+            textBox_Phone.ReadOnly = true;
         }
     }
 }
