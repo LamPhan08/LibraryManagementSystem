@@ -252,5 +252,22 @@ namespace LibraryManagementSystem.Forms
         {
             label_close_authors.ForeColor = Color.White;
         }
+
+        private void btnShowAuthorBooks_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    int authorId = Convert.ToInt32(dataGridView_Authors.CurrentRow.Cells[0].Value.ToString());
+            //    String firstName = dataGridView_Authors.CurrentRow.Cells[1].Value.ToString(),
+            //        lastName = dataGridView_Authors.CurrentRow.Cells[2].Value.ToString();
+            //    String fullName = firstName + " " + lastName;
+            //    BookListForm bookListForm = new BookListForm(authorId, fullName);
+            //    bookListForm.Show();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
     }
 }

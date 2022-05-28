@@ -591,6 +591,7 @@ namespace LibraryManagementSystem.Forms
             removeBookForm.Show();
         }
 
+        // unused
         public void deleteBook(int id)
         {
             try

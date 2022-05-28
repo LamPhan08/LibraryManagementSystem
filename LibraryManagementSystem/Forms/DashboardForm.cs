@@ -19,7 +19,7 @@ namespace LibraryManagementSystem.Forms
         private SqlCommand command;
         private DataTable dataTable;
 
-        public static int numBooks, numAuthors;
+        public static int numBooks, numAuthors, numMembers;
 
         public DashboardForm()
         {
@@ -94,6 +94,15 @@ namespace LibraryManagementSystem.Forms
                 connection.Close();
 
                 label_book.Text = numBooks.ToString();
+
+                numMembers = 0;
+                connection.Open();
+                command = new SqlCommand("SELECT COUNT(*) FROM MEMBERS", connection);
+                numMembers = (int)command.ExecuteScalar();
+                connection.Close();
+
+                label_member.Text = numMembers.ToString();
+
             }
             catch (Exception ex)
             {
