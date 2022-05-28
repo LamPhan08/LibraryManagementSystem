@@ -89,9 +89,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.Gold;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(334, 677);
+            this.panel1.Size = new System.Drawing.Size(250, 550);
             this.panel1.TabIndex = 0;
             // 
             // btnMembers
@@ -102,10 +101,9 @@
             this.btnMembers.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.Color.White;
             this.btnMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMembers.Location = new System.Drawing.Point(5, 323);
-            this.btnMembers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMembers.Location = new System.Drawing.Point(4, 256);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(263, 57);
+            this.btnMembers.Size = new System.Drawing.Size(197, 46);
             this.btnMembers.TabIndex = 7;
             this.btnMembers.Text = " Members";
             this.btnMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,10 +119,9 @@
             this.btnUsers.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(4, 518);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUsers.Location = new System.Drawing.Point(3, 418);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(263, 57);
+            this.btnUsers.Size = new System.Drawing.Size(197, 46);
             this.btnUsers.TabIndex = 6;
             this.btnUsers.Text = " Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,10 +136,9 @@
             this.btnCirculation.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCirculation.ForeColor = System.Drawing.Color.White;
             this.btnCirculation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCirculation.Location = new System.Drawing.Point(5, 453);
-            this.btnCirculation.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCirculation.Location = new System.Drawing.Point(4, 364);
             this.btnCirculation.Name = "btnCirculation";
-            this.btnCirculation.Size = new System.Drawing.Size(263, 57);
+            this.btnCirculation.Size = new System.Drawing.Size(197, 46);
             this.btnCirculation.TabIndex = 5;
             this.btnCirculation.Text = " Circulation";
             this.btnCirculation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,10 +153,9 @@
             this.btnGenres.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenres.ForeColor = System.Drawing.Color.White;
             this.btnGenres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenres.Location = new System.Drawing.Point(5, 388);
-            this.btnGenres.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGenres.Location = new System.Drawing.Point(4, 310);
             this.btnGenres.Name = "btnGenres";
-            this.btnGenres.Size = new System.Drawing.Size(263, 57);
+            this.btnGenres.Size = new System.Drawing.Size(197, 46);
             this.btnGenres.TabIndex = 4;
             this.btnGenres.Text = " Genres";
             this.btnGenres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,10 +171,9 @@
             this.btnAuthors.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAuthors.ForeColor = System.Drawing.Color.White;
             this.btnAuthors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAuthors.Location = new System.Drawing.Point(3, 258);
-            this.btnAuthors.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAuthors.Location = new System.Drawing.Point(2, 202);
             this.btnAuthors.Name = "btnAuthors";
-            this.btnAuthors.Size = new System.Drawing.Size(263, 57);
+            this.btnAuthors.Size = new System.Drawing.Size(197, 46);
             this.btnAuthors.TabIndex = 3;
             this.btnAuthors.Text = " Authors";
             this.btnAuthors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,10 +189,9 @@
             this.btnBooks.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.ForeColor = System.Drawing.Color.White;
             this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBooks.Location = new System.Drawing.Point(4, 182);
-            this.btnBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBooks.Location = new System.Drawing.Point(3, 148);
             this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(263, 57);
+            this.btnBooks.Size = new System.Drawing.Size(197, 46);
             this.btnBooks.TabIndex = 2;
             this.btnBooks.Text = " Books";
             this.btnBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,28 +205,25 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureLogo);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(281, 114);
+            this.panel2.Size = new System.Drawing.Size(211, 93);
             this.panel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe Print", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(73, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 71);
+            this.label1.Size = new System.Drawing.Size(124, 58);
             this.label1.TabIndex = 2;
             this.label1.Text = "Library";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureLogo
             // 
-            this.pictureLogo.Location = new System.Drawing.Point(5, 18);
-            this.pictureLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureLogo.Location = new System.Drawing.Point(4, 15);
             this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(85, 71);
+            this.pictureLogo.Size = new System.Drawing.Size(64, 58);
             this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureLogo.TabIndex = 1;
             this.pictureLogo.TabStop = false;
@@ -246,19 +236,17 @@
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(273, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(205, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1247, 665);
+            this.panel3.Size = new System.Drawing.Size(935, 540);
             this.panel3.TabIndex = 1;
             // 
             // picture_close
             // 
             this.picture_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picture_close.Location = new System.Drawing.Point(1201, 2);
-            this.picture_close.Margin = new System.Windows.Forms.Padding(4);
+            this.picture_close.Location = new System.Drawing.Point(901, 2);
             this.picture_close.Name = "picture_close";
-            this.picture_close.Size = new System.Drawing.Size(44, 41);
+            this.picture_close.Size = new System.Drawing.Size(33, 33);
             this.picture_close.TabIndex = 3;
             this.picture_close.TabStop = false;
             this.picture_close.Click += new System.EventHandler(this.picture_close_Click);
@@ -273,10 +261,9 @@
             this.panel_displayBooks.Controls.Add(this.panel_2ndBook);
             this.panel_displayBooks.Controls.Add(this.panel_1stBook);
             this.panel_displayBooks.Controls.Add(this.label8);
-            this.panel_displayBooks.Location = new System.Drawing.Point(16, 288);
-            this.panel_displayBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_displayBooks.Location = new System.Drawing.Point(12, 234);
             this.panel_displayBooks.Name = "panel_displayBooks";
-            this.panel_displayBooks.Size = new System.Drawing.Size(1213, 356);
+            this.panel_displayBooks.Size = new System.Drawing.Size(910, 289);
             this.panel_displayBooks.TabIndex = 2;
             // 
             // label_bookPrice5
@@ -284,10 +271,9 @@
             this.label_bookPrice5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label_bookPrice5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_bookPrice5.ForeColor = System.Drawing.Color.White;
-            this.label_bookPrice5.Location = new System.Drawing.Point(1092, 73);
-            this.label_bookPrice5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice5.Location = new System.Drawing.Point(819, 59);
             this.label_bookPrice5.Name = "label_bookPrice5";
-            this.label_bookPrice5.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice5.Size = new System.Drawing.Size(78, 16);
             this.label_bookPrice5.TabIndex = 1;
             this.label_bookPrice5.Text = "1000d";
             this.label_bookPrice5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,20 +281,18 @@
             // panel_5thBook
             // 
             this.panel_5thBook.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel_5thBook.Location = new System.Drawing.Point(983, 73);
-            this.panel_5thBook.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_5thBook.Location = new System.Drawing.Point(737, 59);
             this.panel_5thBook.Name = "panel_5thBook";
-            this.panel_5thBook.Size = new System.Drawing.Size(213, 256);
+            this.panel_5thBook.Size = new System.Drawing.Size(160, 208);
             this.panel_5thBook.TabIndex = 3;
             // 
             // panel_4thBook
             // 
             this.panel_4thBook.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel_4thBook.Controls.Add(this.label_bookPrice4);
-            this.panel_4thBook.Location = new System.Drawing.Point(741, 73);
-            this.panel_4thBook.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_4thBook.Location = new System.Drawing.Point(556, 59);
             this.panel_4thBook.Name = "panel_4thBook";
-            this.panel_4thBook.Size = new System.Drawing.Size(213, 256);
+            this.panel_4thBook.Size = new System.Drawing.Size(160, 208);
             this.panel_4thBook.TabIndex = 3;
             // 
             // label_bookPrice4
@@ -316,10 +300,9 @@
             this.label_bookPrice4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label_bookPrice4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_bookPrice4.ForeColor = System.Drawing.Color.White;
-            this.label_bookPrice4.Location = new System.Drawing.Point(109, 0);
-            this.label_bookPrice4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice4.Location = new System.Drawing.Point(82, 0);
             this.label_bookPrice4.Name = "label_bookPrice4";
-            this.label_bookPrice4.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice4.Size = new System.Drawing.Size(78, 16);
             this.label_bookPrice4.TabIndex = 4;
             this.label_bookPrice4.Text = "1000d";
             this.label_bookPrice4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,10 +311,9 @@
             // 
             this.panel_3rdBook.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel_3rdBook.Controls.Add(this.label_bookPrice3);
-            this.panel_3rdBook.Location = new System.Drawing.Point(500, 73);
-            this.panel_3rdBook.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_3rdBook.Location = new System.Drawing.Point(375, 59);
             this.panel_3rdBook.Name = "panel_3rdBook";
-            this.panel_3rdBook.Size = new System.Drawing.Size(213, 256);
+            this.panel_3rdBook.Size = new System.Drawing.Size(160, 208);
             this.panel_3rdBook.TabIndex = 3;
             // 
             // label_bookPrice3
@@ -339,10 +321,9 @@
             this.label_bookPrice3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label_bookPrice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_bookPrice3.ForeColor = System.Drawing.Color.White;
-            this.label_bookPrice3.Location = new System.Drawing.Point(109, 0);
-            this.label_bookPrice3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice3.Location = new System.Drawing.Point(82, 0);
             this.label_bookPrice3.Name = "label_bookPrice3";
-            this.label_bookPrice3.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice3.Size = new System.Drawing.Size(78, 16);
             this.label_bookPrice3.TabIndex = 4;
             this.label_bookPrice3.Text = "1000d";
             this.label_bookPrice3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,10 +332,9 @@
             // 
             this.panel_2ndBook.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel_2ndBook.Controls.Add(this.label_bookPrice2);
-            this.panel_2ndBook.Location = new System.Drawing.Point(259, 73);
-            this.panel_2ndBook.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_2ndBook.Location = new System.Drawing.Point(194, 59);
             this.panel_2ndBook.Name = "panel_2ndBook";
-            this.panel_2ndBook.Size = new System.Drawing.Size(213, 256);
+            this.panel_2ndBook.Size = new System.Drawing.Size(160, 208);
             this.panel_2ndBook.TabIndex = 3;
             // 
             // label_bookPrice2
@@ -362,10 +342,9 @@
             this.label_bookPrice2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label_bookPrice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_bookPrice2.ForeColor = System.Drawing.Color.White;
-            this.label_bookPrice2.Location = new System.Drawing.Point(109, 0);
-            this.label_bookPrice2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice2.Location = new System.Drawing.Point(82, 0);
             this.label_bookPrice2.Name = "label_bookPrice2";
-            this.label_bookPrice2.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice2.Size = new System.Drawing.Size(78, 16);
             this.label_bookPrice2.TabIndex = 4;
             this.label_bookPrice2.Text = "1000d";
             this.label_bookPrice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -374,10 +353,9 @@
             // 
             this.panel_1stBook.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel_1stBook.Controls.Add(this.label_bookPrice1);
-            this.panel_1stBook.Location = new System.Drawing.Point(17, 73);
-            this.panel_1stBook.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_1stBook.Location = new System.Drawing.Point(13, 59);
             this.panel_1stBook.Name = "panel_1stBook";
-            this.panel_1stBook.Size = new System.Drawing.Size(213, 256);
+            this.panel_1stBook.Size = new System.Drawing.Size(160, 208);
             this.panel_1stBook.TabIndex = 2;
             // 
             // label_bookPrice1
@@ -385,10 +363,9 @@
             this.label_bookPrice1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label_bookPrice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_bookPrice1.ForeColor = System.Drawing.Color.White;
-            this.label_bookPrice1.Location = new System.Drawing.Point(108, 0);
-            this.label_bookPrice1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_bookPrice1.Location = new System.Drawing.Point(81, 0);
             this.label_bookPrice1.Name = "label_bookPrice1";
-            this.label_bookPrice1.Size = new System.Drawing.Size(104, 20);
+            this.label_bookPrice1.Size = new System.Drawing.Size(78, 16);
             this.label_bookPrice1.TabIndex = 0;
             this.label_bookPrice1.Text = "1000d";
             this.label_bookPrice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -400,9 +377,8 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1213, 55);
+            this.label8.Size = new System.Drawing.Size(910, 45);
             this.label8.TabIndex = 1;
             this.label8.Text = "Lastest Books";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -412,20 +388,18 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(126)))), ((int)(((byte)(4)))));
             this.panel6.Controls.Add(this.label_member);
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(848, 76);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(636, 62);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(381, 177);
+            this.panel6.Size = new System.Drawing.Size(286, 144);
             this.panel6.TabIndex = 2;
             // 
             // label_member
             // 
             this.label_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_member.ForeColor = System.Drawing.Color.White;
-            this.label_member.Location = new System.Drawing.Point(0, 79);
-            this.label_member.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_member.Location = new System.Drawing.Point(0, 64);
             this.label_member.Name = "label_member";
-            this.label_member.Size = new System.Drawing.Size(381, 55);
+            this.label_member.Size = new System.Drawing.Size(286, 45);
             this.label_member.TabIndex = 3;
             this.label_member.Text = "999";
             this.label_member.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -437,9 +411,8 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(381, 55);
+            this.label7.Size = new System.Drawing.Size(286, 45);
             this.label7.TabIndex = 2;
             this.label7.Text = "Members";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -449,20 +422,18 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
             this.panel5.Controls.Add(this.label_author);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(432, 76);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(324, 62);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(381, 177);
+            this.panel5.Size = new System.Drawing.Size(286, 144);
             this.panel5.TabIndex = 2;
             // 
             // label_author
             // 
             this.label_author.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_author.ForeColor = System.Drawing.Color.White;
-            this.label_author.Location = new System.Drawing.Point(0, 79);
-            this.label_author.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_author.Location = new System.Drawing.Point(0, 64);
             this.label_author.Name = "label_author";
-            this.label_author.Size = new System.Drawing.Size(381, 55);
+            this.label_author.Size = new System.Drawing.Size(286, 45);
             this.label_author.TabIndex = 3;
             this.label_author.Text = "999";
             this.label_author.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -474,9 +445,8 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(381, 55);
+            this.label5.Size = new System.Drawing.Size(286, 45);
             this.label5.TabIndex = 2;
             this.label5.Text = "Authors";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -486,20 +456,18 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.panel4.Controls.Add(this.label_book);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(16, 76);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(12, 62);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(381, 177);
+            this.panel4.Size = new System.Drawing.Size(286, 144);
             this.panel4.TabIndex = 1;
             // 
             // label_book
             // 
             this.label_book.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_book.ForeColor = System.Drawing.Color.White;
-            this.label_book.Location = new System.Drawing.Point(0, 79);
-            this.label_book.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_book.Location = new System.Drawing.Point(0, 64);
             this.label_book.Name = "label_book";
-            this.label_book.Size = new System.Drawing.Size(381, 55);
+            this.label_book.Size = new System.Drawing.Size(286, 45);
             this.label_book.TabIndex = 1;
             this.label_book.Text = "999";
             this.label_book.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -511,23 +479,21 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(381, 55);
+            this.label2.Size = new System.Drawing.Size(286, 45);
             this.label2.TabIndex = 0;
             this.label2.Text = "Books";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(1528, 677);
+            this.ClientSize = new System.Drawing.Size(1146, 550);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardForm";

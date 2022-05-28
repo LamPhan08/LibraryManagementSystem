@@ -34,3 +34,5 @@ D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\L
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
 C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageMembersForm.resources
 C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.BookListForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.BookListForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageMembersForm.resources

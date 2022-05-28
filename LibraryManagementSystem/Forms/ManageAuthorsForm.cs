@@ -52,7 +52,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from AUTHORS", sqlConnection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -217,7 +217,7 @@ namespace LibraryManagementSystem.Forms
                 if (MessageBox.Show("Are you sure you want to delete this author?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
-                    sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                    sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                     sqlConnection.Open();
                     SqlCommand command = new SqlCommand("Delete from AUTHORS where ID = '" + row["ID"].ToString() + "'", sqlConnection);
                     command.ExecuteNonQuery();
@@ -255,19 +255,19 @@ namespace LibraryManagementSystem.Forms
 
         private void btnShowAuthorBooks_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int authorId = Convert.ToInt32(dataGridView_Authors.CurrentRow.Cells[0].Value.ToString());
-            //    String firstName = dataGridView_Authors.CurrentRow.Cells[1].Value.ToString(),
-            //        lastName = dataGridView_Authors.CurrentRow.Cells[2].Value.ToString();
-            //    String fullName = firstName + " " + lastName;
-            //    BookListForm bookListForm = new BookListForm(authorId, fullName);
-            //    bookListForm.Show();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            try
+            {
+                int authorId = Convert.ToInt32(txtAuthorID.Text);
+                String firstName = txtAuthorFirstName.Text,
+                    lastName = txtAuthorLastName.Text;
+                String fullName = firstName + " " + lastName;
+                BookListForm bookListForm = new BookListForm(authorId, fullName);
+                bookListForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

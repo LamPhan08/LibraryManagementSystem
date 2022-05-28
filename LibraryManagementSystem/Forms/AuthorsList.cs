@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class AuthorsList : Form
     {
-        private SqlConnection connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+        private SqlConnection connection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
         private SqlDataAdapter dataAdapter;
         private DataTable dataTable;
 

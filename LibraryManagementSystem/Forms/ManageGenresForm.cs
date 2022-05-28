@@ -56,7 +56,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from GENRES", sqlConnection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
                 dataTable = new DataTable();
@@ -121,7 +121,7 @@ namespace LibraryManagementSystem.Forms
                     if (isAdded) {
                         row = dataTable.NewRow();
 
-                        Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                        Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                         Database.Database database = new Database.Database("GENRES", "select NAME from GENRES where NAME = '" + txtGenreName.Text + "'");
 
                         if (database.Rows.Count > 0)
@@ -181,7 +181,7 @@ namespace LibraryManagementSystem.Forms
                 if (MessageBox.Show("Are you sure you want to delete it?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
-                    sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                    sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                     sqlConnection.Open();
                     SqlCommand command = new SqlCommand("Delete from GENRES where ID = '" + row["ID"].ToString() + "'", sqlConnection);
                     command.ExecuteNonQuery();

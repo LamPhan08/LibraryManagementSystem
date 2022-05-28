@@ -47,7 +47,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from MEMBERS", sqlConnection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -231,7 +231,7 @@ namespace LibraryManagementSystem.Forms
                 if (MessageBox.Show("Are you sure you want to delete this member?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
-                    sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                    sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                     sqlConnection.Open();
                     SqlCommand command = new SqlCommand("Delete from MEMBERS where ID = '" + row["ID"].ToString() + "'", sqlConnection);
                     command.ExecuteNonQuery();

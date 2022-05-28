@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class RemoveBookForm : Form
     {
-        private SqlConnection connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+        private SqlConnection connection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
         private SqlDataAdapter dataAdapter;
         private DataTable dataTable;
         private SqlCommand command;
@@ -36,7 +36,7 @@ namespace LibraryManagementSystem.Forms
             {
                 try
                 {
-                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + id + "'");
 
                     connection.Open();
