@@ -14,7 +14,7 @@ namespace LibraryManagementSystem.Forms
 {
     public partial class ManageBooksForm : Form
     {
-        private SqlConnection connection = new SqlConnection("Server=.; Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+        private SqlConnection connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS; Database=LIBRARY_MANAGEMENT;Integrated Security=true");
         private SqlDataAdapter dataAdapter, dataAdapter1;
         private DataTable dataTable, dataTable1;
         private SqlCommand command;
@@ -43,6 +43,7 @@ namespace LibraryManagementSystem.Forms
             btnSelectCover.Image = Image.FromFile("../../Images/upload.png");   // in add panel
             button_SelectCover_Edit.Image = Image.FromFile("../../Images/upload.png");
             button_show_book.Image = Image.FromFile("../../Images/details_list.png");
+            btnExportBooks.Image = Image.FromFile("../../Images/text_file.png");
 
             txtBookID.Enabled = false;
             txtBookISBN.Enabled = false;
@@ -151,7 +152,7 @@ namespace LibraryManagementSystem.Forms
 
                 try
                 {
-                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select ISBN from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                     if (database.Rows.Count > 0)
@@ -301,7 +302,7 @@ namespace LibraryManagementSystem.Forms
 
                 try
                 {
-                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                     if (database.Rows.Count > 0)
@@ -393,7 +394,7 @@ namespace LibraryManagementSystem.Forms
             }
             try
             {
-                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ID = '" + textBox_ID_Edit.Text + "'");
                 Database.Database authorsDatabase = new Database.Database("AUTHORS", "select * from AUTHORS where ID = '" + int.Parse(database.Rows[0][3].ToString()) + "'");
                 Database.Database gerneDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
@@ -429,7 +430,7 @@ namespace LibraryManagementSystem.Forms
             }
             try
             {
-                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + textBox_ISBN_Edit.Text + "'");
                 Database.Database authorsDatabase = new Database.Database("AUTHORS", "select * from AUTHORS where ID = '" + int.Parse(database.Rows[0][3].ToString()) + "'");
                 Database.Database genreDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
@@ -506,7 +507,7 @@ namespace LibraryManagementSystem.Forms
             }
             try
             {
-                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ID = '" + dataGridView_ShowBooks.CurrentRow.Cells[0].Value.ToString() + "'");
                 Database.Database authorsDatabase = new Database.Database("AUTHORS", "select * from AUTHORS where ID = '" + int.Parse(database.Rows[0][3].ToString()) + "'");
                 Database.Database gerneDatabase = new Database.Database("GENRES", "select NAME from GENRES where ID = '" + int.Parse(database.Rows[0][4].ToString()) + "'");
@@ -540,7 +541,7 @@ namespace LibraryManagementSystem.Forms
             {
                 try
                 {
-                    Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                    Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                     Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + id + "'");
 
                     connection.Open();
@@ -565,6 +566,56 @@ namespace LibraryManagementSystem.Forms
             {
                 Close();
             }
+        }
+
+        private void btnExportBooks_Click(object sender, EventArgs e)
+        {
+            Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+            Database.Database database = new Database.Database("BOOKS", "select * from BOOKS");
+
+            if (!Directory.Exists(@"C:\books"))
+            {
+                Directory.CreateDirectory(@"C:\books");
+            }
+
+            String filePath = @"C:\books\book list.txt";
+
+            if (!File.Exists(filePath))
+            {
+                File.Create(filePath).Close();
+                MessageBox.Show("File created successfully!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            // populate the text file with the book's id, isbn & title
+            TextWriter textWriter = new StreamWriter(filePath);
+
+            String id, isbn, title;
+
+            for (int i = 0; i < database.Rows.Count; i++)
+            {
+                //for (int j = 0; j < database.Columns.Count; j++)
+                //{
+                //    textWriter.Write(database.Rows[i][j].ToString() + " ");
+                //}
+
+                id = database.Rows[i][0].ToString();
+                isbn = database.Rows[i][1].ToString();
+                title = database.Rows[i][2].ToString();
+
+                textWriter.Write
+                    (
+                    "---Book no." + (i + 1) + "---\n" +
+                    "Book ID: " + id + "\n" +
+                    "ISBN number: " + isbn + "\n" +
+                    "Title: " + title
+                    );
+
+                textWriter.WriteLine("");
+                textWriter.WriteLine("-----------------------------------");
+            }
+            textWriter.Close();
+
+            MessageBox.Show("Data exported successfully!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // unused
@@ -596,7 +647,7 @@ namespace LibraryManagementSystem.Forms
         {
             try
             {
-                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where ISBN = '" + txtBookISBN.Text + "'");
 
                 connection.Open();

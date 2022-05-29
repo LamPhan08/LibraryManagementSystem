@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,7 @@ namespace LibraryManagementSystem.Forms
             btnUpdateAuthor.Image = Image.FromFile("../../Images/update.png");
             btnDeleteAuthor.Image = Image.FromFile("../../Images/trash.png");
             btnShowAuthorBooks.Image = Image.FromFile("../../Images/books.png");
+            btnExportAuthors.Image = Image.FromFile("../../Images/text_file.png");
 
             txtAuthorID.ReadOnly = true;
             txtAuthorFirstName.ReadOnly = true;
@@ -52,7 +54,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from AUTHORS", sqlConnection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -217,7 +219,7 @@ namespace LibraryManagementSystem.Forms
                 if (MessageBox.Show("Are you sure you want to delete this author?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
-                    sqlConnection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                    sqlConnection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                     sqlConnection.Open();
                     SqlCommand command = new SqlCommand("Delete from AUTHORS where ID = '" + row["ID"].ToString() + "'", sqlConnection);
                     command.ExecuteNonQuery();
@@ -268,6 +270,51 @@ namespace LibraryManagementSystem.Forms
             {
                 MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnExportAuthors_Click(object sender, EventArgs e)
+        {
+            Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+            Database.Database database = new Database.Database("AUTHORS", "select * from AUTHORS");
+
+            if (!Directory.Exists(@"C:\authors"))
+            {
+                Directory.CreateDirectory(@"C:\authors");
+            }
+
+            String filePath = @"C:\authors\list.txt";
+
+            if (!File.Exists(filePath))
+            {
+                File.Create(filePath).Close();
+                MessageBox.Show("File created successfully!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            // populate the text file with the author's id & fullname
+            TextWriter textWriter = new StreamWriter(filePath);
+
+            String id, firstName, lastName, fullName;
+
+            for (int i = 0; i < database.Rows.Count; i++)
+            {
+                //for (int j = 0; j < database.Columns.Count; j++)
+                //{
+                //    textWriter.Write(database.Rows[i][j].ToString() + " ");
+                //}
+
+                id = database.Rows[i][0].ToString();
+                firstName = database.Rows[i][1].ToString();
+                lastName = database.Rows[i][2].ToString();
+                fullName = firstName + " " + lastName;
+
+                textWriter.Write("ID: " + id + "\nFull name: " + fullName);
+
+                textWriter.WriteLine("");
+                textWriter.WriteLine("-----------------------------------");
+            }
+            textWriter.Close();
+
+            MessageBox.Show("Data exported successfully!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

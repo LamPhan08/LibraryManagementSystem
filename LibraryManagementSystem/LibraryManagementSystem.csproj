@@ -177,6 +177,7 @@
     <Content Include="Images\loop.png" />
     <Content Include="Images\members.png" />
     <Content Include="Images\tag.png" />
+    <Content Include="Images\text_file.png" />
     <Content Include="Images\trash.png" />
     <Content Include="Images\update.png" />
     <Content Include="Images\upload.png" />

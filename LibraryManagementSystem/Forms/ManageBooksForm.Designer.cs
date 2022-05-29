@@ -99,6 +99,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label_close_books = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnExportBooks = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookQuantity)).BeginInit();
@@ -128,6 +129,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.panel1.Controls.Add(this.btnExportBooks);
             this.panel1.Controls.Add(this.button_show_book);
             this.panel1.Controls.Add(this.label_booksCount);
             this.panel1.Controls.Add(this.btnAddBook);
@@ -135,7 +137,7 @@
             this.panel1.Controls.Add(this.btnEditBook);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 94);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 513);
             this.panel1.TabIndex = 6;
@@ -146,7 +148,7 @@
             this.button_show_book.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_show_book.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_show_book.Location = new System.Drawing.Point(11, 162);
-            this.button_show_book.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_show_book.Margin = new System.Windows.Forms.Padding(4);
             this.button_show_book.Name = "button_show_book";
             this.button_show_book.Size = new System.Drawing.Size(169, 59);
             this.button_show_book.TabIndex = 51;
@@ -172,7 +174,7 @@
             this.btnAddBook.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddBook.Location = new System.Drawing.Point(11, 22);
-            this.btnAddBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(169, 59);
             this.btnAddBook.TabIndex = 9;
@@ -187,7 +189,7 @@
             this.btnDeleteBook.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteBook.Location = new System.Drawing.Point(11, 230);
-            this.btnDeleteBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteBook.Name = "btnDeleteBook";
             this.btnDeleteBook.Size = new System.Drawing.Size(169, 59);
             this.btnDeleteBook.TabIndex = 11;
@@ -202,7 +204,7 @@
             this.btnEditBook.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditBook.Location = new System.Drawing.Point(11, 94);
-            this.btnEditBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditBook.Name = "btnEditBook";
             this.btnEditBook.Size = new System.Drawing.Size(169, 59);
             this.btnEditBook.TabIndex = 10;
@@ -243,7 +245,7 @@
             this.panel_add.Controls.Add(this.txtBookISBN);
             this.panel_add.Controls.Add(this.labeName);
             this.panel_add.Location = new System.Drawing.Point(197, 100);
-            this.panel_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_add.Margin = new System.Windows.Forms.Padding(4);
             this.panel_add.Name = "panel_add";
             this.panel_add.Size = new System.Drawing.Size(1437, 498);
             this.panel_add.TabIndex = 7;
@@ -266,7 +268,7 @@
             this.btnClearFields.ForeColor = System.Drawing.Color.White;
             this.btnClearFields.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClearFields.Location = new System.Drawing.Point(725, 441);
-            this.btnClearFields.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearFields.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearFields.Name = "btnClearFields";
             this.btnClearFields.Size = new System.Drawing.Size(337, 49);
             this.btnClearFields.TabIndex = 49;
@@ -295,7 +297,7 @@
             this.btnAddNewBook.ForeColor = System.Drawing.Color.White;
             this.btnAddNewBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddNewBook.Location = new System.Drawing.Point(147, 441);
-            this.btnAddNewBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddNewBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNewBook.Name = "btnAddNewBook";
             this.btnAddNewBook.Size = new System.Drawing.Size(337, 49);
             this.btnAddNewBook.TabIndex = 12;
@@ -310,7 +312,7 @@
             this.btnSelectAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSelectAuthor.Location = new System.Drawing.Point(492, 209);
-            this.btnSelectAuthor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAuthor.Name = "btnSelectAuthor";
             this.btnSelectAuthor.Size = new System.Drawing.Size(161, 39);
             this.btnSelectAuthor.TabIndex = 13;
@@ -323,7 +325,7 @@
             // 
             this.txtBookAuthor.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookAuthor.Location = new System.Drawing.Point(147, 209);
-            this.txtBookAuthor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookAuthor.Name = "txtBookAuthor";
             this.txtBookAuthor.Size = new System.Drawing.Size(227, 38);
             this.txtBookAuthor.TabIndex = 47;
@@ -333,7 +335,7 @@
             this.comboBoxBookGenre.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBookGenre.FormattingEnabled = true;
             this.comboBoxBookGenre.Location = new System.Drawing.Point(147, 267);
-            this.comboBoxBookGenre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxBookGenre.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxBookGenre.Name = "comboBoxBookGenre";
             this.comboBoxBookGenre.Size = new System.Drawing.Size(336, 37);
             this.comboBoxBookGenre.TabIndex = 46;
@@ -342,7 +344,7 @@
             // 
             this.numericUpDown_BookQuantity.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_BookQuantity.Location = new System.Drawing.Point(147, 326);
-            this.numericUpDown_BookQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown_BookQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown_BookQuantity.Name = "numericUpDown_BookQuantity";
             this.numericUpDown_BookQuantity.Size = new System.Drawing.Size(185, 38);
             this.numericUpDown_BookQuantity.TabIndex = 44;
@@ -352,7 +354,7 @@
             this.btnSelectCover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectCover.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectCover.Location = new System.Drawing.Point(1101, 398);
-            this.btnSelectCover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectCover.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectCover.Name = "btnSelectCover";
             this.btnSelectCover.Size = new System.Drawing.Size(312, 42);
             this.btnSelectCover.TabIndex = 13;
@@ -377,7 +379,7 @@
             // 
             this.txtBookPublisher.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookPublisher.Location = new System.Drawing.Point(725, 32);
-            this.txtBookPublisher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookPublisher.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookPublisher.Name = "txtBookPublisher";
             this.txtBookPublisher.Size = new System.Drawing.Size(336, 38);
             this.txtBookPublisher.TabIndex = 42;
@@ -388,7 +390,7 @@
             this.pictureBookCover.Image = global::LibraryManagementSystem.Properties.Resources.bookcover;
             this.pictureBookCover.InitialImage = null;
             this.pictureBookCover.Location = new System.Drawing.Point(1101, 66);
-            this.pictureBookCover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBookCover.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBookCover.Name = "pictureBookCover";
             this.pictureBookCover.Size = new System.Drawing.Size(312, 324);
             this.pictureBookCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -422,7 +424,7 @@
             this.dateTimePicker_Books.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_Books.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_Books.Location = new System.Drawing.Point(725, 94);
-            this.dateTimePicker_Books.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker_Books.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_Books.Name = "dateTimePicker_Books";
             this.dateTimePicker_Books.Size = new System.Drawing.Size(336, 30);
             this.dateTimePicker_Books.TabIndex = 37;
@@ -431,7 +433,7 @@
             // 
             this.txtBookPrice.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookPrice.Location = new System.Drawing.Point(147, 383);
-            this.txtBookPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookPrice.Name = "txtBookPrice";
             this.txtBookPrice.Size = new System.Drawing.Size(336, 38);
             this.txtBookPrice.TabIndex = 34;
@@ -473,7 +475,7 @@
             // 
             this.richTextBox_BookDescription.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_BookDescription.Location = new System.Drawing.Point(725, 148);
-            this.richTextBox_BookDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox_BookDescription.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox_BookDescription.Name = "richTextBox_BookDescription";
             this.richTextBox_BookDescription.Size = new System.Drawing.Size(336, 265);
             this.richTextBox_BookDescription.TabIndex = 26;
@@ -505,7 +507,7 @@
             // 
             this.txtBookTitle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookTitle.Location = new System.Drawing.Point(147, 148);
-            this.txtBookTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookTitle.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookTitle.Name = "txtBookTitle";
             this.txtBookTitle.Size = new System.Drawing.Size(336, 38);
             this.txtBookTitle.TabIndex = 23;
@@ -525,7 +527,7 @@
             // 
             this.txtBookID.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookID.Location = new System.Drawing.Point(147, 36);
-            this.txtBookID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookID.Name = "txtBookID";
             this.txtBookID.Size = new System.Drawing.Size(105, 38);
             this.txtBookID.TabIndex = 30;
@@ -545,7 +547,7 @@
             // 
             this.txtBookISBN.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookISBN.Location = new System.Drawing.Point(147, 91);
-            this.txtBookISBN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookISBN.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookISBN.Name = "txtBookISBN";
             this.txtBookISBN.Size = new System.Drawing.Size(336, 38);
             this.txtBookISBN.TabIndex = 22;
@@ -568,7 +570,7 @@
             this.panel_ShowBooks.Controls.Add(this.button_editBook_);
             this.panel_ShowBooks.Controls.Add(this.dataGridView_ShowBooks);
             this.panel_ShowBooks.Location = new System.Drawing.Point(199, 102);
-            this.panel_ShowBooks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_ShowBooks.Margin = new System.Windows.Forms.Padding(4);
             this.panel_ShowBooks.Name = "panel_ShowBooks";
             this.panel_ShowBooks.Size = new System.Drawing.Size(1437, 498);
             this.panel_ShowBooks.TabIndex = 51;
@@ -581,7 +583,7 @@
             this.button_RemoveBook.ForeColor = System.Drawing.Color.White;
             this.button_RemoveBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_RemoveBook.Location = new System.Drawing.Point(723, 417);
-            this.button_RemoveBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_RemoveBook.Margin = new System.Windows.Forms.Padding(4);
             this.button_RemoveBook.Name = "button_RemoveBook";
             this.button_RemoveBook.Size = new System.Drawing.Size(688, 59);
             this.button_RemoveBook.TabIndex = 55;
@@ -598,7 +600,7 @@
             this.button_editBook_.ForeColor = System.Drawing.Color.White;
             this.button_editBook_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_editBook_.Location = new System.Drawing.Point(29, 417);
-            this.button_editBook_.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_editBook_.Margin = new System.Windows.Forms.Padding(4);
             this.button_editBook_.Name = "button_editBook_";
             this.button_editBook_.Size = new System.Drawing.Size(679, 59);
             this.button_editBook_.TabIndex = 54;
@@ -655,7 +657,7 @@
             this.panel_edit.Controls.Add(this.textBox_ISBN_Edit);
             this.panel_edit.Controls.Add(this.label23);
             this.panel_edit.Location = new System.Drawing.Point(197, 100);
-            this.panel_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_edit.Margin = new System.Windows.Forms.Padding(4);
             this.panel_edit.Name = "panel_edit";
             this.panel_edit.Size = new System.Drawing.Size(1437, 498);
             this.panel_edit.TabIndex = 51;
@@ -666,7 +668,7 @@
             this.button_searchByIsbn.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_searchByIsbn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_searchByIsbn.Location = new System.Drawing.Point(273, 92);
-            this.button_searchByIsbn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_searchByIsbn.Margin = new System.Windows.Forms.Padding(4);
             this.button_searchByIsbn.Name = "button_searchByIsbn";
             this.button_searchByIsbn.Size = new System.Drawing.Size(235, 39);
             this.button_searchByIsbn.TabIndex = 51;
@@ -681,7 +683,7 @@
             this.button_searchById.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_searchById.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_searchById.Location = new System.Drawing.Point(323, 34);
-            this.button_searchById.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_searchById.Margin = new System.Windows.Forms.Padding(4);
             this.button_searchById.Name = "button_searchById";
             this.button_searchById.Size = new System.Drawing.Size(185, 39);
             this.button_searchById.TabIndex = 50;
@@ -710,7 +712,7 @@
             this.button_EditBook.ForeColor = System.Drawing.Color.White;
             this.button_EditBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_EditBook.Location = new System.Drawing.Point(147, 441);
-            this.button_EditBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_EditBook.Margin = new System.Windows.Forms.Padding(4);
             this.button_EditBook.Name = "button_EditBook";
             this.button_EditBook.Size = new System.Drawing.Size(1267, 49);
             this.button_EditBook.TabIndex = 12;
@@ -725,7 +727,7 @@
             this.eButtonSelectAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eButtonSelectAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.eButtonSelectAuthor.Location = new System.Drawing.Point(520, 209);
-            this.eButtonSelectAuthor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eButtonSelectAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.eButtonSelectAuthor.Name = "eButtonSelectAuthor";
             this.eButtonSelectAuthor.Size = new System.Drawing.Size(161, 39);
             this.eButtonSelectAuthor.TabIndex = 13;
@@ -738,7 +740,7 @@
             // 
             this.textBox_Author_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Author_Edit.Location = new System.Drawing.Point(147, 209);
-            this.textBox_Author_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Author_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Author_Edit.Name = "textBox_Author_Edit";
             this.textBox_Author_Edit.Size = new System.Drawing.Size(255, 38);
             this.textBox_Author_Edit.TabIndex = 47;
@@ -748,7 +750,7 @@
             this.comboBox_Genre_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Genre_Edit.FormattingEnabled = true;
             this.comboBox_Genre_Edit.Location = new System.Drawing.Point(147, 267);
-            this.comboBox_Genre_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_Genre_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_Genre_Edit.Name = "comboBox_Genre_Edit";
             this.comboBox_Genre_Edit.Size = new System.Drawing.Size(360, 37);
             this.comboBox_Genre_Edit.TabIndex = 46;
@@ -757,7 +759,7 @@
             // 
             this.numericUpDown_Quantity_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_Quantity_Edit.Location = new System.Drawing.Point(147, 326);
-            this.numericUpDown_Quantity_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown_Quantity_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown_Quantity_Edit.Name = "numericUpDown_Quantity_Edit";
             this.numericUpDown_Quantity_Edit.Size = new System.Drawing.Size(360, 38);
             this.numericUpDown_Quantity_Edit.TabIndex = 44;
@@ -767,7 +769,7 @@
             this.button_SelectCover_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_SelectCover_Edit.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_SelectCover_Edit.Location = new System.Drawing.Point(1101, 379);
-            this.button_SelectCover_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_SelectCover_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.button_SelectCover_Edit.Name = "button_SelectCover_Edit";
             this.button_SelectCover_Edit.Size = new System.Drawing.Size(312, 42);
             this.button_SelectCover_Edit.TabIndex = 13;
@@ -792,7 +794,7 @@
             // 
             this.textBox_Publisher_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Publisher_Edit.Location = new System.Drawing.Point(725, 32);
-            this.textBox_Publisher_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Publisher_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Publisher_Edit.Name = "textBox_Publisher_Edit";
             this.textBox_Publisher_Edit.Size = new System.Drawing.Size(336, 38);
             this.textBox_Publisher_Edit.TabIndex = 42;
@@ -803,7 +805,7 @@
             this.pictureBox_Cover_Edit.Image = global::LibraryManagementSystem.Properties.Resources.bookcover;
             this.pictureBox_Cover_Edit.InitialImage = null;
             this.pictureBox_Cover_Edit.Location = new System.Drawing.Point(1101, 66);
-            this.pictureBox_Cover_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox_Cover_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_Cover_Edit.Name = "pictureBox_Cover_Edit";
             this.pictureBox_Cover_Edit.Size = new System.Drawing.Size(312, 305);
             this.pictureBox_Cover_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -837,7 +839,7 @@
             this.dateTimePicker_DateReceived_Edit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_DateReceived_Edit.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_DateReceived_Edit.Location = new System.Drawing.Point(725, 94);
-            this.dateTimePicker_DateReceived_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker_DateReceived_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_DateReceived_Edit.Name = "dateTimePicker_DateReceived_Edit";
             this.dateTimePicker_DateReceived_Edit.Size = new System.Drawing.Size(336, 30);
             this.dateTimePicker_DateReceived_Edit.TabIndex = 37;
@@ -846,7 +848,7 @@
             // 
             this.textBox_Price_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Price_Edit.Location = new System.Drawing.Point(147, 383);
-            this.textBox_Price_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Price_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Price_Edit.Name = "textBox_Price_Edit";
             this.textBox_Price_Edit.Size = new System.Drawing.Size(360, 38);
             this.textBox_Price_Edit.TabIndex = 34;
@@ -888,7 +890,7 @@
             // 
             this.richTextBox_Description_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_Description_Edit.Location = new System.Drawing.Point(725, 148);
-            this.richTextBox_Description_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox_Description_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox_Description_Edit.Name = "richTextBox_Description_Edit";
             this.richTextBox_Description_Edit.Size = new System.Drawing.Size(336, 274);
             this.richTextBox_Description_Edit.TabIndex = 26;
@@ -920,7 +922,7 @@
             // 
             this.textBox_Title_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Title_Edit.Location = new System.Drawing.Point(147, 148);
-            this.textBox_Title_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Title_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Title_Edit.Name = "textBox_Title_Edit";
             this.textBox_Title_Edit.Size = new System.Drawing.Size(360, 38);
             this.textBox_Title_Edit.TabIndex = 23;
@@ -940,7 +942,7 @@
             // 
             this.textBox_ID_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ID_Edit.Location = new System.Drawing.Point(147, 36);
-            this.textBox_ID_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_ID_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_ID_Edit.Name = "textBox_ID_Edit";
             this.textBox_ID_Edit.Size = new System.Drawing.Size(167, 38);
             this.textBox_ID_Edit.TabIndex = 30;
@@ -960,7 +962,7 @@
             // 
             this.textBox_ISBN_Edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ISBN_Edit.Location = new System.Drawing.Point(147, 91);
-            this.textBox_ISBN_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_ISBN_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_ISBN_Edit.Name = "textBox_ISBN_Edit";
             this.textBox_ISBN_Edit.Size = new System.Drawing.Size(119, 38);
             this.textBox_ISBN_Edit.TabIndex = 22;
@@ -994,6 +996,20 @@
             this.label_close_books.MouseEnter += new System.EventHandler(this.label_close_books_MouseEnter);
             this.label_close_books.MouseLeave += new System.EventHandler(this.label_close_books_MouseLeave);
             // 
+            // btnExportBooks
+            // 
+            this.btnExportBooks.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportBooks.Location = new System.Drawing.Point(11, 297);
+            this.btnExportBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExportBooks.Name = "btnExportBooks";
+            this.btnExportBooks.Size = new System.Drawing.Size(169, 84);
+            this.btnExportBooks.TabIndex = 53;
+            this.btnExportBooks.Text = "Export to .txt file";
+            this.btnExportBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExportBooks.UseVisualStyleBackColor = true;
+            this.btnExportBooks.Click += new System.EventHandler(this.btnExportBooks_Click);
+            // 
             // ManageBooksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1001,15 +1017,13 @@
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1645, 607);
             this.Controls.Add(this.label_close_books);
-            
             this.Controls.Add(this.panel_add);
             this.Controls.Add(this.panel_edit);
             this.Controls.Add(this.panel_ShowBooks);
-
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_header_books);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageBooksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageBooksForm";
@@ -1103,5 +1117,6 @@
         private System.Windows.Forms.DataGridView dataGridView_ShowBooks;
         private System.Windows.Forms.Button button_RemoveBook;
         private System.Windows.Forms.Button button_editBook_;
+        private System.Windows.Forms.Button btnExportBooks;
     }
 }

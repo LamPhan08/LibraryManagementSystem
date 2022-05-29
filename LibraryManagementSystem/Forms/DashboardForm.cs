@@ -49,33 +49,47 @@ namespace LibraryManagementSystem.Forms
 
         private void btnGenres_Click(object sender, EventArgs e)
         {
+            selectedButton(btnGenres);
             ManageGenresForm manageGenresForm = new ManageGenresForm();
             manageGenresForm.Show();
         }
 
         private void btnAuthors_Click(object sender, EventArgs e)
         {
+            selectedButton(btnAuthors);
             ManageAuthorsForm manageAuthorsForm = new ManageAuthorsForm();
             manageAuthorsForm.Show();
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
+            selectedButton(btnBooks);
             ManageBooksForm manageBooksForm = new ManageBooksForm();
             manageBooksForm.Show();
         }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
+            selectedButton(btnMembers);
             ManageMembersForm manageMembersForm = new ManageMembersForm();
             manageMembersForm.Show();
+        }
+
+        private void btnCirculation_Click(object sender, EventArgs e)
+        {
+            selectedButton(btnCirculation);
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            selectedButton(btnUsers);
         }
 
         private void DashboardForm_Shown(object sender, EventArgs e)
         {
             try
             {
-                connection = new SqlConnection("Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from AUTHORS", connection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -111,7 +125,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                Database.Database.connection = "Server=.;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS");
                 if (database.Rows.Count > 0)
                 {
@@ -177,6 +191,19 @@ namespace LibraryManagementSystem.Forms
             {
                 MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void selectedButton(Button button)
+        {
+            foreach (Control control in panel_menu.Controls)
+            {
+                if (control.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)control;
+                    btn.BackColor = System.Drawing.Color.FromArgb(218, 165, 32);
+                }
+            }
+            button.BackColor = System.Drawing.Color.FromArgb(255, 215, 0);
         }
     }
 }
