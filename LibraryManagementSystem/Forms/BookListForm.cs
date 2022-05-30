@@ -37,7 +37,7 @@ namespace LibraryManagementSystem.Forms
             // show the selected author's name
             label_author.Text = "Author: " + fullName;
 
-            Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+            Database.Database.connection = "Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
             Database.Database database = new Database.Database("BOOKS", "select * from BOOKS where AUTHOR_ID = " + authorId);
 
             ListViewItem[] items = new ListViewItem[database.Rows.Count];

@@ -36,3 +36,22 @@ C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\
 C:\Users\congd\source\repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.BookListForm.resources
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.BookListForm.resources
 D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageMembersForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe.config
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.pdb
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.AuthorsList.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.BookListForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.DashboardForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.LoginForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageAuthorsForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageBooksForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageCirculationForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageGenresForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageMembersForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.RemoveBookForm.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Properties.Resources.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.GenerateResource.cache
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb

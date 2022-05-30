@@ -78,6 +78,9 @@ namespace LibraryManagementSystem.Forms
         private void btnCirculation_Click(object sender, EventArgs e)
         {
             selectedButton(btnCirculation);
+            ManageCirculationForm mngCirF = new ManageCirculationForm();
+            mngCirF.Show();
+
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -89,7 +92,7 @@ namespace LibraryManagementSystem.Forms
         {
             try
             {
-                connection = new SqlConnection("Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                connection = new SqlConnection("Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from AUTHORS", connection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -125,7 +128,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                Database.Database.connection = "Server=DESKTOP-G8ANP0F\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS");
                 if (database.Rows.Count > 0)
                 {

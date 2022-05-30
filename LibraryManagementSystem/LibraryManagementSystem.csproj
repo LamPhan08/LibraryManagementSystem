@@ -85,6 +85,12 @@
     <Compile Include="Forms\ManageBooksForm.Designer.cs">
       <DependentUpon>ManageBooksForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManageCirculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageCirculationForm.Designer.cs">
+      <DependentUpon>ManageCirculationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManageGenresForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageBooksForm.resx">
       <DependentUpon>ManageBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageCirculationForm.resx">
+      <DependentUpon>ManageCirculationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageGenresForm.resx">
       <DependentUpon>ManageGenresForm.cs</DependentUpon>
@@ -168,14 +177,17 @@
     <Content Include="Images\book.png" />
     <Content Include="Images\books.png" />
     <Content Include="Images\broom.png" />
+    <Content Include="Images\circulation.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\details_list.png" />
     <Content Include="Images\edit.png" />
     <Content Include="Images\genres.png" />
+    <Content Include="Images\issue_book.png" />
     <Content Include="Images\library_logo.png" />
     <Content Include="Images\lock.png" />
     <Content Include="Images\loop.png" />
     <Content Include="Images\members.png" />
+    <Content Include="Images\return_book.png" />
     <Content Include="Images\tag.png" />
     <Content Include="Images\text_file.png" />
     <Content Include="Images\trash.png" />
