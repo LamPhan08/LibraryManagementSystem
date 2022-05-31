@@ -42,5 +42,75 @@ namespace LibraryManagementSystem.Forms
         {
 
         }
+
+        private void btn_SearchBook_Click(object sender, EventArgs e)
+        {
+            Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+            Database.Database database = new Database.Database("Books", "select * from BOOKS where ID = '" + Convert.ToInt32(numericUpDown_BookID.Value) + "'");
+            if(database.Rows.Count>0)
+            {
+                label_bookTitle.Text = database.Rows[0][2].ToString();
+                label_bookTitle.ForeColor = Color.LightGreen;
+            }
+            else
+            {
+                label_bookTitle.Text = "This book does not exits";
+                label_bookTitle.ForeColor = Color.Red;
+            }
+        }
+
+        private void panel_issue_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_SearchMember_Click(object sender, EventArgs e)
+        {
+            Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+            Database.Database database = new Database.Database("Members", "select * from Members where ID = '" + numericUpDown_memberID.Value + "'");
+            if (database.Rows.Count > 0)
+            {
+                label_memberFullName.Text = database.Rows[0][2].ToString();
+                label_memberFullName.ForeColor = Color.LightGreen;
+            }
+            else
+            {
+                label_memberFullName.Text = "This member does not exits";
+                label_memberFullName.ForeColor = Color.Red;
+            }
+        }
+
+        private void label_bookTitle_Click(object sender, EventArgs e)
+        {
+            BookInfoCard infoCard = new BookInfoCard(Convert.ToInt32(numericUpDown_BookID.Value));
+            infoCard.ShowDialog();
+        }
+
+        private void label_bookTitle_MouseEnter(object sender, EventArgs e)
+        {
+            label_bookTitle.Font = new Font(label_bookTitle.Font.FontFamily, 14, FontStyle.Underline);
+               
+        }
+
+        private void label_bookTitle_MouseLeave(object sender, EventArgs e)
+        {
+            label_bookTitle.Font = new Font(label_bookTitle.Font.FontFamily, 12, FontStyle.Regular);
+        }
+
+        private void label_memberFullName_MouseEnter(object sender, EventArgs e)
+        {
+            label_memberFullName.Font = new Font(label_memberFullName.Font.FontFamily, 14, FontStyle.Underline);
+        }
+
+        private void label_memberFullName_MouseLeave(object sender, EventArgs e)
+        {
+            label_memberFullName.Font = new Font(label_memberFullName.Font.FontFamily, 12, FontStyle.Regular);
+        }
+
+        private void label_memberFullName_Click(object sender, EventArgs e)
+        {
+            MemberInfoCard memberInfo = new MemberInfoCard(Convert.ToInt32(numericUpDown_memberID.Value));
+            memberInfo.ShowDialog();
+        }
     }
 }

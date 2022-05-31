@@ -55,6 +55,12 @@
     <Compile Include="Forms\AuthorsList.Designer.cs">
       <DependentUpon>AuthorsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BookInfoCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookInfoCard.Designer.cs">
+      <DependentUpon>BookInfoCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BookListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     <Compile Include="Forms\ManageMembersForm.Designer.cs">
       <DependentUpon>ManageMembersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MemberInfoCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MemberInfoCard.Designer.cs">
+      <DependentUpon>MemberInfoCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RemoveBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AuthorsList.resx">
       <DependentUpon>AuthorsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookInfoCard.resx">
+      <DependentUpon>BookInfoCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BookListForm.resx">
       <DependentUpon>BookListForm.cs</DependentUpon>
@@ -137,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageMembersForm.resx">
       <DependentUpon>ManageMembersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MemberInfoCard.resx">
+      <DependentUpon>MemberInfoCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RemoveBookForm.resx">
       <DependentUpon>RemoveBookForm.cs</DependentUpon>

@@ -88,6 +88,11 @@ namespace LibraryManagementSystem.Forms
             selectedButton(btnUsers);
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void DashboardForm_Shown(object sender, EventArgs e)
         {
             try

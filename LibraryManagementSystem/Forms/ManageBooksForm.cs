@@ -618,6 +618,11 @@ namespace LibraryManagementSystem.Forms
             MessageBox.Show("Data exported successfully!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void panel_add_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         // unused
         private void BindingManagerBase_dataTable1_PositionChanged(object sender, EventArgs e)
         {

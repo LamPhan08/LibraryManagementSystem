@@ -256,6 +256,7 @@
             this.panel_add.Name = "panel_add";
             this.panel_add.Size = new System.Drawing.Size(1078, 405);
             this.panel_add.TabIndex = 7;
+            this.panel_add.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_add_Paint);
             // 
             // label10
             // 
@@ -934,7 +935,7 @@
             this.label_close_books.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_close_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_close_books.ForeColor = System.Drawing.Color.White;
-            this.label_close_books.Location = new System.Drawing.Point(1208, 0);
+            this.label_close_books.Location = new System.Drawing.Point(1225, 0);
             this.label_close_books.Name = "label_close_books";
             this.label_close_books.Size = new System.Drawing.Size(26, 25);
             this.label_close_books.TabIndex = 8;
