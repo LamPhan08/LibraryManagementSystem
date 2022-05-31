@@ -55,3 +55,4 @@ C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\o
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+C:\Users\congd\Source\Repos\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageCirculationForm.resources

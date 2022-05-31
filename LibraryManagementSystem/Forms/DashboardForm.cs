@@ -92,7 +92,7 @@ namespace LibraryManagementSystem.Forms
         {
             try
             {
-                connection = new SqlConnection("Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                connection = new SqlConnection("Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from AUTHORS", connection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -128,7 +128,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                Database.Database.connection = "Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+                Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 Database.Database database = new Database.Database("BOOKS", "select * from BOOKS");
                 if (database.Rows.Count > 0)
                 {

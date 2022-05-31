@@ -54,7 +54,7 @@ namespace LibraryManagementSystem.Forms
 
             try
             {
-                sqlConnection = new SqlConnection("Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                sqlConnection = new SqlConnection("Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                 dataAdapter = new SqlDataAdapter("select * from AUTHORS", sqlConnection);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -219,7 +219,7 @@ namespace LibraryManagementSystem.Forms
                 if (MessageBox.Show("Are you sure you want to delete this author?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataRow row = dataTable.Rows[managerBase.Position];
-                    sqlConnection = new SqlConnection("Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true");
+                    sqlConnection = new SqlConnection("Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true");
                     sqlConnection.Open();
                     SqlCommand command = new SqlCommand("Delete from AUTHORS where ID = '" + row["ID"].ToString() + "'", sqlConnection);
                     command.ExecuteNonQuery();
@@ -274,7 +274,7 @@ namespace LibraryManagementSystem.Forms
 
         private void btnExportAuthors_Click(object sender, EventArgs e)
         {
-            Database.Database.connection = "Server=DESKTOP-J5PVCK3\\SQLEXPRESS;Database=LIBRARY_MANAGEMENT;Integrated Security=true";
+            Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
             Database.Database database = new Database.Database("AUTHORS", "select * from AUTHORS");
 
             if (!Directory.Exists(@"C:\authors"))

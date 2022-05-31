@@ -16,6 +16,9 @@ namespace LibraryManagementSystem.Database
         string tablename;
         string command;
         public static string connection;
+
+        public static string connectionName = "DESKTOP-G8ANP0F\\SQLEXPRESS";
+
         //Tạo hàm kết nối đến CSDL thông qua chuỗi kết nối
         private void CreateConnection()
         {
