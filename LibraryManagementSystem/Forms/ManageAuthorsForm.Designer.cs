@@ -111,6 +111,7 @@
             // 
             // btnExportAuthors
             // 
+            this.btnExportAuthors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExportAuthors.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportAuthors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExportAuthors.Location = new System.Drawing.Point(8, 311);
@@ -136,6 +137,7 @@
             // 
             // btnShowAuthorBooks
             // 
+            this.btnShowAuthorBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowAuthorBooks.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAuthorBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShowAuthorBooks.Location = new System.Drawing.Point(8, 236);
@@ -149,6 +151,7 @@
             // 
             // btnUpdateAuthor
             // 
+            this.btnUpdateAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateAuthor.Location = new System.Drawing.Point(8, 72);
@@ -162,6 +165,7 @@
             // 
             // btnAddAuthor
             // 
+            this.btnAddAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddAuthor.Location = new System.Drawing.Point(8, 18);
@@ -175,6 +179,7 @@
             // 
             // btnDeleteAuthor
             // 
+            this.btnDeleteAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteAuthor.Location = new System.Drawing.Point(8, 182);
@@ -188,6 +193,7 @@
             // 
             // btnEditAuthor
             // 
+            this.btnEditAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditAuthor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditAuthor.Location = new System.Drawing.Point(8, 127);
@@ -217,6 +223,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1115, 499);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dataGridView_Authors
             // 

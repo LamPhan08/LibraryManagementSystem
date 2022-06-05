@@ -279,5 +279,18 @@ namespace LibraryManagementSystem.Forms
             textBox_Email.ReadOnly = true;
             textBox_Phone.ReadOnly = true;
         }
+
+        private void dataGridView_Members_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox_Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar)&&!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

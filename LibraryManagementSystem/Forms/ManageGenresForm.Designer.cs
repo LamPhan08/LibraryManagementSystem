@@ -98,6 +98,7 @@
             // 
             // btnUpdateGenre
             // 
+            this.btnUpdateGenre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateGenre.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateGenre.Location = new System.Drawing.Point(212, 212);
             this.btnUpdateGenre.Name = "btnUpdateGenre";
@@ -110,6 +111,7 @@
             // 
             // btnDeleteGenre
             // 
+            this.btnDeleteGenre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteGenre.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteGenre.Location = new System.Drawing.Point(212, 158);
             this.btnDeleteGenre.Name = "btnDeleteGenre";
@@ -122,6 +124,7 @@
             // 
             // btnEditGenre
             // 
+            this.btnEditGenre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditGenre.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditGenre.Location = new System.Drawing.Point(44, 212);
             this.btnEditGenre.Name = "btnEditGenre";
@@ -134,6 +137,7 @@
             // 
             // btnAddGenre
             // 
+            this.btnAddGenre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddGenre.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddGenre.Location = new System.Drawing.Point(44, 158);
             this.btnAddGenre.Name = "btnAddGenre";

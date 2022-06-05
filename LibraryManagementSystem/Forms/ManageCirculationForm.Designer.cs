@@ -52,31 +52,35 @@ namespace LibraryManagementSystem.Forms
             this.numericUpDown_BookID = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.panel_return = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button_showAll = new System.Windows.Forms.Button();
+            this.button_showLost = new System.Windows.Forms.Button();
+            this.button_showReturned = new System.Windows.Forms.Button();
+            this.button_showIssued = new System.Windows.Forms.Button();
+            this.dataGridView_issue = new System.Windows.Forms.DataGridView();
+            this.button_booklost = new System.Windows.Forms.Button();
+            this.button_return2 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.richTextBox_decription2 = new System.Windows.Forms.RichTextBox();
+            this.dateTimePicker_return2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_Issue2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label_memberFullName2 = new System.Windows.Forms.Label();
+            this.label_bookTitle2 = new System.Windows.Forms.Label();
+            this.numericUpDown_memberId2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_BookId2 = new System.Windows.Forms.NumericUpDown();
             this.label_close_books = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_issue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_memberID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookID)).BeginInit();
             this.panel_return.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_issue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_memberId2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookId2)).BeginInit();
             this.SuspendLayout();
             // 
             // label_header_books
@@ -353,102 +357,201 @@ namespace LibraryManagementSystem.Forms
             // panel_return
             // 
             this.panel_return.BackColor = System.Drawing.Color.SeaShell;
-            this.panel_return.Controls.Add(this.button1);
-            //this.panel_return.Controls.Add(this.panel_issue);
-            this.panel_return.Controls.Add(this.button2);
-            this.panel_return.Controls.Add(this.button3);
-            this.panel_return.Controls.Add(this.richTextBox1);
-            this.panel_return.Controls.Add(this.dateTimePicker1);
-            this.panel_return.Controls.Add(this.dateTimePicker2);
+            this.panel_return.Controls.Add(this.button_showAll);
+            this.panel_return.Controls.Add(this.button_showLost);
+            this.panel_return.Controls.Add(this.button_showReturned);
+            this.panel_return.Controls.Add(this.button_showIssued);
+            this.panel_return.Controls.Add(this.dataGridView_issue);
+            this.panel_return.Controls.Add(this.button_booklost);
+            this.panel_return.Controls.Add(this.button_return2);
+            this.panel_return.Controls.Add(this.label11);
+            this.panel_return.Controls.Add(this.label10);
+            this.panel_return.Controls.Add(this.button_delete);
+            this.panel_return.Controls.Add(this.richTextBox_decription2);
+            this.panel_return.Controls.Add(this.dateTimePicker_return2);
+            this.panel_return.Controls.Add(this.dateTimePicker_Issue2);
             this.panel_return.Controls.Add(this.label3);
             this.panel_return.Controls.Add(this.label8);
             this.panel_return.Controls.Add(this.label9);
-            this.panel_return.Controls.Add(this.label10);
-            this.panel_return.Controls.Add(this.label11);
-            this.panel_return.Controls.Add(this.label12);
-            this.panel_return.Controls.Add(this.label13);
-            this.panel_return.Controls.Add(this.numericUpDown1);
-            this.panel_return.Controls.Add(this.label14);
-            this.panel_return.Controls.Add(this.numericUpDown2);
-            this.panel_return.Controls.Add(this.label15);
+            this.panel_return.Controls.Add(this.label_memberFullName2);
+            this.panel_return.Controls.Add(this.label_bookTitle2);
+            this.panel_return.Controls.Add(this.numericUpDown_memberId2);
+            this.panel_return.Controls.Add(this.numericUpDown_BookId2);
             this.panel_return.Location = new System.Drawing.Point(148, 79);
             this.panel_return.Name = "panel_return";
             this.panel_return.Size = new System.Drawing.Size(830, 409);
             this.panel_return.TabIndex = 62;
             // 
-            // button1
+            // button_showAll
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(404, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 32);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Search";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_showAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_showAll.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_showAll.Location = new System.Drawing.Point(688, 8);
+            this.button_showAll.Name = "button_showAll";
+            this.button_showAll.Size = new System.Drawing.Size(129, 34);
+            this.button_showAll.TabIndex = 70;
+            this.button_showAll.Text = " All";
+            this.button_showAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_showAll.UseVisualStyleBackColor = true;
+            this.button_showAll.Click += new System.EventHandler(this.button_showAll_Click);
             // 
-            // button2
+            // button_showLost
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(404, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 32);
-            this.button2.TabIndex = 60;
-            this.button2.Text = "Search Book";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_showLost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_showLost.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showLost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_showLost.Location = new System.Drawing.Point(559, 7);
+            this.button_showLost.Name = "button_showLost";
+            this.button_showLost.Size = new System.Drawing.Size(126, 34);
+            this.button_showLost.TabIndex = 69;
+            this.button_showLost.Text = " Lost";
+            this.button_showLost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_showLost.UseVisualStyleBackColor = true;
+            this.button_showLost.Click += new System.EventHandler(this.button_showLost_Click);
             // 
-            // button3
+            // button_showReturned
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(203)))), ((int)(((byte)(167)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(70, 357);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(690, 40);
-            this.button3.TabIndex = 59;
-            this.button3.Text = "Issue Book";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_showReturned.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_showReturned.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showReturned.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_showReturned.Location = new System.Drawing.Point(425, 7);
+            this.button_showReturned.Name = "button_showReturned";
+            this.button_showReturned.Size = new System.Drawing.Size(128, 34);
+            this.button_showReturned.TabIndex = 68;
+            this.button_showReturned.Text = " Returned";
+            this.button_showReturned.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_showReturned.UseVisualStyleBackColor = true;
+            this.button_showReturned.Click += new System.EventHandler(this.button_showReturn);
             // 
-            // richTextBox1
+            // button_showIssued
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(219, 265);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(271, 86);
-            this.richTextBox1.TabIndex = 58;
-            this.richTextBox1.Text = "";
+            this.button_showIssued.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_showIssued.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showIssued.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_showIssued.Location = new System.Drawing.Point(300, 8);
+            this.button_showIssued.Name = "button_showIssued";
+            this.button_showIssued.Size = new System.Drawing.Size(119, 34);
+            this.button_showIssued.TabIndex = 67;
+            this.button_showIssued.Text = " Issued";
+            this.button_showIssued.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_showIssued.UseVisualStyleBackColor = true;
+            this.button_showIssued.Click += new System.EventHandler(this.button_showIssued_Click);
             // 
-            // dateTimePicker1
+            // dataGridView_issue
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(259, 233);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 26);
-            this.dateTimePicker1.TabIndex = 57;
+            this.dataGridView_issue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_issue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_issue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView_issue.Location = new System.Drawing.Point(300, 47);
+            this.dataGridView_issue.Name = "dataGridView_issue";
+            this.dataGridView_issue.Size = new System.Drawing.Size(517, 264);
+            this.dataGridView_issue.TabIndex = 66;
+            this.dataGridView_issue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_issue_CellClick);
             // 
-            // dateTimePicker2
+            // button_booklost
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(259, 188);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(139, 26);
-            this.dateTimePicker2.TabIndex = 56;
+            this.button_booklost.BackColor = System.Drawing.Color.Orange;
+            this.button_booklost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_booklost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_booklost.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_booklost.ForeColor = System.Drawing.Color.White;
+            this.button_booklost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_booklost.Location = new System.Drawing.Point(425, 317);
+            this.button_booklost.Name = "button_booklost";
+            this.button_booklost.Size = new System.Drawing.Size(313, 40);
+            this.button_booklost.TabIndex = 65;
+            this.button_booklost.Text = "Book Lost";
+            this.button_booklost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_booklost.UseVisualStyleBackColor = false;
+            this.button_booklost.Click += new System.EventHandler(this.button_BookLost_Click);
+            // 
+            // button_return2
+            // 
+            this.button_return2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button_return2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_return2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_return2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_return2.ForeColor = System.Drawing.Color.White;
+            this.button_return2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_return2.Location = new System.Drawing.Point(101, 317);
+            this.button_return2.Name = "button_return2";
+            this.button_return2.Size = new System.Drawing.Size(318, 40);
+            this.button_return2.TabIndex = 64;
+            this.button_return2.Text = "Return Book";
+            this.button_return2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_return2.UseVisualStyleBackColor = false;
+            this.button_return2.Click += new System.EventHandler(this.button_BookReturn);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 79);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(130, 23);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "Memeber Id:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(13, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 23);
+            this.label10.TabIndex = 62;
+            this.label10.Text = "Book Id:";
+            // 
+            // button_delete
+            // 
+            this.button_delete.BackColor = System.Drawing.Color.Firebrick;
+            this.button_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_delete.Location = new System.Drawing.Point(101, 363);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(637, 40);
+            this.button_delete.TabIndex = 59;
+            this.button_delete.Text = "Delete";
+            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
+            // richTextBox_decription2
+            // 
+            this.richTextBox_decription2.Location = new System.Drawing.Point(84, 205);
+            this.richTextBox_decription2.Name = "richTextBox_decription2";
+            this.richTextBox_decription2.Size = new System.Drawing.Size(186, 79);
+            this.richTextBox_decription2.TabIndex = 58;
+            this.richTextBox_decription2.Text = "";
+            // 
+            // dateTimePicker_return2
+            // 
+            this.dateTimePicker_return2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_return2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_return2.Location = new System.Drawing.Point(142, 170);
+            this.dateTimePicker_return2.Name = "dateTimePicker_return2";
+            this.dateTimePicker_return2.Size = new System.Drawing.Size(139, 26);
+            this.dateTimePicker_return2.TabIndex = 57;
+            // 
+            // dateTimePicker_Issue2
+            // 
+            this.dateTimePicker_Issue2.Enabled = false;
+            this.dateTimePicker_Issue2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Issue2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Issue2.Location = new System.Drawing.Point(142, 136);
+            this.dateTimePicker_Issue2.Name = "dateTimePicker_Issue2";
+            this.dateTimePicker_Issue2.Size = new System.Drawing.Size(139, 26);
+            this.dateTimePicker_Issue2.TabIndex = 56;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 291);
+            this.label3.Location = new System.Drawing.Point(16, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 23);
             this.label3.TabIndex = 55;
@@ -458,7 +561,7 @@ namespace LibraryManagementSystem.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(123, 233);
+            this.label8.Location = new System.Drawing.Point(13, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 23);
             this.label8.TabIndex = 54;
@@ -468,92 +571,51 @@ namespace LibraryManagementSystem.Forms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(133, 185);
+            this.label9.Location = new System.Drawing.Point(16, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 23);
             this.label9.TabIndex = 53;
             this.label9.Text = " Issue Date:";
             // 
-            // label10
+            // label_memberFullName2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.LightCoral;
-            this.label10.Location = new System.Drawing.Point(255, 147);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 23);
-            this.label10.TabIndex = 52;
-            this.label10.Text = "Yes Or Yes";
+            this.label_memberFullName2.AutoSize = true;
+            this.label_memberFullName2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_memberFullName2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_memberFullName2.ForeColor = System.Drawing.Color.LightCoral;
+            this.label_memberFullName2.Location = new System.Drawing.Point(139, 114);
+            this.label_memberFullName2.Name = "label_memberFullName2";
+            this.label_memberFullName2.Size = new System.Drawing.Size(132, 16);
+            this.label_memberFullName2.TabIndex = 50;
+            this.label_memberFullName2.Text = "Member Full Name";
             // 
-            // label11
+            // label_bookTitle2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 147);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(236, 23);
-            this.label11.TabIndex = 51;
-            this.label11.Text = "Is This Book Available:";
+            this.label_bookTitle2.AutoSize = true;
+            this.label_bookTitle2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_bookTitle2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_bookTitle2.ForeColor = System.Drawing.Color.LightCoral;
+            this.label_bookTitle2.Location = new System.Drawing.Point(139, 47);
+            this.label_bookTitle2.Name = "label_bookTitle2";
+            this.label_bookTitle2.Size = new System.Drawing.Size(76, 16);
+            this.label_bookTitle2.TabIndex = 49;
+            this.label_bookTitle2.Text = "Book Title";
             // 
-            // label12
+            // numericUpDown_memberId2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.LightCoral;
-            this.label12.Location = new System.Drawing.Point(256, 117);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 16);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Member Full Name";
+            this.numericUpDown_memberId2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown_memberId2.Location = new System.Drawing.Point(142, 79);
+            this.numericUpDown_memberId2.Name = "numericUpDown_memberId2";
+            this.numericUpDown_memberId2.Size = new System.Drawing.Size(139, 32);
+            this.numericUpDown_memberId2.TabIndex = 48;
             // 
-            // label13
+            // numericUpDown_BookId2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.LightCoral;
-            this.label13.Location = new System.Drawing.Point(256, 50);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 16);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "Book Title";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(259, 82);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(139, 32);
-            this.numericUpDown1.TabIndex = 48;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(42, 82);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(213, 23);
-            this.label14.TabIndex = 47;
-            this.label14.Text = "Enter the member ID:";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(259, 15);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(139, 32);
-            this.numericUpDown2.TabIndex = 46;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(66, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(187, 23);
-            this.label15.TabIndex = 45;
-            this.label15.Text = "Enter the book ID:";
+            this.numericUpDown_BookId2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown_BookId2.Location = new System.Drawing.Point(142, 10);
+            this.numericUpDown_BookId2.Name = "numericUpDown_BookId2";
+            this.numericUpDown_BookId2.Size = new System.Drawing.Size(139, 32);
+            this.numericUpDown_BookId2.TabIndex = 46;
             // 
             // label_close_books
             // 
@@ -576,11 +638,11 @@ namespace LibraryManagementSystem.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(982, 488);
-            this.Controls.Add(this.panel_issue);
-            this.Controls.Add(this.panel_return);
             this.Controls.Add(this.label_close_books);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_header_books);
+            this.Controls.Add(this.panel_issue);
+            this.Controls.Add(this.panel_return);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageCirculationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -593,8 +655,9 @@ namespace LibraryManagementSystem.Forms
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookID)).EndInit();
             this.panel_return.ResumeLayout(false);
             this.panel_return.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_issue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_memberId2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookId2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,25 +686,28 @@ namespace LibraryManagementSystem.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label_available;
         private System.Windows.Forms.Button btn_IssueBook;
-        private System.Windows.Forms.Button btn_SearchMember;
         private System.Windows.Forms.Button btn_SearchBook;
         private System.Windows.Forms.Panel panel_return;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.RichTextBox richTextBox_decription2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_return2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Issue2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label_memberFullName2;
+        private System.Windows.Forms.Label label_bookTitle2;
+        private System.Windows.Forms.NumericUpDown numericUpDown_memberId2;
+        private System.Windows.Forms.NumericUpDown numericUpDown_BookId2;
+        private System.Windows.Forms.Button btn_SearchMember;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button_booklost;
+        private System.Windows.Forms.Button button_return2;
+        private System.Windows.Forms.DataGridView dataGridView_issue;
+        private System.Windows.Forms.Button button_showLost;
+        private System.Windows.Forms.Button button_showReturned;
+        private System.Windows.Forms.Button button_showIssued;
+        private System.Windows.Forms.Button button_showAll;
     }
 }

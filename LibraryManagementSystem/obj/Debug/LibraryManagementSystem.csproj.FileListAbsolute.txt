@@ -19,3 +19,4 @@ C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\b
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.MemberInfoCard.resources
+C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageUsers.resources

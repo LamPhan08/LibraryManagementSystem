@@ -37,6 +37,12 @@
             this.labelID = new System.Windows.Forms.Label();
             this.labeName = new System.Windows.Forms.Label();
             this.dataGridView_Members = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIRSTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LASTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GENDER_MEMBER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PHONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton_Female = new System.Windows.Forms.RadioButton();
@@ -55,12 +61,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_close_members = new System.Windows.Forms.Label();
             this.label_header_members = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIRSTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LASTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GENDER_MEMBER = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PHONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Members)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -162,6 +162,58 @@
             this.dataGridView_Members.RowHeadersWidth = 51;
             this.dataGridView_Members.Size = new System.Drawing.Size(687, 359);
             this.dataGridView_Members.TabIndex = 23;
+            this.dataGridView_Members.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Members_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ID.DataPropertyName = "ID";
+            this.ID.FillWeight = 40F;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 56;
+            // 
+            // FIRSTNAME
+            // 
+            this.FIRSTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.FIRSTNAME.DataPropertyName = "FIRSTNAME";
+            this.FIRSTNAME.FillWeight = 99.61929F;
+            this.FIRSTNAME.HeaderText = "First Name";
+            this.FIRSTNAME.MinimumWidth = 6;
+            this.FIRSTNAME.Name = "FIRSTNAME";
+            this.FIRSTNAME.ReadOnly = true;
+            this.FIRSTNAME.Width = 117;
+            // 
+            // LASTNAME
+            // 
+            this.LASTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.LASTNAME.DataPropertyName = "LASTNAME";
+            this.LASTNAME.FillWeight = 99.61929F;
+            this.LASTNAME.HeaderText = "Last Name";
+            this.LASTNAME.MinimumWidth = 6;
+            this.LASTNAME.Name = "LASTNAME";
+            this.LASTNAME.ReadOnly = true;
+            this.LASTNAME.Width = 114;
+            // 
+            // GENDER_MEMBER
+            // 
+            this.GENDER_MEMBER.HeaderText = "Gender";
+            this.GENDER_MEMBER.Name = "GENDER_MEMBER";
+            this.GENDER_MEMBER.ReadOnly = true;
+            // 
+            // PHONE
+            // 
+            this.PHONE.HeaderText = "Phone number";
+            this.PHONE.Name = "PHONE";
+            this.PHONE.ReadOnly = true;
+            // 
+            // EMAIL
+            // 
+            this.EMAIL.HeaderText = "Email";
+            this.EMAIL.Name = "EMAIL";
+            this.EMAIL.ReadOnly = true;
             // 
             // panel2
             // 
@@ -243,6 +295,7 @@
             this.textBox_Phone.Name = "textBox_Phone";
             this.textBox_Phone.Size = new System.Drawing.Size(253, 31);
             this.textBox_Phone.TabIndex = 24;
+            this.textBox_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Phone_KeyPress);
             // 
             // label2
             // 
@@ -276,6 +329,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Location = new System.Drawing.Point(8, 246);
@@ -289,6 +343,7 @@
             // 
             // btnUpdateMember
             // 
+            this.btnUpdateMember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateMember.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateMember.Location = new System.Drawing.Point(8, 75);
@@ -302,6 +357,7 @@
             // 
             // btnAddMember
             // 
+            this.btnAddMember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddMember.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMember.Location = new System.Drawing.Point(8, 18);
@@ -315,6 +371,7 @@
             // 
             // btnDeleteMember
             // 
+            this.btnDeleteMember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteMember.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteMember.Location = new System.Drawing.Point(8, 189);
@@ -328,6 +385,7 @@
             // 
             // btnEditMember
             // 
+            this.btnEditMember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditMember.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditMember.Location = new System.Drawing.Point(8, 132);
@@ -383,57 +441,6 @@
             this.label_header_members.Text = "      Members";
             this.label_header_members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ID.DataPropertyName = "ID";
-            this.ID.FillWeight = 40F;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 56;
-            // 
-            // FIRSTNAME
-            // 
-            this.FIRSTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.FIRSTNAME.DataPropertyName = "FIRSTNAME";
-            this.FIRSTNAME.FillWeight = 99.61929F;
-            this.FIRSTNAME.HeaderText = "First Name";
-            this.FIRSTNAME.MinimumWidth = 6;
-            this.FIRSTNAME.Name = "FIRSTNAME";
-            this.FIRSTNAME.ReadOnly = true;
-            this.FIRSTNAME.Width = 128;
-            // 
-            // LASTNAME
-            // 
-            this.LASTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LASTNAME.DataPropertyName = "LASTNAME";
-            this.LASTNAME.FillWeight = 99.61929F;
-            this.LASTNAME.HeaderText = "Last Name";
-            this.LASTNAME.MinimumWidth = 6;
-            this.LASTNAME.Name = "LASTNAME";
-            this.LASTNAME.ReadOnly = true;
-            this.LASTNAME.Width = 125;
-            // 
-            // GENDER_MEMBER
-            // 
-            this.GENDER_MEMBER.HeaderText = "Gender";
-            this.GENDER_MEMBER.Name = "GENDER_MEMBER";
-            this.GENDER_MEMBER.ReadOnly = true;
-            // 
-            // PHONE
-            // 
-            this.PHONE.HeaderText = "Phone number";
-            this.PHONE.Name = "PHONE";
-            this.PHONE.ReadOnly = true;
-            // 
-            // EMAIL
-            // 
-            this.EMAIL.HeaderText = "Email";
-            this.EMAIL.Name = "EMAIL";
-            this.EMAIL.ReadOnly = true;
-            // 
             // ManageMembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,7 +451,7 @@
             this.Controls.Add(this.label_close_members);
             this.Controls.Add(this.label_header_members);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManageMembersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageMembersForm";

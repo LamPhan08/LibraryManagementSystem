@@ -86,6 +86,9 @@ namespace LibraryManagementSystem.Forms
         private void btnUsers_Click(object sender, EventArgs e)
         {
             selectedButton(btnUsers);
+            ManageUsers mngUsers = new ManageUsers();
+            mngUsers.Show();
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

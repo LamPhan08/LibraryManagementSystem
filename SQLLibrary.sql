@@ -20,12 +20,13 @@ create table ISSUE
 	 note text,
 
 )
+alter table Issue add constraint fk_member_id foreign key (memid) references Members(id) on update cascade on Delete cascade;
 delete from ISSUE
 INSERT INTO USERS VALUES('PHAN', 'LAM', 'LAMPHAN', '123456', 'Quan tri vien')
 INSERT INTO USERS VALUES('NGUYEN', 'DOAN', 'DOANNGUYEN', '123456', 'Quan tri vien')
 INSERT INTO USERS VALUES('NGUYEN', 'HUY', 'HUYNGUYEN', '123456', 'Quan tri vien')
 
-SELECT * FROM ISSUE
+SELECT * FROM users
 
 CREATE TABLE GENRES(
 	ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,

@@ -542,8 +542,6 @@
         private System.Windows.Forms.Panel panel_2ndBook;
         private System.Windows.Forms.Panel panel_1stBook;
         private System.Windows.Forms.Label label_bookPrice1;
-        private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnCirculation;
         private System.Windows.Forms.Button btnGenres;
         private System.Windows.Forms.Button btnAuthors;
         private System.Windows.Forms.Button btnBooks;
@@ -553,5 +551,7 @@
         private System.Windows.Forms.Label label_bookPrice3;
         private System.Windows.Forms.Label label_bookPrice2;
         private System.Windows.Forms.Button btnMembers;
+        public System.Windows.Forms.Button btnUsers;
+        public System.Windows.Forms.Button btnCirculation;
     }
 }

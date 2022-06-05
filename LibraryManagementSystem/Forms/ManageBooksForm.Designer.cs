@@ -142,6 +142,7 @@
             // 
             // btnExportBooks
             // 
+            this.btnExportBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExportBooks.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExportBooks.Location = new System.Drawing.Point(8, 241);
@@ -952,11 +953,11 @@
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1263, 493);
             this.Controls.Add(this.label_close_books);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label_header_books);
             this.Controls.Add(this.panel_add);
             this.Controls.Add(this.panel_edit);
             this.Controls.Add(this.panel_ShowBooks);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label_header_books);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageBooksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

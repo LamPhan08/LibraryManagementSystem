@@ -55,12 +55,33 @@ namespace LibraryManagementSystem.Forms
                         + "' and USERPASSWORD = '" + txtUserPassword.Text + "'");
                     if (database.Rows.Count > 0)
                     {
-                        if (database.Rows[0][0].ToString().Equals("Quan tri vien"))
+                        if (database.Rows[0][0].ToString().Equals("owner"))
                         {
                             MessageBox.Show("Login Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             DashboardForm dashboard = new DashboardForm();
                             dashboard.ShowDialog();
+                            Close();
+                        }
+                        if (database.Rows[0][0].ToString().Equals("admin"))
+                        {
+                            MessageBox.Show("Login Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            DashboardForm dashboard = new DashboardForm();
+                            dashboard.btnUsers.Enabled = false;
+                            dashboard.ShowDialog();
+                       
+                            Close();
+                        }
+                        if (database.Rows[0][0].ToString().Equals("user"))
+                        {
+                            MessageBox.Show("Login Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            DashboardForm dashboard = new DashboardForm();
+                            dashboard.btnUsers.Enabled = false;
+                            dashboard.btnCirculation.Enabled = false;
+                            dashboard.ShowDialog();
+
                             Close();
                         }
                     }
