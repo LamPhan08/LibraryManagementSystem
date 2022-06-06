@@ -37,12 +37,6 @@
             this.labelID = new System.Windows.Forms.Label();
             this.labeName = new System.Windows.Forms.Label();
             this.dataGridView_Members = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIRSTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LASTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GENDER_MEMBER = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PHONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton_Female = new System.Windows.Forms.RadioButton();
@@ -61,6 +55,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_close_members = new System.Windows.Forms.Label();
             this.label_header_members = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender_Member = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Members)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -142,12 +142,12 @@
             this.dataGridView_Members.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Members.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.FIRSTNAME,
-            this.LASTNAME,
-            this.GENDER_MEMBER,
-            this.PHONE,
-            this.EMAIL});
+            this.Id,
+            this.FirstName,
+            this.LastName,
+            this.Gender_Member,
+            this.Phone,
+            this.Email});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,57 +163,6 @@
             this.dataGridView_Members.Size = new System.Drawing.Size(687, 359);
             this.dataGridView_Members.TabIndex = 23;
             this.dataGridView_Members.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Members_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ID.DataPropertyName = "ID";
-            this.ID.FillWeight = 40F;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 56;
-            // 
-            // FIRSTNAME
-            // 
-            this.FIRSTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.FIRSTNAME.DataPropertyName = "FIRSTNAME";
-            this.FIRSTNAME.FillWeight = 99.61929F;
-            this.FIRSTNAME.HeaderText = "First Name";
-            this.FIRSTNAME.MinimumWidth = 6;
-            this.FIRSTNAME.Name = "FIRSTNAME";
-            this.FIRSTNAME.ReadOnly = true;
-            this.FIRSTNAME.Width = 117;
-            // 
-            // LASTNAME
-            // 
-            this.LASTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LASTNAME.DataPropertyName = "LASTNAME";
-            this.LASTNAME.FillWeight = 99.61929F;
-            this.LASTNAME.HeaderText = "Last Name";
-            this.LASTNAME.MinimumWidth = 6;
-            this.LASTNAME.Name = "LASTNAME";
-            this.LASTNAME.ReadOnly = true;
-            this.LASTNAME.Width = 114;
-            // 
-            // GENDER_MEMBER
-            // 
-            this.GENDER_MEMBER.HeaderText = "Gender";
-            this.GENDER_MEMBER.Name = "GENDER_MEMBER";
-            this.GENDER_MEMBER.ReadOnly = true;
-            // 
-            // PHONE
-            // 
-            this.PHONE.HeaderText = "Phone number";
-            this.PHONE.Name = "PHONE";
-            this.PHONE.ReadOnly = true;
-            // 
-            // EMAIL
-            // 
-            this.EMAIL.HeaderText = "Email";
-            this.EMAIL.Name = "EMAIL";
-            this.EMAIL.ReadOnly = true;
             // 
             // panel2
             // 
@@ -441,6 +390,48 @@
             this.label_header_members.Text = "      Members";
             this.label_header_members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "First name";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last name";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // Gender_Member
+            // 
+            this.Gender_Member.DataPropertyName = "Gender_Member";
+            this.Gender_Member.HeaderText = "Gender";
+            this.Gender_Member.Name = "Gender_Member";
+            this.Gender_Member.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
             // ManageMembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,11 +484,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton_Female;
         private System.Windows.Forms.RadioButton radioButton_Male;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FIRSTNAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LASTNAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GENDER_MEMBER;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PHONE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender_Member;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

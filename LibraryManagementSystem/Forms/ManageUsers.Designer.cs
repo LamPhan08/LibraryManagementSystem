@@ -48,6 +48,12 @@ namespace LibraryManagementSystem.Forms
             this.btnUpdateUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_User)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +66,7 @@ namespace LibraryManagementSystem.Forms
             this.label_header_books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_header_books.Location = new System.Drawing.Point(0, 0);
             this.label_header_books.Name = "label_header_books";
-            this.label_header_books.Size = new System.Drawing.Size(866, 76);
+            this.label_header_books.Size = new System.Drawing.Size(1008, 76);
             this.label_header_books.TabIndex = 5;
             this.label_header_books.Text = "      Users";
             this.label_header_books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -72,7 +78,7 @@ namespace LibraryManagementSystem.Forms
             this.label_close_books.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_close_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_close_books.ForeColor = System.Drawing.Color.White;
-            this.label_close_books.Location = new System.Drawing.Point(828, 9);
+            this.label_close_books.Location = new System.Drawing.Point(970, 9);
             this.label_close_books.Name = "label_close_books";
             this.label_close_books.Size = new System.Drawing.Size(26, 25);
             this.label_close_books.TabIndex = 10;
@@ -82,10 +88,18 @@ namespace LibraryManagementSystem.Forms
             // 
             // dataGridView_User
             // 
+            this.dataGridView_User.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_User.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_User.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.FirstName,
+            this.LastName,
+            this.UserName,
+            this.UserPassword,
+            this.UserType});
             this.dataGridView_User.Location = new System.Drawing.Point(418, 95);
             this.dataGridView_User.Name = "dataGridView_User";
-            this.dataGridView_User.Size = new System.Drawing.Size(436, 401);
+            this.dataGridView_User.Size = new System.Drawing.Size(578, 401);
             this.dataGridView_User.TabIndex = 11;
             this.dataGridView_User.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_User_CellClick);
             // 
@@ -254,12 +268,48 @@ namespace LibraryManagementSystem.Forms
             this.btnDeleteUser.UseVisualStyleBackColor = true;
             this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "Fisrt name";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last name";
+            this.LastName.Name = "LastName";
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Username";
+            this.UserName.Name = "UserName";
+            // 
+            // UserPassword
+            // 
+            this.UserPassword.DataPropertyName = "UserPassword";
+            this.UserPassword.HeaderText = "Password";
+            this.UserPassword.Name = "UserPassword";
+            // 
+            // UserType
+            // 
+            this.UserType.DataPropertyName = "UserType";
+            this.UserType.HeaderText = "Role";
+            this.UserType.Name = "UserType";
+            // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(866, 508);
+            this.ClientSize = new System.Drawing.Size(1008, 508);
             this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.btnDeleteUser);
@@ -311,5 +361,11 @@ namespace LibraryManagementSystem.Forms
         private System.Windows.Forms.Button btnUpdateUser;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserType;
     }
 }

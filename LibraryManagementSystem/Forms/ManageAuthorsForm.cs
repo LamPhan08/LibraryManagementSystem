@@ -49,8 +49,8 @@ namespace LibraryManagementSystem.Forms
             txtAuthorEducation.ReadOnly = true;
             richTextBox_AuthorBio.ReadOnly = true;
             btnUpdateAuthor.Enabled = false;
-
             
+
 
             try
             {

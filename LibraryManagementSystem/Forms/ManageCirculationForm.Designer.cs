@@ -73,6 +73,12 @@ namespace LibraryManagementSystem.Forms
             this.numericUpDown_memberId2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_BookId2 = new System.Windows.Forms.NumericUpDown();
             this.label_close_books = new System.Windows.Forms.Label();
+            this.bookid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issue_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.return_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_issue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_memberID)).BeginInit();
@@ -361,7 +367,6 @@ namespace LibraryManagementSystem.Forms
             this.panel_return.Controls.Add(this.button_showLost);
             this.panel_return.Controls.Add(this.button_showReturned);
             this.panel_return.Controls.Add(this.button_showIssued);
-            this.panel_return.Controls.Add(this.dataGridView_issue);
             this.panel_return.Controls.Add(this.button_booklost);
             this.panel_return.Controls.Add(this.button_return2);
             this.panel_return.Controls.Add(this.label11);
@@ -377,6 +382,7 @@ namespace LibraryManagementSystem.Forms
             this.panel_return.Controls.Add(this.label_bookTitle2);
             this.panel_return.Controls.Add(this.numericUpDown_memberId2);
             this.panel_return.Controls.Add(this.numericUpDown_BookId2);
+            this.panel_return.Controls.Add(this.dataGridView_issue);
             this.panel_return.Location = new System.Drawing.Point(148, 79);
             this.panel_return.Name = "panel_return";
             this.panel_return.Size = new System.Drawing.Size(830, 409);
@@ -442,6 +448,13 @@ namespace LibraryManagementSystem.Forms
             // 
             this.dataGridView_issue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_issue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_issue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookid,
+            this.memid,
+            this.statut,
+            this.issue_date,
+            this.return_date,
+            this.note});
             this.dataGridView_issue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView_issue.Location = new System.Drawing.Point(300, 47);
             this.dataGridView_issue.Name = "dataGridView_issue";
@@ -632,6 +645,42 @@ namespace LibraryManagementSystem.Forms
             this.label_close_books.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_close_books.Click += new System.EventHandler(this.label_close_books_Click);
             // 
+            // bookid
+            // 
+            this.bookid.DataPropertyName = "bookid";
+            this.bookid.HeaderText = "Book_Id";
+            this.bookid.Name = "bookid";
+            // 
+            // memid
+            // 
+            this.memid.DataPropertyName = "memid";
+            this.memid.HeaderText = "Member_Id";
+            this.memid.Name = "memid";
+            // 
+            // statut
+            // 
+            this.statut.DataPropertyName = "statut";
+            this.statut.HeaderText = "Status";
+            this.statut.Name = "statut";
+            // 
+            // issue_date
+            // 
+            this.issue_date.DataPropertyName = "issue_date";
+            this.issue_date.HeaderText = "Issue date";
+            this.issue_date.Name = "issue_date";
+            // 
+            // return_date
+            // 
+            this.return_date.DataPropertyName = "return_date";
+            this.return_date.HeaderText = "Return date";
+            this.return_date.Name = "return_date";
+            // 
+            // note
+            // 
+            this.note.DataPropertyName = "note";
+            this.note.HeaderText = "Note";
+            this.note.Name = "note";
+            // 
             // ManageCirculationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -709,5 +758,11 @@ namespace LibraryManagementSystem.Forms
         private System.Windows.Forms.Button button_showReturned;
         private System.Windows.Forms.Button button_showIssued;
         private System.Windows.Forms.Button button_showAll;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn memid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn issue_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn return_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn note;
     }
 }

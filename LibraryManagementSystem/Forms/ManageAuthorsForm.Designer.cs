@@ -42,11 +42,6 @@
             this.btnEditAuthor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView_Authors = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIRSTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LASTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EDUCATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox_AuthorBio = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAuthorEducation = new System.Windows.Forms.TextBox();
@@ -57,6 +52,11 @@
             this.labelID = new System.Windows.Forms.Label();
             this.txtAuthorFirstName = new System.Windows.Forms.TextBox();
             this.labeName = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Authors)).BeginInit();
@@ -244,11 +244,11 @@
             this.dataGridView_Authors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Authors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Authors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.FIRSTNAME,
-            this.LASTNAME,
-            this.EDUCATION,
-            this.BIO});
+            this.Id,
+            this.FirstName,
+            this.LastName,
+            this.Education,
+            this.Bio});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,53 +263,6 @@
             this.dataGridView_Authors.RowHeadersWidth = 51;
             this.dataGridView_Authors.Size = new System.Drawing.Size(687, 368);
             this.dataGridView_Authors.TabIndex = 23;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ID.DataPropertyName = "ID";
-            this.ID.FillWeight = 40F;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 56;
-            // 
-            // FIRSTNAME
-            // 
-            this.FIRSTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.FIRSTNAME.DataPropertyName = "FIRSTNAME";
-            this.FIRSTNAME.FillWeight = 99.61929F;
-            this.FIRSTNAME.HeaderText = "First Name";
-            this.FIRSTNAME.MinimumWidth = 6;
-            this.FIRSTNAME.Name = "FIRSTNAME";
-            this.FIRSTNAME.ReadOnly = true;
-            this.FIRSTNAME.Width = 117;
-            // 
-            // LASTNAME
-            // 
-            this.LASTNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LASTNAME.DataPropertyName = "LASTNAME";
-            this.LASTNAME.FillWeight = 99.61929F;
-            this.LASTNAME.HeaderText = "Last Name";
-            this.LASTNAME.MinimumWidth = 6;
-            this.LASTNAME.Name = "LASTNAME";
-            this.LASTNAME.ReadOnly = true;
-            this.LASTNAME.Width = 114;
-            // 
-            // EDUCATION
-            // 
-            this.EDUCATION.HeaderText = "Education";
-            this.EDUCATION.MinimumWidth = 6;
-            this.EDUCATION.Name = "EDUCATION";
-            this.EDUCATION.ReadOnly = true;
-            // 
-            // BIO
-            // 
-            this.BIO.HeaderText = "Bio";
-            this.BIO.MinimumWidth = 6;
-            this.BIO.Name = "BIO";
-            this.BIO.ReadOnly = true;
             // 
             // richTextBox_AuthorBio
             // 
@@ -402,6 +355,41 @@
             this.labeName.TabIndex = 11;
             this.labeName.Text = "First Name:";
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "First name";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last name";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // Education
+            // 
+            this.Education.DataPropertyName = "Education";
+            this.Education.HeaderText = "Education";
+            this.Education.Name = "Education";
+            this.Education.ReadOnly = true;
+            // 
+            // Bio
+            // 
+            this.Bio.DataPropertyName = "Bio";
+            this.Bio.HeaderText = "Biography";
+            this.Bio.Name = "Bio";
+            this.Bio.ReadOnly = true;
+            // 
             // ManageAuthorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,11 +437,11 @@
         private System.Windows.Forms.DataGridView dataGridView_Authors;
         private System.Windows.Forms.Button btnShowAuthorBooks;
         public System.Windows.Forms.Label label_authorsCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FIRSTNAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LASTNAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EDUCATION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BIO;
         private System.Windows.Forms.Button btnExportAuthors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Education;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bio;
     }
 }
