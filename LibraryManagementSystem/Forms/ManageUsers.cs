@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -112,6 +113,16 @@ namespace LibraryManagementSystem.Forms
                 {
                     return;
                 }
+                if (!Regex.IsMatch(fname, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(lname, @"^[a-zA-Z0-9]+$"))
+                {
+                    MessageBox.Show("Fisrt name and Last name just only characters ");
+                    return;
+                }
+                if (!Regex.IsMatch(username, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(password, @"^[a-zA-Z0-9]+$"))
+                {
+                    MessageBox.Show("Username and Password just only characters and numbers");
+                    return;
+                }
                 try
                 {
                     connection.Open();
@@ -201,7 +212,17 @@ namespace LibraryManagementSystem.Forms
                         {
                             return;
                         }
-                        try
+                    if (!Regex.IsMatch(fname, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(lname, @"^[a-zA-Z0-9]+$"))
+                    {
+                        MessageBox.Show("Username and Password just only characters and numbers");
+                        return;
+                    }
+                    if (!Regex.IsMatch(username, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(password, @"^[a-zA-Z0-9]+$"))
+                    {
+                        MessageBox.Show("Username and Password just only characters and numbers");
+                        return;
+                    }
+                    try
                         {
                             connection.Open();
                             String s = ("Update users set FirstName=@firstname,LastName=@lastname,UserName=@username,UserPassword=@password,UserType=@usertype where Id= '" + id + "'");

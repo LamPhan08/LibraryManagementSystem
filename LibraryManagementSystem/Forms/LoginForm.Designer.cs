@@ -121,6 +121,7 @@
             this.label_close.TabIndex = 1;
             this.label_close.Text = "X";
             this.label_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_close.Click += new System.EventHandler(this.label_close_Click);
             this.label_close.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_close_MouseClick);
             this.label_close.MouseEnter += new System.EventHandler(this.label_close_MouseEnter);
             this.label_close.MouseLeave += new System.EventHandler(this.label_close_MouseLeave);

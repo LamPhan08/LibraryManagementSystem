@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -135,6 +136,12 @@ namespace LibraryManagementSystem.Forms
 
         private void btnUpdateAuthor_Click(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(txtAuthorFirstName.Text, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(txtAuthorLastName.Text, @"^[a-zA-Z0-9]+$"))
+            {
+                MessageBox.Show("First name and last name just only characters ");
+                return;
+            }
+          
             if (txtAuthorFirstName.Text.Equals("") || txtAuthorLastName.Text.Equals("") || txtAuthorEducation.Text.Equals("") || richTextBox_AuthorBio.Text.Equals(""))
             {
                 MessageBox.Show("Please enter full information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

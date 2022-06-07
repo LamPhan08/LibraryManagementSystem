@@ -85,7 +85,7 @@ namespace LibraryManagementSystem.Forms
 
             label_booksCount.Text = numberOfBooks.ToString() + " books";
 
-            panel_edit.BringToFront();
+            panel_add.BringToFront();
         }
 
         private void label_close_books_Click(object sender, EventArgs e)

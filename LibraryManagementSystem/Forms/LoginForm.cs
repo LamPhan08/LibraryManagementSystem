@@ -109,5 +109,10 @@ namespace LibraryManagementSystem.Forms
                 btnLogin.Enabled = false;
             }
         }
+
+        private void label_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

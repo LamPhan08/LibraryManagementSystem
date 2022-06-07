@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -138,6 +139,11 @@ namespace LibraryManagementSystem.Forms
 
         private void btnUpdateMember_Click(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(txtMemberFirstName.Text, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(txtMemberLastName.Text, @"^[a-zA-Z0-9]+$"))
+            {
+                MessageBox.Show("First name and last name just only characters ");
+                return;
+            }
             if (txtMemberFirstName.Text.Equals("") || txtMemberLastName.Text.Equals("") || textBox_Email.Text.Equals("") || textBox_Phone.Text.Equals("") || (!radioButton_Female.Checked && !radioButton_Male.Checked))
             {
                 MessageBox.Show("Please enter full information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
