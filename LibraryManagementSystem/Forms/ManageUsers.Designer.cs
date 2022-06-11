@@ -29,9 +29,15 @@ namespace LibraryManagementSystem.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_header_books = new System.Windows.Forms.Label();
+            this.label_header_users = new System.Windows.Forms.Label();
             this.label_close_books = new System.Windows.Forms.Label();
             this.dataGridView_User = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_userLastName = new System.Windows.Forms.TextBox();
@@ -48,28 +54,22 @@ namespace LibraryManagementSystem.Forms
             this.btnUpdateUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.btnDeleteUser = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_User)).BeginInit();
             this.SuspendLayout();
             // 
-            // label_header_books
+            // label_header_users
             // 
-            this.label_header_books.BackColor = System.Drawing.Color.SkyBlue;
-            this.label_header_books.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_header_books.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_header_books.ForeColor = System.Drawing.Color.White;
-            this.label_header_books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_header_books.Location = new System.Drawing.Point(0, 0);
-            this.label_header_books.Name = "label_header_books";
-            this.label_header_books.Size = new System.Drawing.Size(1008, 76);
-            this.label_header_books.TabIndex = 5;
-            this.label_header_books.Text = "      Users";
-            this.label_header_books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_header_users.BackColor = System.Drawing.Color.SkyBlue;
+            this.label_header_users.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_header_users.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_header_users.ForeColor = System.Drawing.Color.White;
+            this.label_header_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_header_users.Location = new System.Drawing.Point(0, 0);
+            this.label_header_users.Name = "label_header_users";
+            this.label_header_users.Size = new System.Drawing.Size(1008, 76);
+            this.label_header_users.TabIndex = 5;
+            this.label_header_users.Text = "      Users";
+            this.label_header_users.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label_close_books
             // 
@@ -78,7 +78,7 @@ namespace LibraryManagementSystem.Forms
             this.label_close_books.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_close_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_close_books.ForeColor = System.Drawing.Color.White;
-            this.label_close_books.Location = new System.Drawing.Point(970, 9);
+            this.label_close_books.Location = new System.Drawing.Point(982, 0);
             this.label_close_books.Name = "label_close_books";
             this.label_close_books.Size = new System.Drawing.Size(26, 25);
             this.label_close_books.TabIndex = 10;
@@ -102,6 +102,42 @@ namespace LibraryManagementSystem.Forms
             this.dataGridView_User.Size = new System.Drawing.Size(578, 401);
             this.dataGridView_User.TabIndex = 11;
             this.dataGridView_User.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_User_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "Fisrt name";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last name";
+            this.LastName.Name = "LastName";
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Username";
+            this.UserName.Name = "UserName";
+            // 
+            // UserPassword
+            // 
+            this.UserPassword.DataPropertyName = "UserPassword";
+            this.UserPassword.HeaderText = "Password";
+            this.UserPassword.Name = "UserPassword";
+            // 
+            // UserType
+            // 
+            this.UserType.DataPropertyName = "UserType";
+            this.UserType.HeaderText = "Role";
+            this.UserType.Name = "UserType";
             // 
             // txt_username
             // 
@@ -220,7 +256,7 @@ namespace LibraryManagementSystem.Forms
             this.checkbox_setAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkbox_setAdmin.Location = new System.Drawing.Point(146, 379);
             this.checkbox_setAdmin.Name = "checkbox_setAdmin";
-            this.checkbox_setAdmin.Size = new System.Drawing.Size(234, 20);
+            this.checkbox_setAdmin.Size = new System.Drawing.Size(233, 20);
             this.checkbox_setAdmin.TabIndex = 33;
             this.checkbox_setAdmin.Text = "Grant permission admin to this user";
             this.checkbox_setAdmin.UseVisualStyleBackColor = true;
@@ -268,42 +304,6 @@ namespace LibraryManagementSystem.Forms
             this.btnDeleteUser.UseVisualStyleBackColor = true;
             this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "Fisrt name";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "Last name";
-            this.LastName.Name = "LastName";
-            // 
-            // UserName
-            // 
-            this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "Username";
-            this.UserName.Name = "UserName";
-            // 
-            // UserPassword
-            // 
-            this.UserPassword.DataPropertyName = "UserPassword";
-            this.UserPassword.HeaderText = "Password";
-            this.UserPassword.Name = "UserPassword";
-            // 
-            // UserType
-            // 
-            this.UserType.DataPropertyName = "UserType";
-            this.UserType.HeaderText = "Role";
-            this.UserType.Name = "UserType";
-            // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,7 +328,7 @@ namespace LibraryManagementSystem.Forms
             this.Controls.Add(this.labeName);
             this.Controls.Add(this.dataGridView_User);
             this.Controls.Add(this.label_close_books);
-            this.Controls.Add(this.label_header_books);
+            this.Controls.Add(this.label_header_users);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -342,7 +342,7 @@ namespace LibraryManagementSystem.Forms
 
         #endregion
 
-        private System.Windows.Forms.Label label_header_books;
+        private System.Windows.Forms.Label label_header_users;
         private System.Windows.Forms.Label label_close_books;
         private System.Windows.Forms.DataGridView dataGridView_User;
         private System.Windows.Forms.TextBox txt_username;

@@ -191,9 +191,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
@@ -203,12 +201,14 @@
     <Content Include="Images\authors.png" />
     <Content Include="Images\book.png" />
     <Content Include="Images\books.png" />
+    <Content Include="Images\borrow.png" />
     <Content Include="Images\broom.png" />
     <Content Include="Images\circulation.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\details_list.png" />
     <Content Include="Images\edit.png" />
     <Content Include="Images\genres.png" />
+    <Content Include="Images\group.png" />
     <Content Include="Images\issue_book.png" />
     <Content Include="Images\library_logo.png" />
     <Content Include="Images\lock.png" />

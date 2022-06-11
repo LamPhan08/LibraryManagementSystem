@@ -51,35 +51,35 @@ namespace LibraryManagementSystem.Forms
         {
             selectedButton(btnGenres);
             ManageGenresForm manageGenresForm = new ManageGenresForm();
-            manageGenresForm.Show();
+            manageGenresForm.ShowDialog();
         }
 
         private void btnAuthors_Click(object sender, EventArgs e)
         {
             selectedButton(btnAuthors);
             ManageAuthorsForm manageAuthorsForm = new ManageAuthorsForm();
-            manageAuthorsForm.Show();
+            manageAuthorsForm.ShowDialog();
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
             selectedButton(btnBooks);
             ManageBooksForm manageBooksForm = new ManageBooksForm();
-            manageBooksForm.Show();
+            manageBooksForm.ShowDialog();
         }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
             selectedButton(btnMembers);
             ManageMembersForm manageMembersForm = new ManageMembersForm();
-            manageMembersForm.Show();
+            manageMembersForm.ShowDialog();
         }
 
         private void btnCirculation_Click(object sender, EventArgs e)
         {
             selectedButton(btnCirculation);
             ManageCirculationForm mngCirF = new ManageCirculationForm();
-            mngCirF.Show();
+            mngCirF.ShowDialog();
 
         }
 
@@ -87,7 +87,7 @@ namespace LibraryManagementSystem.Forms
         {
             selectedButton(btnUsers);
             ManageUsers mngUsers = new ManageUsers();
-            mngUsers.Show();
+            mngUsers.ShowDialog();
 
         }
 

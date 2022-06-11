@@ -28,6 +28,7 @@ namespace LibraryManagementSystem.Forms
 
         private void ManageCirculationForm_Load(object sender, EventArgs e)
         {
+            label_header_circulation.Image = Image.FromFile("../../Images/borrow.png");
             btn_issue.Image = Image.FromFile("../../Images/issue_book.png");
             btn_return.Image = Image.FromFile("../../Images/return_book.png");
             try

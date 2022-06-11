@@ -42,6 +42,8 @@ namespace LibraryManagementSystem.Forms
             txtMemberID.ReadOnly = true;
             txtMemberFirstName.ReadOnly = true;
             txtMemberLastName.ReadOnly = true;
+            textBox_Phone.ReadOnly = true;
+            textBox_Email.ReadOnly = true;
             btnUpdateMember.Enabled = false;
 
 

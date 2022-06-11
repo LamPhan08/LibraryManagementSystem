@@ -2,6 +2,8 @@ CREATE DATABASE LIBRARY_MANAGEMENT
 
 USE LIBRARY_MANAGEMENT
 
+go
+
 CREATE TABLE USERS(
 	ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	FIRSTNAME VARCHAR(20) NOT NULL,
@@ -18,15 +20,19 @@ create table ISSUE
 	 issue_date date not null,
 	 return_date date not null,
 	 note text,
-
 )
+
 alter table Issue add constraint fk_member_id foreign key (memid) references Members(id) on update cascade on Delete cascade;
 delete from ISSUE
-INSERT INTO USERS VALUES('PHAN', 'LAM', 'LAMPHAN', '123456', 'Quan tri vien')
-INSERT INTO USERS VALUES('NGUYEN', 'DOAN', 'DOANNGUYEN', '123456', 'Quan tri vien')
-INSERT INTO USERS VALUES('NGUYEN', 'HUY', 'HUYNGUYEN', '123456', 'Quan tri vien')
+INSERT INTO USERS VALUES('PHAN', 'LAM', 'LAMPHAN', '123456', 'owner')
+INSERT INTO USERS VALUES('NGUYEN', 'DOAN', 'DOANNGUYEN', '123456', 'admin')
+INSERT INTO USERS VALUES('NGUYEN', 'HUY', 'HUYNGUYEN', '123456', 'admin')
 
 SELECT * FROM users
+SELECT * FROM AUTHORS
+
+DELETE FROM USERS
+
 
 CREATE TABLE GENRES(
 	ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,

@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.button_deleteBook);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Location = new System.Drawing.Point(0, 53);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 185);
             this.panel1.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.numericUpDown_BookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_BookId.Location = new System.Drawing.Point(223, 29);
-            this.numericUpDown_BookId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown_BookId.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown_BookId.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -108,7 +108,7 @@
             this.label_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_close.ForeColor = System.Drawing.Color.White;
-            this.label_close.Location = new System.Drawing.Point(426, 7);
+            this.label_close.Location = new System.Drawing.Point(433, 0);
             this.label_close.Name = "label_close";
             this.label_close.Size = new System.Drawing.Size(26, 25);
             this.label_close.TabIndex = 2;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RemoveBookForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemoveBookForm";

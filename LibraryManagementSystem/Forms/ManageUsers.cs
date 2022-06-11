@@ -33,6 +33,7 @@ namespace LibraryManagementSystem.Forms
 
         private void ManageUsers_Load(object sender, EventArgs e)
         {
+            label_header_users.Image = Image.FromFile("../../Images/group.png");
             btnAddUser.Image = Image.FromFile("../../Images/add.png");
             btnDeleteUser.Image = Image.FromFile("../../Images/edit.png");
             btnUpdateUser.Image = Image.FromFile("../../Images/update.png");

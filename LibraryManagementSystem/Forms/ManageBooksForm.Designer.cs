@@ -37,7 +37,6 @@
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.panel_add = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnClearFields = new System.Windows.Forms.Button();
             this.txtAuthorID = new System.Windows.Forms.Label();
             this.btnAddNewBook = new System.Windows.Forms.Button();
@@ -225,7 +224,6 @@
             // panel_add
             // 
             this.panel_add.BackColor = System.Drawing.Color.Peru;
-            this.panel_add.Controls.Add(this.label10);
             this.panel_add.Controls.Add(this.btnClearFields);
             this.panel_add.Controls.Add(this.txtAuthorID);
             this.panel_add.Controls.Add(this.btnAddNewBook);
@@ -255,19 +253,9 @@
             this.panel_add.Controls.Add(this.labeName);
             this.panel_add.Location = new System.Drawing.Point(148, 81);
             this.panel_add.Name = "panel_add";
-            this.panel_add.Size = new System.Drawing.Size(1078, 405);
+            this.panel_add.Size = new System.Drawing.Size(1110, 405);
             this.panel_add.TabIndex = 7;
             this.panel_add.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_add_Paint);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(194, 40);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(165, 13);
-            this.label10.TabIndex = 50;
-            this.label10.Text = "Click \"Clear fields\" to generate ID";
             // 
             // btnClearFields
             // 
@@ -554,7 +542,7 @@
             this.panel_ShowBooks.Controls.Add(this.dataGridView_ShowBooks);
             this.panel_ShowBooks.Location = new System.Drawing.Point(149, 83);
             this.panel_ShowBooks.Name = "panel_ShowBooks";
-            this.panel_ShowBooks.Size = new System.Drawing.Size(1078, 405);
+            this.panel_ShowBooks.Size = new System.Drawing.Size(1110, 405);
             this.panel_ShowBooks.TabIndex = 51;
             // 
             // button_RemoveBook
@@ -638,7 +626,7 @@
             this.panel_edit.Controls.Add(this.label23);
             this.panel_edit.Location = new System.Drawing.Point(148, 81);
             this.panel_edit.Name = "panel_edit";
-            this.panel_edit.Size = new System.Drawing.Size(1078, 405);
+            this.panel_edit.Size = new System.Drawing.Size(1110, 405);
             this.panel_edit.TabIndex = 51;
             // 
             // button_searchByIsbn
@@ -936,7 +924,7 @@
             this.label_close_books.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_close_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_close_books.ForeColor = System.Drawing.Color.White;
-            this.label_close_books.Location = new System.Drawing.Point(1225, 0);
+            this.label_close_books.Location = new System.Drawing.Point(1237, 0);
             this.label_close_books.Name = "label_close_books";
             this.label_close_books.Size = new System.Drawing.Size(26, 25);
             this.label_close_books.TabIndex = 8;
@@ -1016,7 +1004,6 @@
         public System.Windows.Forms.TextBox txtBookAuthor;
         public System.Windows.Forms.Label txtAuthorID;
         private System.Windows.Forms.Button btnClearFields;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel_edit;
         public System.Windows.Forms.Label label_AuthorId_Edit;
         private System.Windows.Forms.Button button_EditBook;

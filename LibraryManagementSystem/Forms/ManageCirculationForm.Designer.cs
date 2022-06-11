@@ -29,7 +29,7 @@ namespace LibraryManagementSystem.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_header_books = new System.Windows.Forms.Label();
+            this.label_header_circulation = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_issue = new System.Windows.Forms.Button();
             this.btn_return = new System.Windows.Forms.Button();
@@ -56,7 +56,6 @@ namespace LibraryManagementSystem.Forms
             this.button_showLost = new System.Windows.Forms.Button();
             this.button_showReturned = new System.Windows.Forms.Button();
             this.button_showIssued = new System.Windows.Forms.Button();
-            this.dataGridView_issue = new System.Windows.Forms.DataGridView();
             this.button_booklost = new System.Windows.Forms.Button();
             this.button_return2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,37 +71,38 @@ namespace LibraryManagementSystem.Forms
             this.label_bookTitle2 = new System.Windows.Forms.Label();
             this.numericUpDown_memberId2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_BookId2 = new System.Windows.Forms.NumericUpDown();
-            this.label_close_books = new System.Windows.Forms.Label();
+            this.dataGridView_issue = new System.Windows.Forms.DataGridView();
             this.bookid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issue_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.return_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label_close_books = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_issue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_memberID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookID)).BeginInit();
             this.panel_return.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_issue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_memberId2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookId2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_issue)).BeginInit();
             this.SuspendLayout();
             // 
-            // label_header_books
+            // label_header_circulation
             // 
-            this.label_header_books.BackColor = System.Drawing.Color.SteelBlue;
-            this.label_header_books.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_header_books.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_header_books.ForeColor = System.Drawing.Color.White;
-            this.label_header_books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_header_books.Location = new System.Drawing.Point(0, 0);
-            this.label_header_books.Name = "label_header_books";
-            this.label_header_books.Size = new System.Drawing.Size(982, 76);
-            this.label_header_books.TabIndex = 4;
-            this.label_header_books.Text = "      Circulation";
-            this.label_header_books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_header_books.Click += new System.EventHandler(this.label_header_books_Click);
+            this.label_header_circulation.BackColor = System.Drawing.Color.SteelBlue;
+            this.label_header_circulation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_header_circulation.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_header_circulation.ForeColor = System.Drawing.Color.White;
+            this.label_header_circulation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_header_circulation.Location = new System.Drawing.Point(0, 0);
+            this.label_header_circulation.Name = "label_header_circulation";
+            this.label_header_circulation.Size = new System.Drawing.Size(982, 76);
+            this.label_header_circulation.TabIndex = 4;
+            this.label_header_circulation.Text = "      Circulation";
+            this.label_header_circulation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_header_circulation.Click += new System.EventHandler(this.label_header_books_Click);
             // 
             // panel1
             // 
@@ -301,7 +301,7 @@ namespace LibraryManagementSystem.Forms
             this.label_memberFullName.ForeColor = System.Drawing.Color.LightCoral;
             this.label_memberFullName.Location = new System.Drawing.Point(256, 117);
             this.label_memberFullName.Name = "label_memberFullName";
-            this.label_memberFullName.Size = new System.Drawing.Size(132, 16);
+            this.label_memberFullName.Size = new System.Drawing.Size(131, 16);
             this.label_memberFullName.TabIndex = 50;
             this.label_memberFullName.Text = "Member Full Name";
             this.label_memberFullName.Click += new System.EventHandler(this.label_memberFullName_Click);
@@ -316,7 +316,7 @@ namespace LibraryManagementSystem.Forms
             this.label_bookTitle.ForeColor = System.Drawing.Color.LightCoral;
             this.label_bookTitle.Location = new System.Drawing.Point(256, 50);
             this.label_bookTitle.Name = "label_bookTitle";
-            this.label_bookTitle.Size = new System.Drawing.Size(76, 16);
+            this.label_bookTitle.Size = new System.Drawing.Size(75, 16);
             this.label_bookTitle.TabIndex = 49;
             this.label_bookTitle.Text = "Book Title";
             this.label_bookTitle.Click += new System.EventHandler(this.label_bookTitle_Click);
@@ -443,24 +443,6 @@ namespace LibraryManagementSystem.Forms
             this.button_showIssued.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_showIssued.UseVisualStyleBackColor = true;
             this.button_showIssued.Click += new System.EventHandler(this.button_showIssued_Click);
-            // 
-            // dataGridView_issue
-            // 
-            this.dataGridView_issue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_issue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_issue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookid,
-            this.memid,
-            this.statut,
-            this.issue_date,
-            this.return_date,
-            this.note});
-            this.dataGridView_issue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView_issue.Location = new System.Drawing.Point(300, 47);
-            this.dataGridView_issue.Name = "dataGridView_issue";
-            this.dataGridView_issue.Size = new System.Drawing.Size(517, 264);
-            this.dataGridView_issue.TabIndex = 66;
-            this.dataGridView_issue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_issue_CellClick);
             // 
             // button_booklost
             // 
@@ -598,7 +580,7 @@ namespace LibraryManagementSystem.Forms
             this.label_memberFullName2.ForeColor = System.Drawing.Color.LightCoral;
             this.label_memberFullName2.Location = new System.Drawing.Point(139, 114);
             this.label_memberFullName2.Name = "label_memberFullName2";
-            this.label_memberFullName2.Size = new System.Drawing.Size(132, 16);
+            this.label_memberFullName2.Size = new System.Drawing.Size(131, 16);
             this.label_memberFullName2.TabIndex = 50;
             this.label_memberFullName2.Text = "Member Full Name";
             // 
@@ -610,7 +592,7 @@ namespace LibraryManagementSystem.Forms
             this.label_bookTitle2.ForeColor = System.Drawing.Color.LightCoral;
             this.label_bookTitle2.Location = new System.Drawing.Point(139, 47);
             this.label_bookTitle2.Name = "label_bookTitle2";
-            this.label_bookTitle2.Size = new System.Drawing.Size(76, 16);
+            this.label_bookTitle2.Size = new System.Drawing.Size(75, 16);
             this.label_bookTitle2.TabIndex = 49;
             this.label_bookTitle2.Text = "Book Title";
             // 
@@ -630,20 +612,23 @@ namespace LibraryManagementSystem.Forms
             this.numericUpDown_BookId2.Size = new System.Drawing.Size(139, 32);
             this.numericUpDown_BookId2.TabIndex = 46;
             // 
-            // label_close_books
+            // dataGridView_issue
             // 
-            this.label_close_books.AutoSize = true;
-            this.label_close_books.BackColor = System.Drawing.Color.SteelBlue;
-            this.label_close_books.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_close_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_close_books.ForeColor = System.Drawing.Color.White;
-            this.label_close_books.Location = new System.Drawing.Point(935, 9);
-            this.label_close_books.Name = "label_close_books";
-            this.label_close_books.Size = new System.Drawing.Size(26, 25);
-            this.label_close_books.TabIndex = 9;
-            this.label_close_books.Text = "X";
-            this.label_close_books.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_close_books.Click += new System.EventHandler(this.label_close_books_Click);
+            this.dataGridView_issue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_issue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_issue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookid,
+            this.memid,
+            this.statut,
+            this.issue_date,
+            this.return_date,
+            this.note});
+            this.dataGridView_issue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView_issue.Location = new System.Drawing.Point(300, 47);
+            this.dataGridView_issue.Name = "dataGridView_issue";
+            this.dataGridView_issue.Size = new System.Drawing.Size(517, 264);
+            this.dataGridView_issue.TabIndex = 66;
+            this.dataGridView_issue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_issue_CellClick);
             // 
             // bookid
             // 
@@ -681,6 +666,21 @@ namespace LibraryManagementSystem.Forms
             this.note.HeaderText = "Note";
             this.note.Name = "note";
             // 
+            // label_close_books
+            // 
+            this.label_close_books.AutoSize = true;
+            this.label_close_books.BackColor = System.Drawing.Color.SteelBlue;
+            this.label_close_books.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_close_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_close_books.ForeColor = System.Drawing.Color.White;
+            this.label_close_books.Location = new System.Drawing.Point(956, 0);
+            this.label_close_books.Name = "label_close_books";
+            this.label_close_books.Size = new System.Drawing.Size(26, 25);
+            this.label_close_books.TabIndex = 9;
+            this.label_close_books.Text = "X";
+            this.label_close_books.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_close_books.Click += new System.EventHandler(this.label_close_books_Click);
+            // 
             // ManageCirculationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,7 +689,7 @@ namespace LibraryManagementSystem.Forms
             this.ClientSize = new System.Drawing.Size(982, 488);
             this.Controls.Add(this.label_close_books);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label_header_books);
+            this.Controls.Add(this.label_header_circulation);
             this.Controls.Add(this.panel_issue);
             this.Controls.Add(this.panel_return);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -704,9 +704,9 @@ namespace LibraryManagementSystem.Forms
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookID)).EndInit();
             this.panel_return.ResumeLayout(false);
             this.panel_return.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_issue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_memberId2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BookId2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_issue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,7 +714,7 @@ namespace LibraryManagementSystem.Forms
 
         #endregion
 
-        private System.Windows.Forms.Label label_header_books;
+        private System.Windows.Forms.Label label_header_circulation;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_issue;
         private System.Windows.Forms.Button btn_return;

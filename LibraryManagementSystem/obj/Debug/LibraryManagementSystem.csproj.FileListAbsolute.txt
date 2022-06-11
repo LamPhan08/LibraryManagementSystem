@@ -20,3 +20,26 @@ C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\o
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.MemberInfoCard.resources
 C:\Users\DELL\OneDrive\Desktop\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageUsers.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe.config
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.pdb
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.AssemblyReference.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.SuggestedBindingRedirects.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.AuthorsList.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.BookInfoCard.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.BookListForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.DashboardForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.LoginForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageAuthorsForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageBooksForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageCirculationForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageGenresForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageMembersForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.ManageUsers.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.MemberInfoCard.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Forms.RemoveBookForm.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Properties.Resources.resources
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.GenerateResource.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
+D:\Đồ án NMCMNPM\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb

@@ -101,9 +101,9 @@
             this.btnMembers.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.Color.White;
             this.btnMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMembers.Location = new System.Drawing.Point(4, 256);
+            this.btnMembers.Location = new System.Drawing.Point(0, 256);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(197, 46);
+            this.btnMembers.Size = new System.Drawing.Size(250, 46);
             this.btnMembers.TabIndex = 7;
             this.btnMembers.Text = " Members";
             this.btnMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,9 +119,9 @@
             this.btnUsers.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(3, 418);
+            this.btnUsers.Location = new System.Drawing.Point(0, 418);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(197, 46);
+            this.btnUsers.Size = new System.Drawing.Size(250, 46);
             this.btnUsers.TabIndex = 6;
             this.btnUsers.Text = " Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,9 +137,9 @@
             this.btnCirculation.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCirculation.ForeColor = System.Drawing.Color.White;
             this.btnCirculation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCirculation.Location = new System.Drawing.Point(4, 364);
+            this.btnCirculation.Location = new System.Drawing.Point(0, 364);
             this.btnCirculation.Name = "btnCirculation";
-            this.btnCirculation.Size = new System.Drawing.Size(197, 46);
+            this.btnCirculation.Size = new System.Drawing.Size(250, 46);
             this.btnCirculation.TabIndex = 5;
             this.btnCirculation.Text = " Circulation";
             this.btnCirculation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,9 +155,9 @@
             this.btnGenres.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenres.ForeColor = System.Drawing.Color.White;
             this.btnGenres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenres.Location = new System.Drawing.Point(4, 310);
+            this.btnGenres.Location = new System.Drawing.Point(0, 310);
             this.btnGenres.Name = "btnGenres";
-            this.btnGenres.Size = new System.Drawing.Size(197, 46);
+            this.btnGenres.Size = new System.Drawing.Size(250, 46);
             this.btnGenres.TabIndex = 4;
             this.btnGenres.Text = " Genres";
             this.btnGenres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,7 +175,7 @@
             this.btnAuthors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAuthors.Location = new System.Drawing.Point(2, 202);
             this.btnAuthors.Name = "btnAuthors";
-            this.btnAuthors.Size = new System.Drawing.Size(197, 46);
+            this.btnAuthors.Size = new System.Drawing.Size(248, 46);
             this.btnAuthors.TabIndex = 3;
             this.btnAuthors.Text = " Authors";
             this.btnAuthors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,9 +191,9 @@
             this.btnBooks.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.ForeColor = System.Drawing.Color.White;
             this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBooks.Location = new System.Drawing.Point(3, 148);
+            this.btnBooks.Location = new System.Drawing.Point(0, 148);
             this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(197, 46);
+            this.btnBooks.Size = new System.Drawing.Size(250, 46);
             this.btnBooks.TabIndex = 2;
             this.btnBooks.Text = " Books";
             this.btnBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,7 +208,7 @@
             this.panel2.Controls.Add(this.pictureLogo);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(211, 93);
+            this.panel2.Size = new System.Drawing.Size(250, 93);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -238,15 +238,15 @@
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(256, 5);
+            this.panel3.Location = new System.Drawing.Point(256, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1041, 545);
+            this.panel3.Size = new System.Drawing.Size(936, 545);
             this.panel3.TabIndex = 1;
             // 
             // picture_close
             // 
             this.picture_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picture_close.Location = new System.Drawing.Point(901, 2);
+            this.picture_close.Location = new System.Drawing.Point(903, 0);
             this.picture_close.Name = "picture_close";
             this.picture_close.Size = new System.Drawing.Size(33, 33);
             this.picture_close.TabIndex = 3;
@@ -492,7 +492,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(1204, 550);
+            this.ClientSize = new System.Drawing.Size(1198, 550);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label_header_authors = new System.Windows.Forms.Label();
             this.label_close_authors = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,6 +42,11 @@
             this.btnEditAuthor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView_Authors = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox_AuthorBio = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAuthorEducation = new System.Windows.Forms.TextBox();
@@ -52,11 +57,6 @@
             this.labelID = new System.Windows.Forms.Label();
             this.txtAuthorFirstName = new System.Windows.Forms.TextBox();
             this.labeName = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Authors)).BeginInit();
@@ -83,7 +83,7 @@
             this.label_close_authors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_close_authors.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_close_authors.ForeColor = System.Drawing.Color.White;
-            this.label_close_authors.Location = new System.Drawing.Point(1240, 0);
+            this.label_close_authors.Location = new System.Drawing.Point(1248, 0);
             this.label_close_authors.Name = "label_close_authors";
             this.label_close_authors.Size = new System.Drawing.Size(26, 25);
             this.label_close_authors.TabIndex = 4;
@@ -219,9 +219,9 @@
             this.panel2.Controls.Add(this.labelID);
             this.panel2.Controls.Add(this.txtAuthorFirstName);
             this.panel2.Controls.Add(this.labeName);
-            this.panel2.Location = new System.Drawing.Point(147, 80);
+            this.panel2.Location = new System.Drawing.Point(148, 83);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1115, 499);
+            this.panel2.Size = new System.Drawing.Size(1119, 499);
             this.panel2.TabIndex = 6;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -234,14 +234,14 @@
             this.dataGridView_Authors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Authors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_Authors.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Authors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Authors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Authors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Authors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -249,20 +249,55 @@
             this.LastName,
             this.Education,
             this.Bio});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_Authors.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Authors.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Authors.Location = new System.Drawing.Point(420, 30);
             this.dataGridView_Authors.Name = "dataGridView_Authors";
             this.dataGridView_Authors.ReadOnly = true;
             this.dataGridView_Authors.RowHeadersWidth = 51;
             this.dataGridView_Authors.Size = new System.Drawing.Size(687, 368);
             this.dataGridView_Authors.TabIndex = 23;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "First name";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last name";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // Education
+            // 
+            this.Education.DataPropertyName = "Education";
+            this.Education.HeaderText = "Education";
+            this.Education.Name = "Education";
+            this.Education.ReadOnly = true;
+            // 
+            // Bio
+            // 
+            this.Bio.DataPropertyName = "Bio";
+            this.Bio.HeaderText = "Biography";
+            this.Bio.Name = "Bio";
+            this.Bio.ReadOnly = true;
             // 
             // richTextBox_AuthorBio
             // 
@@ -354,41 +389,6 @@
             this.labeName.Size = new System.Drawing.Size(120, 23);
             this.labeName.TabIndex = 11;
             this.labeName.Text = "First Name:";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "First name";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "Last name";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            // 
-            // Education
-            // 
-            this.Education.DataPropertyName = "Education";
-            this.Education.HeaderText = "Education";
-            this.Education.Name = "Education";
-            this.Education.ReadOnly = true;
-            // 
-            // Bio
-            // 
-            this.Bio.DataPropertyName = "Bio";
-            this.Bio.HeaderText = "Biography";
-            this.Bio.Name = "Bio";
-            this.Bio.ReadOnly = true;
             // 
             // ManageAuthorsForm
             // 
