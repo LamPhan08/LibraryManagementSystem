@@ -138,15 +138,41 @@ namespace LibraryManagementSystem.Forms
 
             btnUpdateMember.Enabled = true;
         }
-
+        public static bool RegexEmailCheck(string input)
+        {
+            // returns true if the input is a valid email
+            return Regex.IsMatch(input, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+        }
+        public bool checkValidWhiteSpace(String s)
+        {
+            String sent = s.Trim();
+            Regex trimmer = new Regex(@"\s\s+"); // Xóa khoảng trắng thừa trong chuỗi
+            sent = trimmer.Replace(sent, " ");
+            if(s.Equals(sent))
+            {
+                return true;
+            }
+            return false;
+        }
         private void btnUpdateMember_Click(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(txtMemberFirstName.Text, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(txtMemberLastName.Text, @"^[a-zA-Z0-9]+$"))
+            if (!Regex.IsMatch(txtMemberFirstName.Text, @"^[A-Za-z\s]{1,}$") || !Regex.IsMatch(txtMemberLastName.Text, @"^[A-Za-z\s]{1,}$"))
             {
                 MessageBox.Show("First name and last name just only characters ");
                 return;
             }
-            if (txtMemberFirstName.Text.Equals("") || txtMemberLastName.Text.Equals("") || textBox_Email.Text.Equals("") || textBox_Phone.Text.Equals("") || (!radioButton_Female.Checked && !radioButton_Male.Checked))
+            if(!checkValidWhiteSpace(txtMemberFirstName.Text)||!checkValidWhiteSpace(txtMemberLastName.Text))
+            {
+                MessageBox.Show("First name and last name cant contain more than 2 white space or finish with white space!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(!RegexEmailCheck(textBox_Email.Text))
+            {
+                MessageBox.Show("Email not valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+          
+            if (txtMemberFirstName.Text.Trim().Equals("") || txtMemberLastName.Text.Trim().Equals("") || textBox_Email.Text.Trim().Equals("") || textBox_Phone.Text.Trim().Equals("") || (!radioButton_Female.Checked && !radioButton_Male.Checked))
             {
                 MessageBox.Show("Please enter full information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

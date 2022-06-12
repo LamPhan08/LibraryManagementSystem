@@ -112,7 +112,17 @@ namespace LibraryManagementSystem.Forms
                 btnEditAuthor.Enabled = false;
             }
         }
-
+        public bool checkValidWhiteSpace(String s)
+        {
+            String sent = s.Trim();
+            Regex trimmer = new Regex(@"\s\s+"); // Xóa khoảng trắng thừa trong chuỗi
+            sent = trimmer.Replace(sent, " ");
+            if (s.Equals(sent))
+            {
+                return true;
+            }
+            return false;
+        }
         private void btnAddAuthor_Click(object sender, EventArgs e)
         {
             isAdded = true;
@@ -136,13 +146,18 @@ namespace LibraryManagementSystem.Forms
 
         private void btnUpdateAuthor_Click(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(txtAuthorFirstName.Text, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(txtAuthorLastName.Text, @"^[a-zA-Z0-9]+$"))
+            if (!Regex.IsMatch(txtAuthorFirstName.Text, @"^[A-Za-z\s]{1,}$") || !Regex.IsMatch(txtAuthorLastName.Text, @"^[A-Za-z\s]{1,}$"))
             {
                 MessageBox.Show("First name and last name just only characters ");
                 return;
             }
-          
-            if (txtAuthorFirstName.Text.Equals("") || txtAuthorLastName.Text.Equals("") || txtAuthorEducation.Text.Equals("") || richTextBox_AuthorBio.Text.Equals(""))
+            if (!checkValidWhiteSpace(txtAuthorFirstName.Text) || !checkValidWhiteSpace(txtAuthorLastName.Text))
+            {
+                MessageBox.Show("First name and last name cant contain more than 2 white space or finish with white space!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (txtAuthorFirstName.Text.Trim().Equals("") || txtAuthorLastName.Text.Equals("") || txtAuthorEducation.Text.Equals("") || richTextBox_AuthorBio.Text.Equals(""))
             {
                 MessageBox.Show("Please enter full information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

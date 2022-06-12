@@ -96,6 +96,17 @@ namespace LibraryManagementSystem.Forms
             }
             return true;
         }
+        public bool checkValidWhiteSpace(String s)
+        {
+            String sent = s.Trim();
+            Regex trimmer = new Regex(@"\s\s+"); // Xóa khoảng trắng thừa trong chuỗi
+            sent = trimmer.Replace(sent, " ");
+            if (s.Equals(sent))
+            {
+                return true;
+            }
+            return false;
+        }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
@@ -114,9 +125,14 @@ namespace LibraryManagementSystem.Forms
                 {
                     return;
                 }
-                if (!Regex.IsMatch(fname, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(lname, @"^[a-zA-Z0-9]+$"))
+                if (!Regex.IsMatch(fname, @"^[A-Za-z\s]{1,}$") || !Regex.IsMatch(lname, @"^[A-Za-z\s]{1,}$"))
                 {
-                    MessageBox.Show("Fisrt name and Last name just only characters ");
+                    MessageBox.Show("First name and last name just only characters ");
+                    return;
+                }
+                if (!checkValidWhiteSpace(fname) || !checkValidWhiteSpace(lname))
+                {
+                    MessageBox.Show("First name and last name cant contain more than 2 white space or finish with white space!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (!Regex.IsMatch(username, @"^[a-zA-Z0-9]+$") || !Regex.IsMatch(password, @"^[a-zA-Z0-9]+$"))
