@@ -137,7 +137,7 @@ namespace LibraryManagementSystem.Forms
             try
             {
                 Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
-                Database.Database database = new Database.Database("BOOKS", "select * from BOOKS");
+                Database.Database database = new Database.Database("BOOKS", "select * from BOOKS ORDER BY ID DESC");
                 if (database.Rows.Count > 0)
                 {
                     //byte[] cover1 = (byte[])database.Rows[0][10];
@@ -162,7 +162,7 @@ namespace LibraryManagementSystem.Forms
 
                     byte[] bytesImage = (byte[])database.Rows[0][10];
                     MemoryStream memoryStream;
-                    int i = 0;
+                    int i = 4;
                     foreach (var panelControl in panel_displayBooks.Controls)
                     {
                         if (panelControl.GetType() == typeof(Panel))
@@ -172,7 +172,7 @@ namespace LibraryManagementSystem.Forms
                             memoryStream = new MemoryStream(bytesImage);
                             panel.BackgroundImage = Image.FromStream(memoryStream);
                             panel.BackgroundImageLayout = ImageLayout.Stretch;
-                            i++;
+                            i--;
 
                             foreach (var labelControl in panel.Controls)
                             {

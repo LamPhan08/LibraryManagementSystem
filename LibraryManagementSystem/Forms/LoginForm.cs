@@ -60,8 +60,8 @@ namespace LibraryManagementSystem.Forms
                             MessageBox.Show("Login Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             DashboardForm dashboard = new DashboardForm();
-                            dashboard.ShowDialog();
-                            Close();
+                            dashboard.Show();
+                            Hide();
                         }
                         if (database.Rows[0][0].ToString().Equals("admin"))
                         {
@@ -69,9 +69,9 @@ namespace LibraryManagementSystem.Forms
 
                             DashboardForm dashboard = new DashboardForm();
                             dashboard.btnUsers.Enabled = false;
-                            dashboard.ShowDialog();
-                       
-                            Close();
+                            dashboard.Show();
+
+                            Hide();
                         }
                         if (database.Rows[0][0].ToString().Equals("user"))
                         {
@@ -80,9 +80,9 @@ namespace LibraryManagementSystem.Forms
                             DashboardForm dashboard = new DashboardForm();
                             dashboard.btnUsers.Enabled = false;
                             dashboard.btnCirculation.Enabled = false;
-                            dashboard.ShowDialog();
+                            dashboard.Show();
 
-                            Close();
+                            Hide();
                         }
                     }
                     else
@@ -113,6 +113,11 @@ namespace LibraryManagementSystem.Forms
         private void label_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
