@@ -34,7 +34,6 @@
             this.button_show_book = new System.Windows.Forms.Button();
             this.label_booksCount = new System.Windows.Forms.Label();
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.panel_add = new System.Windows.Forms.Panel();
             this.btnClearFields = new System.Windows.Forms.Button();
@@ -131,7 +130,6 @@
             this.panel1.Controls.Add(this.button_show_book);
             this.panel1.Controls.Add(this.label_booksCount);
             this.panel1.Controls.Add(this.btnAddBook);
-            this.panel1.Controls.Add(this.btnDeleteBook);
             this.panel1.Controls.Add(this.btnEditBook);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 76);
@@ -144,7 +142,7 @@
             this.btnExportBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExportBooks.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportBooks.Location = new System.Drawing.Point(8, 241);
+            this.btnExportBooks.Location = new System.Drawing.Point(8, 205);
             this.btnExportBooks.Name = "btnExportBooks";
             this.btnExportBooks.Size = new System.Drawing.Size(127, 68);
             this.btnExportBooks.TabIndex = 53;
@@ -158,7 +156,7 @@
             this.button_show_book.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_show_book.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_show_book.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_show_book.Location = new System.Drawing.Point(8, 132);
+            this.button_show_book.Location = new System.Drawing.Point(8, 147);
             this.button_show_book.Name = "button_show_book";
             this.button_show_book.Size = new System.Drawing.Size(127, 48);
             this.button_show_book.TabIndex = 51;
@@ -184,7 +182,7 @@
             this.btnAddBook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddBook.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddBook.Location = new System.Drawing.Point(8, 18);
+            this.btnAddBook.Location = new System.Drawing.Point(8, 31);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(127, 48);
             this.btnAddBook.TabIndex = 9;
@@ -193,26 +191,12 @@
             this.btnAddBook.UseVisualStyleBackColor = true;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // btnDeleteBook
-            // 
-            this.btnDeleteBook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteBook.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteBook.Location = new System.Drawing.Point(8, 187);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(127, 48);
-            this.btnDeleteBook.TabIndex = 11;
-            this.btnDeleteBook.Text = " Delete";
-            this.btnDeleteBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDeleteBook.UseVisualStyleBackColor = true;
-            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
-            // 
             // btnEditBook
             // 
             this.btnEditBook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditBook.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditBook.Location = new System.Drawing.Point(8, 76);
+            this.btnEditBook.Location = new System.Drawing.Point(8, 89);
             this.btnEditBook.Name = "btnEditBook";
             this.btnEditBook.Size = new System.Drawing.Size(127, 48);
             this.btnEditBook.TabIndex = 10;
@@ -972,7 +956,6 @@
         private System.Windows.Forms.Label label_header_books;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Button btnEditBook;
         private System.Windows.Forms.Panel panel_add;
         private System.Windows.Forms.Label label_close_books;

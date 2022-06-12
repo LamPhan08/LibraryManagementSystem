@@ -158,7 +158,7 @@ namespace LibraryManagementSystem.Forms
         {
             if (!Regex.IsMatch(txtMemberFirstName.Text, @"^[A-Za-z\s]{1,}$") || !Regex.IsMatch(txtMemberLastName.Text, @"^[A-Za-z\s]{1,}$"))
             {
-                MessageBox.Show("First name and last name just only characters ");
+                MessageBox.Show("First name and last name just only characters", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if(!checkValidWhiteSpace(txtMemberFirstName.Text)||!checkValidWhiteSpace(txtMemberLastName.Text))

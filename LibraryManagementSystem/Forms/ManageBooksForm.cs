@@ -38,7 +38,6 @@ namespace LibraryManagementSystem.Forms
         {
             label_header_books.Image = Image.FromFile("../../Images/book.png");
             btnAddBook.Image = Image.FromFile("../../Images/add.png");
-            btnDeleteBook.Image = Image.FromFile("../../Images/trash.png");
             btnEditBook.Image = Image.FromFile("../../Images/edit.png");
             btnSelectCover.Image = Image.FromFile("../../Images/upload.png");   // in add panel
             button_SelectCover_Edit.Image = Image.FromFile("../../Images/upload.png");
@@ -536,7 +535,7 @@ namespace LibraryManagementSystem.Forms
             
             int id = Convert.ToInt32(dataGridView_ShowBooks.CurrentRow.Cells[0].Value);
 
-            DialogResult result = MessageBox.Show("Do you REALLY want to delete this book?", "Warning!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Do you REALLY want to delete this book?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 try
@@ -561,10 +560,6 @@ namespace LibraryManagementSystem.Forms
                 {
                     MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                Close();
             }
         }
 
