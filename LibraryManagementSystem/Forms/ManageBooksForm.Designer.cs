@@ -404,6 +404,7 @@
             this.txtBookPrice.Name = "txtBookPrice";
             this.txtBookPrice.Size = new System.Drawing.Size(253, 32);
             this.txtBookPrice.TabIndex = 34;
+            this.txtBookPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookPrice_KeyPress);
             // 
             // label4
             // 

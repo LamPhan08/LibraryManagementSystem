@@ -126,14 +126,14 @@ namespace LibraryManagementSystem.Forms
         {
 
 
-            if (txtBookISBN.Text.Equals("") 
-                || txtBookTitle.Text.Equals("") 
+            if (txtBookISBN.Text.Trim().Equals("") 
+                || txtBookTitle.Text.Trim().Equals("") 
                 || txtBookAuthor.Equals("") 
                 || comboBoxBookGenre.Text.Equals("") 
                 || numericUpDown_BookQuantity.Text.Equals("") 
-                || txtBookPrice.Text.Equals("") 
-                || txtBookPublisher.Text.Equals("") 
-                || richTextBox_BookDescription.Text.Equals("") || txtAuthorID.Text.Equals("ID:"))
+                || txtBookPrice.Text.Trim().Equals("") 
+                || txtBookPublisher.Text.Trim().Equals("") 
+                || richTextBox_BookDescription.Text.Trim().Equals("") || txtAuthorID.Text.Equals("ID:"))
             {
                 MessageBox.Show("Please enter full information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -616,6 +616,14 @@ namespace LibraryManagementSystem.Forms
         private void panel_add_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtBookPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         // unused

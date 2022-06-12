@@ -108,7 +108,7 @@ namespace LibraryManagementSystem.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtGenreName.Text.Equals(""))
+            if (txtGenreName.Text.Trim().Equals(""))
             {
                 MessageBox.Show("Please enter name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
