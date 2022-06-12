@@ -163,7 +163,7 @@ namespace LibraryManagementSystem.Forms
                 Database.Database database1 = new Database.Database("Members", "select * from members where ID = '" + Convert.ToInt32(numericUpDown_memberID.Value) + "'");
                 Database.Database database2 = new Database.Database("Issue", "select * from issue where memId = '" + Convert.ToInt32(numericUpDown_memberID.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookID.Value) + "'And statut = '" + "issued" + "'");
           Database.Database database3 = new Database.Database("Issue", "select Count (*) from issue where bookid = '" + Convert.ToInt32(numericUpDown_BookID.Value) + "'And statut = '" + "issued" + "'");
-
+            Database.Database database4 = new Database.Database("Issue", "select * from issue where memId = '" + Convert.ToInt32(numericUpDown_memberID.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookID.Value) +   "'And issue_date = '" + issueDate.ToString()+ "'");
             if (database.Rows.Count>0&& database3.Rows.Count > 0)
             {
                 int issue_book = Int32.Parse(database3.Rows[0][0].ToString());
@@ -192,6 +192,11 @@ namespace LibraryManagementSystem.Forms
             else if(database2.Rows.Count>0)
              {
                 MessageBox.Show("The member is borrowing this book!");
+                return;
+            }
+            else if(database4.Rows.Count>0)
+            {
+                MessageBox.Show("The member borrowed this book on that day");
                 return;
             }
             else
@@ -325,7 +330,7 @@ namespace LibraryManagementSystem.Forms
 
         private void button_BookReturn(object sender, EventArgs e)
         {
-            Database.Database database2 = new Database.Database("Issue", "select * from issue where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'");
+            Database.Database database2 = new Database.Database("Issue", "select * from issue where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString()+"'");
             if(database2.Rows.Count<=0)
             {
                 return;
@@ -349,13 +354,12 @@ namespace LibraryManagementSystem.Forms
             {
                 Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 connection.Open();
-                command = new SqlCommand("UPDATE issue SET statut = '" + "returned" + "' where bookid =" + bookId, connection);
-                SqlCommand command2 = new SqlCommand("UPDATE issue SET return_date = '" + returnDate + "' where bookid =" + bookId, connection);
-                SqlCommand command3 = new SqlCommand("UPDATE issue SET note = '" + note + "' where bookid =" + bookId, connection);
-                command2.ExecuteNonQuery();
-                command2.ExecuteNonQuery();
+                command = new SqlCommand("UPDATE issue SET statut = '" + "returned" + "'where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
+                SqlCommand command2 = new SqlCommand("UPDATE issue SET return_date = '" + returnDate + "'where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
+                SqlCommand command3 = new SqlCommand("UPDATE issue SET note = '" + note + "'where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
                 command3.ExecuteNonQuery();
                 command.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
                 connection.Close();
                 try
                 {
@@ -402,7 +406,7 @@ namespace LibraryManagementSystem.Forms
                 Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 connection.Open();
              SqlCommand  command2=new SqlCommand("UPDATE Books SET Quantity = Quantity -1 where id =" + bookId , connection);
-            command = new SqlCommand("UPDATE issue SET statut = '" + "lost" + "' where bookid =" + bookId, connection);
+            command = new SqlCommand("UPDATE issue SET statut = '" + "lost" + "'where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
             command2.ExecuteNonQuery();
                 command.ExecuteNonQuery();
             connection.Close();
