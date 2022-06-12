@@ -17,7 +17,7 @@ namespace LibraryManagementSystem.Database
         string command;
         public static string connection;
 
-        public static string connectionName = ".";
+        public static string connectionName = "DESKTOP-J5PVCK3\\SQLEXPRESS";
 
         //Tạo hàm kết nối đến CSDL thông qua chuỗi kết nối
         private void CreateConnection()

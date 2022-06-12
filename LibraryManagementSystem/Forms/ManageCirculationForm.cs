@@ -437,7 +437,7 @@ namespace LibraryManagementSystem.Forms
             {
                 Database.Database.connection = "Server=" + Database.Database.connectionName + ";Database=LIBRARY_MANAGEMENT;Integrated Security=true";
                 connection.Open();
-                SqlCommand command = new SqlCommand("Delete from Issue where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'", connection);
+                SqlCommand command = new SqlCommand("Delete from Issue where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Delete data successfully");

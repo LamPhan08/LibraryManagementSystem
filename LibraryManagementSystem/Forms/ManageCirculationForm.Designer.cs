@@ -301,7 +301,7 @@ namespace LibraryManagementSystem.Forms
             this.label_memberFullName.ForeColor = System.Drawing.Color.LightCoral;
             this.label_memberFullName.Location = new System.Drawing.Point(256, 117);
             this.label_memberFullName.Name = "label_memberFullName";
-            this.label_memberFullName.Size = new System.Drawing.Size(131, 16);
+            this.label_memberFullName.Size = new System.Drawing.Size(132, 16);
             this.label_memberFullName.TabIndex = 50;
             this.label_memberFullName.Text = "Member Full Name";
             this.label_memberFullName.Click += new System.EventHandler(this.label_memberFullName_Click);
@@ -316,7 +316,7 @@ namespace LibraryManagementSystem.Forms
             this.label_bookTitle.ForeColor = System.Drawing.Color.LightCoral;
             this.label_bookTitle.Location = new System.Drawing.Point(256, 50);
             this.label_bookTitle.Name = "label_bookTitle";
-            this.label_bookTitle.Size = new System.Drawing.Size(75, 16);
+            this.label_bookTitle.Size = new System.Drawing.Size(76, 16);
             this.label_bookTitle.TabIndex = 49;
             this.label_bookTitle.Text = "Book Title";
             this.label_bookTitle.Click += new System.EventHandler(this.label_bookTitle_Click);
@@ -580,7 +580,7 @@ namespace LibraryManagementSystem.Forms
             this.label_memberFullName2.ForeColor = System.Drawing.Color.LightCoral;
             this.label_memberFullName2.Location = new System.Drawing.Point(139, 114);
             this.label_memberFullName2.Name = "label_memberFullName2";
-            this.label_memberFullName2.Size = new System.Drawing.Size(131, 16);
+            this.label_memberFullName2.Size = new System.Drawing.Size(132, 16);
             this.label_memberFullName2.TabIndex = 50;
             this.label_memberFullName2.Text = "Member Full Name";
             // 
@@ -592,7 +592,7 @@ namespace LibraryManagementSystem.Forms
             this.label_bookTitle2.ForeColor = System.Drawing.Color.LightCoral;
             this.label_bookTitle2.Location = new System.Drawing.Point(139, 47);
             this.label_bookTitle2.Name = "label_bookTitle2";
-            this.label_bookTitle2.Size = new System.Drawing.Size(75, 16);
+            this.label_bookTitle2.Size = new System.Drawing.Size(76, 16);
             this.label_bookTitle2.TabIndex = 49;
             this.label_bookTitle2.Text = "Book Title";
             // 
