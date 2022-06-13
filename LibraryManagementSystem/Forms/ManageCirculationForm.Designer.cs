@@ -690,8 +690,8 @@ namespace LibraryManagementSystem.Forms
             this.Controls.Add(this.label_close_books);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_header_circulation);
-            this.Controls.Add(this.panel_issue);
             this.Controls.Add(this.panel_return);
+            this.Controls.Add(this.panel_issue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageCirculationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

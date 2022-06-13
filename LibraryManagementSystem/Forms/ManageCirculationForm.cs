@@ -357,9 +357,10 @@ namespace LibraryManagementSystem.Forms
                 command = new SqlCommand("UPDATE issue SET statut = '" + "returned" + "'where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
                 SqlCommand command2 = new SqlCommand("UPDATE issue SET return_date = '" + returnDate + "'where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
                 SqlCommand command3 = new SqlCommand("UPDATE issue SET note = '" + note + "'where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'And statut = '" + dataGridView_issue.CurrentRow.Cells[2].Value.ToString() + "'", connection);
+                command2.ExecuteNonQuery();
                 command3.ExecuteNonQuery();
                 command.ExecuteNonQuery();
-                command2.ExecuteNonQuery();
+                
                 connection.Close();
                 try
                 {
