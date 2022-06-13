@@ -389,8 +389,9 @@ namespace LibraryManagementSystem.Forms
 
         private void button_BookLost_Click(object sender, EventArgs e)
         {
-            Database.Database database2 = new Database.Database("Issue", "select * from issue where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'");
-            if(database2.Rows.Count<=0)
+            Database.Database database2 = new Database.Database("Issue", "select * from issue where memId = '" + Convert.ToInt32(numericUpDown_memberId2.Value) + "'And bookId = '" + Convert.ToInt32(numericUpDown_BookId2.Value) + "'And issue_date = '" + dateTimePicker_Issue2.Value.ToString() + "'");
+            if (database2.Rows.Count <= 0)
+                if (database2.Rows.Count<=0)
             {
                 return;
             }
