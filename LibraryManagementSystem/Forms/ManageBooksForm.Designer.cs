@@ -508,6 +508,7 @@
             this.txtBookISBN.Name = "txtBookISBN";
             this.txtBookISBN.Size = new System.Drawing.Size(253, 32);
             this.txtBookISBN.TabIndex = 22;
+            this.txtBookISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookISBN_KeyPress);
             // 
             // labeName
             // 
@@ -891,6 +892,7 @@
             this.textBox_ISBN_Edit.Name = "textBox_ISBN_Edit";
             this.textBox_ISBN_Edit.Size = new System.Drawing.Size(90, 32);
             this.textBox_ISBN_Edit.TabIndex = 22;
+            this.textBox_ISBN_Edit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ISBN_Edit_KeyPress);
             // 
             // label23
             // 

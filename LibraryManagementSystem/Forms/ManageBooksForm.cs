@@ -626,6 +626,22 @@ namespace LibraryManagementSystem.Forms
             }
         }
 
+        private void txtBookISBN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_ISBN_Edit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         // unused
         private void BindingManagerBase_dataTable1_PositionChanged(object sender, EventArgs e)
         {
