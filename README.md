@@ -17,10 +17,13 @@ Before running the program, you need to follow these steps to create **Database*
 Note: Remember to add an additional backslash ("\") to the **connectionName** if you copy the whole Server name from MySQL.
 
 ## *Using software:*
+
 Using the sample account:
   **Username: Admin**
   **Password: 123456**
-**Step 1**: Go to MySQL, and add this line:
-INSERT INTO USERS VALUES('Default', 'User', 'Admin', '123456', 'owner')
+
+**Step 1**: Go to MySQL, and add this line: INSERT INTO USERS VALUES('Default', 'User', 'Admin', '123456', 'owner')
+
 **Step 2**: Go back to the solution, and start running program.
+
 **Step 3**: Enter Username (Admin) and password (123456)
