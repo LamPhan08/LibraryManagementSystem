@@ -19,7 +19,9 @@ Note: Remember to add an additional backslash ("\") to the **connectionName** if
 ## *Using software:*
 
 Using the sample account:
+
   **Username: Admin**
+  
   **Password: 123456**
 
 **Step 1**: Go to MySQL, and add this line: INSERT INTO USERS VALUES('Default', 'User', 'Admin', '123456', 'owner')
